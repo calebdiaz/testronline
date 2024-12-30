@@ -1,0 +1,59 @@
+question;answer;explanation
+---
+"Proporcionar contexto a ChatGPT durante la escritura de un prompt permite:
+A. Obtener una respuesta más rápidamente.
+B. Obtener una respuesta más precisa.
+C. Obtener una respuesta más completa.
+D. Es indiferente, ChatGPT no considera la información de contexto proporcionada por el usuario.";"B";"La incorporación de contexto a la pregunta mejora la precisión en los resultados, especialmente en aplicaciones donde se requiere precisión en la respuesta."
+---
+"ChatGPT puede utilizarse como asistente para la creación de una aplicación de software. En particular, puede ayudarnos con:
+A. Solamente el esbozo de una arquitectura de alto nivel.
+B. La arquitectura y la implementación del código fuente.
+C. Solo con la implementación del código fuente de una función concreta.
+D. ChatGPT no puede utilizarse de este modo, para este propósito, deben utilizarse herramientas como GitHub Copilot.";"B";"ChatGPT puede asistir tanto en el diseño de la arquitectura como en la generación de código fuente, cubriendo múltiples etapas del desarrollo."
+---
+"ChatGPT no es solo un chatbot, sino que puede entrenarse para realizar tareas propias de algoritmos de machine learning, como la asignación de una categoría a un texto (clasificación):
+A. Falso.
+B. Verdadero.";"B";"ChatGPT puede realizar tareas de clasificación utilizando ejemplos de clasificación en el prompt o en configuraciones avanzadas."
+---
+"El conteo de número de tókenes es un aspecto clave para controlar el consumo. Esta tarea puede realizarse con la librería:
+A. Midjourney.
+B. Tiktoken.
+C. ChatGPT.
+D. OpenAICounter.";"B";"Tiktoken permite contar los tókenes de un prompt y su respuesta en OpenAI, ayudando a gestionar el consumo dentro de los límites de la API."
+---
+"LangChain proporciona una clase para interactuar con las capacidades de chatbot de OpenAI. El nombre de esta clase es:
+A. LLMChain.
+B. ChatOpenAI.
+C. PromptTemplate.
+D. OpenAIChatModel.";"B";"ChatOpenAI es la clase de LangChain que se conecta con los modelos de OpenAI, incluyendo configuraciones de temperatura y modelo."
+---
+"¿En qué consiste el streaming de respuestas tras la recepción y procesamiento de un prompt en un LLM?:
+A. En imprimir varias respuestas simultáneamente.
+B. En imprimir la salida de una respuesta a medida que se va generando, en lugar de esperar a que se genere en su totalidad para imprimirla.
+C. En imprimir la respuesta a varios usuarios conectados a la misma interfaz.
+D. En imprimir respuestas relacionadas de forma paralela.";"B";"El streaming permite mostrar la respuesta mientras se genera, mejorando la experiencia del usuario al reducir la percepción de espera."
+---
+"¿Qué función cumplen las plantillas en LangChain?:
+A. Permiten ejecutar una secuencia de acciones predeterminada.
+B. Permite reutilizar y simplificar el código que accede a los LLMs a través de un prompt parametrizable.
+C. Permiten ejecutar una secuencia de acciones de forma dinámica, es decir, considerando la salida de las acciones previas.
+D. Permite convertir a embeddings el prompt para facilitar su reutilización.";"B";"Las plantillas en LangChain permiten crear prompts parametrizables que facilitan la reutilización y estructuración de solicitudes a los LLMs."
+---
+"¿Para qué se utiliza la librería Pydantic en LangChain?:
+A. Para implementar agentes basados en tools.
+B. Para extraer datos estructurados a partir de un schema y un texto en lenguaje natural.
+C. Pydantic no se utiliza con LangChain, es una librería que sirve para validación de datos en otros entornos, como TensorFlow.
+D. Para extraer datos no estructurados a partir de un texto en lenguaje natural.";"B";"Pydantic permite estructurar datos de lenguaje natural en datos estructurados que los sistemas pueden procesar."
+---
+"FAISS y Pinecone son dos alternativas para implementar vector stores, ¿cuál es la diferencia de enfoque entre ambos?:
+A. Pinecone es una librería open-source que puede ejecutarse en cualquier PC, mientras que FAISS es un servicio gestionado en cloud.
+B. FAISS es una librería open-source que puede ejecutarse en cualquier PC, mientras que Pinecone es un servicio gestionado en cloud.
+C. FAISS proporciona un enfoque holístico, es decir, integrar muchas funcionalidades que no están presentes en Pinecone.
+D. Pinecone tiene un rendimiento muy superior al de FAISS, independiente del entorno de computación.";"B";"FAISS es una biblioteca open-source que se puede ejecutar localmente, mientras que Pinecone es un servicio en la nube, eliminando la necesidad de infraestructura propia."
+---
+"¿En qué casos debe utilizarse ReAct frente a OpenAI functions?:
+A. Cuando el caso de uso que estamos considerando es sencillo y solamente implica extracción de datos y consultas a buscadores.
+B. Cuando el número de herramientas necesarias es elevado y se requiere un análisis detallado de las acciones anteriores y sus resultados.
+C. En todos los casos, puesto que ReAct es un framework con capacidades muy superiores a las de las funciones de OpenAI.
+D. En todos los casos, puesto que ReAct es mucho más sencillo de aprender e implementar en LangChain que las funciones OpenAI.";"B";"ReAct es adecuado para casos complejos con muchas herramientas y dependencias entre acciones, mientras que OpenAI functions es más útil en casos simples."

@@ -1,0 +1,61 @@
+question;answer;explanation
+---
+"¿Cuál de los siguientes NO es un caso de uso de IA en el sector sanitario?:
+A. Uso de chatbots para automatizar el diagnóstico del paciente o asistir a los profesionales médicos en esta labor.
+B. Elección de proveedores de dispositivos médicos.
+C. Sistemas de auditoría.
+D. Gestión del embarazo.";"B";"Existe un amplio abanico de casos de uso de IA en el sector sanitario, generalmente relacionados con la identificación de patrones para fines predictivos o el uso de IA generativa para procesamiento de lenguaje natural."
+---
+"¿Para qué se utiliza la IA en los robots quirúrgicos?:
+A. Para la identificación de los pacientes óptimos para la intervención.
+B. Para identificar qué patrones del procedimiento quirúrgico producen mejores resultados e incrementar la precisión de las intervenciones.
+C. Para la evaluación de la fatiga de los profesionales médicos que operan el robot.
+D. Para proporcionar información precisa de posición al robot.";"B";"El análisis de los datos asociados a múltiples intervenciones previas facilita la extracción de patrones para mejorar los resultados de intervenciones futuras."
+---
+"¿Qué tipos de enfermedades puede detectar la IA mediante el análisis de imágenes médicas?:
+A. Únicamente cardiovasculares.
+B. Cardiovasculares, neurológicas, oncológicas.
+C. Únicamente neurológicas.
+D. Oncológicas, cardiovasculares o de naturaleza vírica.";"B";"En efecto, los estudios publicados indican que la IA puede detectar eficazmente enfermedades de tipo cardiovascular, neurológico u oncológico en imágenes médicas."
+---
+"¿Cuál de los siguientes no es un beneficio del cloud para implantar IA en el sector sanitario?:
+A. Capacidad para escalar.
+B. El acceso a los servicios a través de una consola web.
+C. Garantías de seguridad.
+D. Reutilización de modelos preentrenados.";"B";"Los proveedores de cloud disponen de grandes infraestructuras que permiten un escalado dinámico de la capacidad de computación, así como modelos de IA preentrenados que pueden adaptarse a casos de uso particulares, y unas mayores garantías de seguridad por sus inversiones en sistemas para prevenir incidentes."
+---
+"¿En qué consiste el Project Health Insights de Microsoft Azure?:
+A. Detecta cáncer de mama a partir de imágenes médicas.
+B. Utiliza dos modelos preentrenados para detección del cáncer y la asignación de pacientes a ensayos clínicos.
+C. Es un chat conversacional para atender a pacientes.
+D. Es una base de datos de tratamientos construida por un agente de IA.";"B";"En efecto, Azure lanzó este proyecto para generar modelos de IA que resuelvan ambas problemáticas. Estos modelos permiten mejorar la salud de la población y ahorrar costes a las organizaciones del sector sanitario."
+---
+"¿Qué diferencia a MedLM de un LLM (large language model) convencional?:
+A. MedLM se utiliza para descubrir nuevos fármacos.
+B. MedLM se utiliza para responder preguntas de carácter médico.
+C. MedLM se utiliza para generar modelos predictivos de demanda de servicios sanitarios.
+D. MedLM se utiliza como sistema de entrenamiento de chats conversacionales basados en modelos LLM.";"B";"MedLM es una colección de modelos conversacionales desarrollados por Google Cloud, que están especializados en temáticas del ámbito médico. Pueden utilizarse para construir chatbots inteligentes capaces de resolver dudas a pacientes."
+---
+"¿Cómo se utiliza la IA para mejorar la extracción de crudo y gas?:
+A. Se utiliza para determinar las mejores técnicas de extracción.
+B. Se utiliza identificar dónde se encuentran los yacimientos analizando datos de carácter geológico.
+C. Se utiliza para determinar la calidad de la extracción, en lugar de utilizar procesos manuales que requieren presencia de expertos en el yacimiento.
+D. No se utiliza la IA con este propósito.";"B";"La capacidad de los sistemas de IA para analizar grandes volúmenes de información es clave a la hora de encontrar los patrones característicos de una ubicación en la que existe un yacimiento."
+---
+"¿Cuál son las principales aplicaciones de la IA en el ámbito de las energías renovables?:
+A. Identificar nuevas opciones de energías renovables.
+B. Equilibrar oferta y demanda e identificar el momento idóneo para generar energía.
+C. Ajustar el precio de estas energías para garantizar que se consuma la totalidad de la energía que se ha producido.
+D. No se utiliza la IA en este ámbito.";"B";"La consecución de este equilibrio permite optimizar el proceso de producción y reducir sus costes, potenciando la competitividad de este tipo de energías respecto a las fuentes de energía tradicionales."
+---
+"¿Qué aspectos de los proveedores de computación en la nube se capitalizan en el sector energético?:
+A. El acceso a los servicios a través de una consola web y el uso de APIs.
+B. La captura de información en tiempo real, la disponibilidad de infraestructura en todas las geografías, la escalabilidad y sus servicios de análisis de datos.
+C. La disponibilidad de los servicios en múltiples idiomas y la posibilidad de configurarlos a través de un SDK en Python.
+D. Sus servicios de análisis de datos con modelos de IA preentrenados.";"B";"Es precisamente la integración de todos estos servicios la que posibilita la implementación ágil de sistemas que explotan la IA en este sector."
+---
+"La aplicación de IA para el control de plagas permite:
+A. Aumentar el consumo de pesticidas.
+B. Reducir el consumo de pesticidas.
+C. Descubrir nuevos tipos de plagas.
+D. Evitar el consumo de pesticidas.";"B";"El análisis de imágenes de temperatura proporcionadas por los satélites permite anticipar la aparición de una plaga y focalizar el uso de pesticidas a la zona afectada."

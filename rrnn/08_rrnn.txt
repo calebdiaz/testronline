@@ -1,0 +1,57 @@
+question;answer;explanation
+---
+"En reinforcement learning (marca la respuesta correcta):
+A. Un agente está en un entorno y trata de aprender recompensas a partir del estado en el que se encuentra.
+B. Un agente está en un entorno y trata de aprender los estados óptimos del entorno.
+C. Un agente está en un entorno y trata de aprender las acciones que maximizan las recompensas en cada estado posible.
+D. Un agente está en un entorno y trata de aprender las acciones que minimizan las recompensas en cada estado posible.";"C";"El objetivo del agente es aprender las acciones que maximizan las recompensas acumuladas a largo plazo."
+---
+"¿Cuál de los siguientes problemas está definido como un problema de reinforcement learning? (marca todas las respuestas correctas):
+A. Un helicóptero autónomo puede realizar acciones como mover las aspas y cambiar la dirección. Recibe rewards positivas si se mantiene en vuelo y negativas si cae al suelo.
+B. Un robot industrial tiene que mover objetos de un sitio a otro y sus acciones son el movimiento de una mano mecánica. Recibe rewards positivas por mover el objeto con éxito.
+C. Un clasificador de imágenes tiene una serie de imágenes y unas etiquetas por cada imagen. El clasificador aprende a catalogar las imágenes según las etiquetas.
+D. Un algoritmo de recomendación asigna a cada usuario los vídeos más probables a ver en el futuro según el historial del usuario.";"A,B";"Ambos ejemplos implican un agente que realiza acciones en un entorno y aprende a maximizar recompensas a partir de estas acciones."
+---
+"El entorno o environment en un problema de reinforcement learning nos da (marca todas las respuestas correctas):
+A. Una acción at a realizar para el agente.
+B. Una recompensa rt a partir del estado y la acción realizada por el agente.
+C. Un nuevo estado st+1 a partir del estado st y la acción at realizada por el agente.
+D. Una policy a seguir por el agente.";"B,C";"El entorno devuelve una recompensa y un nuevo estado basado en la acción tomada por el agente en el estado actual."
+---
+"La value function V (marca todas las respuestas correctas):
+A. Está asociada a una policy π y la trayectoria que definen las acciones de esta policy.
+B. Si el discount factor es 1, todas las recompensas valen lo mismo independientemente de en qué momento del tiempo se consiguen.
+C. Nos da una medida de lo bueno que es un estado siguiendo una policy π a partir de las recompensas esperadas si seguimos la policy desde ese estado.
+D. Nos da una medida de lo bueno que es un estado y una acción siguiendo una policy π a partir de las recompensas esperadas si seguimos la policy desde ese estado.";"C";"La función de valor está asociada a una policy y mide la bondad de un estado basado en las recompensas esperadas al seguir la policy desde ese estado."
+---
+"A partir de Q*, podemos obtener la optimal policy π* (marca la respuesta correcta):
+A. Por cada estado s, elegimos la acción que nos da un valor mayor de Q*(s,a).
+B. Por cada estado s, aplicamos la ecuación de Bellman a partir de Q* para obtener el nuevo estado s´ y acción a´.
+C. Es imposible calcular π* a partir de Q*.";"A";"La optimal policy se obtiene seleccionando la acción con el mayor valor Q* en cada estado."
+---
+"Q-learning a partir de value iteration (marca la respuesta correcta):
+A. Se caracteriza por no utilizar la ecuación de Bellman.
+B. Se hace computacionalmente intratable cuando hay muchos estados o acciones.
+C. Converge mejor a mayor número de acciones.";"B";"Q-learning se vuelve computacionalmente costoso con un gran número de estados o acciones debido a la complejidad del almacenamiento y actualización de valores."
+---
+"En el algoritmo Deep Q-Learning visto en clase, la red neuronal tiene una salida por cada acción, en vez de representar la acción como input. Esto es así porque (marca la respuesta correcta):
+A. El número de acciones puede llegar a ser muy grande.
+B. El número de estados puede llegar a ser muy grande.
+C. Podemos obtener todos los Q-values para un estado con un solo forward pass.
+D. Ninguna de las anteriores.";"C";"Esto permite calcular los valores Q para todas las acciones en un solo forward pass, mejorando la eficiencia del algoritmo."
+---
+"Experience Replay (marca todas las respuestas correctas):
+A. Define una memoria de jugadas guardadas con sus rewards de manera que podemos obtener jugadas aleatorias a partir de ella.
+B. Es una memoria que guarda jugadas, v-values y q-values para cada jugada.
+C. Hace el entrenamiento más eficiente al mostrar jugadas variadas en vez de jugadas consecutivas.";"A,C";"Experience Replay mejora la eficiencia al reutilizar experiencias pasadas y evitar la correlación temporal en los datos de entrenamiento."
+---
+"En el algoritmo Deep Q-Learning es importante dar cierta probabilidad a realizar acciones aleatorias porque (marca todas las respuestas correctas):
+A. En un principio, la red neuronal es aleatoria y no puede ser considerada como una policy óptima.
+B. Es importante explorar nuevas acciones para descubrir sus recompensas y no quedar atrapado en políticas subóptimas.
+C. Incluso cuando la red defina una buena aproximación a Q*, es importante probar nuevas acciones que puedan llevar a mejores soluciones.";"A,B";"La exploración aleatoria evita la convergencia temprana en políticas subóptimas y permite descubrir mejores soluciones."
+---
+"El estado en Deep Q-Learning aplicado a videojuegos Atari es (marca la respuesta correcta):
+A. Una serie de valores simbólicos y formales que definen el estado del juego.
+B. Un sistema de ecuaciones que define velocidad de la bola, la física respecto a la paleta, etc.
+C. Las imágenes del juego que ve un jugador (dispuestas en conjuntos de 4 frames seguidos).
+D. Ninguna de las anteriores.";"C";"El estado se define por las imágenes del juego, que proporcionan al agente información visual para tomar decisiones.

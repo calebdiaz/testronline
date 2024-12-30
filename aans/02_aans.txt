@@ -1,0 +1,61 @@
+question;answer;explanation
+---
+"¿Cuál es el objetivo principal del algoritmo K-Means?:
+A. Reducir la dimensión de los datos.
+B. Dividir un conjunto de datos en grupos similares.
+C. Generar reglas de asociación entre variables.
+D. Clasificar datos en categorías predefinidas.";"B";"K-Means busca agrupar los puntos de datos de tal manera que los puntos dentro de un mismo clúster sean similares entre sí."
+---
+"¿Qué técnica se utiliza para encontrar el valor óptimo de K en K-Means?:
+A. Coeficiente de Pearson.
+B. Análisis de componentes principales (PCA).
+C. Regresión lineal.
+D. Coeficiente de la silueta.";"D";"Este coeficiente mide cuán bien está cada punto de datos asignado a su clúster en comparación con otros clústeres."
+---
+"¿Cuál es la base del método del codo para encontrar el valor óptimo de K?:
+A. El análisis de correlación entre variables.
+B. La minimización de la distancia intra-clúster.
+C. La maximización del índice de Davies-Bouldin.
+D. La reducción de la inercia total del modelo.";"D";"El «codo» en la gráfica representa el punto donde la disminución en la inercia se desacelera significativamente."
+---
+"¿Qué compara la estadística de brecha en K-Means?:
+A. La dispersión intra-clúster de los datos reales con la esperada en datos aleatorios.
+B. La dispersión inter-clúster de los datos reales con la esperada en datos aleatorios.
+C. La precisión del modelo en datos de entrenamiento con datos de prueba.
+D. La dispersión intra-clúster de los datos con la dispersión inter-clúster.";"A";"Compara la dispersión de los puntos de datos dentro de los clústeres con la dispersión esperada de los datos aleatorios."
+---
+"¿Cuál es una de las ventajas que tiene aplicar el modelo K-Means?:
+A. La interpretabilidad de los resultados.
+B. El alto coste computacional en conjuntos de datos grandes.
+C. No requiere especificar el número de clústeres.
+D. No es adecuado para datos no lineales.";"A";"Debido a su naturaleza simple y directa, los clústeres generados por K-Means suelen ser fáciles de entender e interpretar."
+---
+"¿Qué medida se utiliza en el coeficiente de la silueta para evaluar la cohesión y separación de los clústeres?:
+A. Entropía.
+B. Distancia intra-clúster.
+C. Coeficiente de correlación.
+D. Distancia inter-clúster.";"B";"La distancia intra-clúster mide qué tan cerca están los puntos de datos de su centroide dentro del mismo clúster."
+---
+"¿Cuál es la desventaja común de K-Means en la práctica?:
+A. Sensible a la inicialización de los centroides.
+B. Puede manejar fácilmente datos no lineales.
+C. Requiere grandes cantidades de memoria.
+D. No es escalable para grandes conjuntos de datos.";"A";"Los centroides iniciales se eligen de manera aleatoria en K-Means, lo que puede llevar a diferentes resultados de clustering."
+---
+"¿Qué indica un valor del coeficiente de la silueta de -1 en el algoritmo K-Means?:
+A. Un clúster muy cohesionado.
+B. Un punto de datos mal asignado a un clúster.
+C. Un clúster con poca separación de otros clústeres.
+D. Un clúster con mucha variabilidad.";"B";"Un coeficiente de la silueta de -1 es el valor mínimo posible y sugiere que el clustering es inapropiado para ese punto de datos, ya que está más cerca de un clúster diferente al que se le ha asignado."
+---
+"¿Cuál es el mejor método para hallar el valor óptimo de K?:
+A. El método del codo.
+B. El coeficiente de la silueta.
+C. La estadística de brecha.
+D. Ninguno en particular, depende del conjunto de datos.";"D";"No hay un método único que sea el mejor para encontrar el valor óptimo de K en todos los casos."
+---
+"¿K-Means y KNN son lo mismo?:
+A. No, pero K-Means y KNN se parecen en que son algoritmos de aprendizaje supervisado.
+B. No, porque K-Means es un algoritmo de aprendizaje no supervisado y KNN es un algoritmo de aprendizaje supervisado.
+C. No, pero K-Means y KNN se parecen en que son algoritmos de aprendizaje no supervisado.
+D. Sí, son el mismo algoritmo.";"B";"K-Means y KNN (K-Nearest Neighbors) son algoritmos diferentes con diferentes enfoques y propósitos."

@@ -1,0 +1,61 @@
+question;answer;explanation
+---
+"¿Qué significa DBSCAN?:
+A. Density-Based Spatial Clustering of Applications with Noise.
+B. Data-Based Spatial Clustering Algorithm.
+C. Density-Balanced Spatial Clustering Algorithm.
+D. Distance-Based Spatial Clustering of Applications with Noise.";"A";"DBSCAN significa 'Density-Based Spatial Clustering of Applications with Noise', en español 'Agrupamiento espacial basado en densidad de aplicaciones con ruido'."
+---
+"¿Cuál de los siguientes parámetros es clave en DBSCAN?:
+A. K.
+B. Épsilon (ϵ).
+C. Sigma (σ).
+D. Alpha (α).";"B";"Épsilon (ϵ) es la distancia máxima entre dos puntos para considerarse vecinos en DBSCAN."
+---
+"¿Qué tipo de clústeres puede identificar el DBSCAN?:
+A. Solamente esféricos.
+B. Solamente convexos.
+C. De cualquier forma.
+D. Solamente cóncavos.";"C";"DBSCAN puede identificar clústeres de cualquier forma, lo cual es una ventaja sobre otros algoritmos que solo identifican formas específicas."
+---
+"¿A qué hace referencia el parámetro MinPts?:
+A. El número mínimo de puntos en el dataset.
+B. El número mínimo de clústeres.
+C. El número mínimo de puntos para formar un clúster denso.
+D. La distancia mínima entre dos puntos.";"C";"MinPts define el número mínimo de puntos necesarios en una región para que sea considerada un clúster denso."
+---
+"¿Qué ocurre si el valor de épsilon (ϵ) es muy pequeño?:
+A. Todos los puntos se considerarán clústeres.
+B. La mayoría de los puntos serán considerados ruido.
+C. Todos los puntos se unirán en un solo clúster.
+D. Se formarán clústeres de forma esférica.";"B";"Si el valor de épsilon es muy pequeño, pocos puntos se consideran vecinos y la mayoría serán clasificados como ruido."
+---
+"¿Cómo se denomina un punto que tiene menos de MinPts dentro de la distancia ϵ pero que está cerca de un punto central?:
+A. Punto central.
+B. Punto de ruido.
+C. Punto aislado.
+D. Punto fronterizo.";"D";"Este punto se llama 'punto fronterizo' ya que está cerca de un clúster central pero no cumple con MinPts en su vecindad."
+---
+"¿Cuál es una ventaja importante de DBSCAN frente a K-Means?:
+A. Requiere menos parámetros.
+B. Identifica clústeres de forma esférica.
+C. Es más rápido.
+D. No necesita especificar el número de clústeres de antemano.";"D";"DBSCAN no necesita el número de clústeres a priori porque determina los clústeres en función de la densidad."
+---
+"¿Qué métrica de evaluación se puede usar para evaluar la calidad de un clustering con DBSCAN?:
+A. Puntaje de la silueta.
+B. Error cuadrático medio.
+C. Puntaje de Z-Score.
+D. Prueba t de Student.";"A";"El 'puntaje de la silueta' mide la cohesión y separación de los clústeres, siendo útil para evaluar la calidad de un clustering con DBSCAN."
+---
+"En el contexto de DBSCAN, ¿para qué se utiliza un KD-Tree?:
+A. Acelerar la búsqueda de vecinos.
+B. Reducir el número de puntos en el dataset.
+C. Mejorar la precisión del clustering.
+D. Aumentar el número de clústeres.";"A";"Un KD-Tree permite acelerar la búsqueda de vecinos al organizar los puntos de manera eficiente para DBSCAN."
+---
+"¿Qué hace DBSCAN con los puntos que no pertenecen a ningún clúster?:
+A. Los redistribuye a clústeres existentes.
+B. Los etiqueta como ruido.
+C. Los elimina del dataset.
+D. Los marca como puntos centrales.";"B";"DBSCAN etiqueta como 'ruido' a los puntos que no cumplen con los criterios para pertenecer a un clúster, marcándolos como posibles outliers."

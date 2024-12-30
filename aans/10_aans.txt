@@ -1,0 +1,66 @@
+question;answer;explanation
+---
+"¿Cuál es el objetivo principal del aprendizaje por refuerzo?:
+A. Minimizar la pérdida de datos.
+B. Maximizar la precisión de la clasificación.
+C. Optimizar la recompensa acumulada a largo plazo.
+D. Reducir el tiempo de entrenamiento.";"C";"Se centra en que un agente optimice su política de acciones para maximizar la recompensa acumulada a lo largo del tiempo."
+---
+"En el algoritmo Q-learning, ¿qué representa la variable γ (gamma)?:
+A. La tasa de aprendizaje.
+B. El factor de descuento.
+C. La recompensa inmediata.
+D. La acción a tomar.";"B";"Gamma es el factor de descuento que pondera las recompensas futuras frente a las inmediatas en el aprendizaje por refuerzo."
+---
+"¿Cuál es el propósito de la red objetivo en el algoritmo DQN?:
+A. Reducir el tamaño de la tabla Q.
+B. Estabilizar el proceso de aprendizaje.
+C. Aumentar la tasa de aprendizaje.
+D. Minimizar la recompensa acumulada.";"B";"Se utiliza para estabilizar el aprendizaje al mantener una copia fija de la red principal durante varias iteraciones, lo que ayuda a evitar grandes fluctuaciones en las actualizaciones de los valores Q.
+La red objetivo estabiliza el aprendizaje al mantener los valores Q objetivo constantes durante varias actualizaciones."
+---
+"En el contexto de REINFORCE, ¿qué es el gradiente de la política?:
+A. La diferencia entre las recompensas actuales y futuras.
+B. La actualización de los valores Q.
+C. El gradiente de la recompensa acumulada esperada con respecto a los parámetros de la política.
+D. La función de pérdida.";"C";"El gradiente de la política se calcula para ajustar los parámetros de la política con el fin de maximizar la recompensa acumulada esperada."
+---
+"¿Qué ventaja tiene PPO sobre otros métodos de gradiente de políticas?:
+A. Es más fácil de implementar y tiene mejor complejidad de muestra.
+B. Requiere menos datos de entrenamiento.
+C. No utiliza redes neuronales.
+D. Minimiza la recompensa acumulada.";"A";"PPO es conocido por ser robusto y eficiente, ofreciendo una implementación más simple y una mejor complejidad de muestra en comparación con otros métodos de gradiente de políticas."
+---
+"En Q-learning, ¿cómo se define un episodio?:
+A. Un conjunto de acciones sin recompensa.
+B. El proceso de aprendizaje de un solo paso.
+C. El final de una etapa donde el agente ha alcanzado el objetivo o ha fracasado.
+D. La actualización de la red neuronal.";"C";"Un episodio en Q-learning termina cuando el agente ha alcanzado su objetivo o ha fracasado, momento en el cual no puede tomar más acciones.
+Un episodio termina cuando el agente alcanza el objetivo o fracasa, y marca un ciclo completo de interacción con el entorno."
+---
+"¿Qué es la tabla Q en el contexto de Q-learning?:
+A. Una lista de recompensas acumuladas.
+B. Un registro de todas las acciones realizadas.
+C. Una matriz que mantiene los valores Q para todas las combinaciones de estados y acciones.
+D. Una función de política.";"C";"Contiene los valores Q, que representan la utilidad esperada de tomar una acción en un estado dado para todas las combinaciones posibles de estados y acciones.
+La tabla Q almacena los valores Q, que representan el valor esperado de realizar una acción en un estado dado."
+---
+"¿Cuál es el propósito de la función de pérdida en DQN?:
+A. Maximizar la recompensa inmediata.
+B. Minimizar la diferencia entre los valores Q predichos y los valores Q objetivo.
+C. Actualizar los valores de la tabla Q.
+D. Seleccionar la mejor acción posible.";"B";"La función de pérdida se utiliza para minimizar el error cuadrático medio entre los valores Q predichos por la red principal y los valores Q objetivo calculados por la red objetivo.
+La función de pérdida ajusta la red neuronal para minimizar la diferencia entre los valores Q predichos y los valores Q objetivo."
+---
+"¿Qué técnica utiliza REINFORCE para ajustar su estrategia?:
+A. Diferencias temporales.
+B. Gradiente de políticas.
+C. Factor de descuento.
+D. Red objetivo.";"B";"Ajusta su estrategia utilizando el gradiente de políticas, que optimiza directamente la función de política para maximizar las recompensas acumuladas.
+REINFORCE utiliza el gradiente de políticas para ajustar la estrategia del agente y maximizar la recompensa acumulada."
+---
+"En PPO, ¿qué se entiende por -clip objetivo-?:
+A. Una técnica para asegurar que las actualizaciones de la política no sean demasiado grandes.
+B. Un método para inicializar la tabla Q.
+C. Un proceso para reducir el número de episodios.
+D. Una función para calcular la recompensa inmediata.";"A";"El clip objetivo  en PPO se usa para limitar el cambio en el ratio de probabilidad, asegurando que las actualizaciones de la política se mantengan dentro de un rango razonable para garantizar la estabilidad del entrenamiento."

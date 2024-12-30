@@ -1,0 +1,61 @@
+question;answer;explanation
+---
+"¿Qué métodos se pueden utilizar para enviar ficheros o carpetas a un bucket de Google Cloud Storage?:
+A. Se debe utilizar el cliente pesado facilitado por Google, que puede descargarse en el sitio web de Google Cloud.
+B. Google Cloud Console, línea de comandos, REST API.
+C. Solamente Google Cloud Console.
+D. Únicamente REST API, como medida de seguridad para evitar fugas de datos sensibles.";"B";"Google ofrece los tres métodos para enviar ficheros a GCS. El primero es un método interactivo, mientras que los otros dos se utilizan desde scripts o código fuente, respectivamente."
+---
+"Google Cloud Storage es un servicio de almacenamiento basado en:
+A. Ficheros.
+B. Objetos.
+C. Bloques.
+D. Columnas.";"B";"Google Cloud Storage es un sistema de almacenamiento basado en objetos. Este enfoque permite escalabilidad masiva, menos complejidad y búsquedas más eficientes y rápidas."
+---
+"¿Cuál de las siguientes es una ventaja de los cuadernos gestionados por el usuario?:
+A. No requieren reinicio tras un cambio de la VM en la que se ejecutan.
+B. Admiten un mayor grado de personalización que los cuadernos gestionados por Google.
+C. Reducen las opciones de personalización para proporcionar mayor seguridad.
+D. En general, se ejecutan con menor latencia que los cuadernos gestionados por Google.";"B";"La característica diferencial de los cuadernos gestionados por el usuario es precisamente su elevado grado de personalización, con el propósito de acomodar casuísticas no contempladas por las configuraciones estándar de AI Workbench."
+---
+"¿Qué lenguajes de programación están soportados en Google AutoML?:
+A. Java, Python y Rust.
+B. Ninguno, porque AutoML no requiere escribir código fuente para entrenar modelos.
+C. Java y Python.
+D. Solo Python, que es lenguaje más habitual en los Jupyter Notebooks.";"B";"En efecto, AutoML es una plataforma no code que no requiere programación para generar modelos. Por tanto, no soporta ninguno de los lenguajes, porque no son necesarios para su operativa."
+---
+"¿Cuál de las siguientes no es una métrica de optimización (optimization objective) para un modelo de regresión creado con Google AutoML?:
+A. RMSE
+B. AUC ROC
+C. MAE
+D. RMSLE";"B";"La métrica de área bajo la curva del receiver-operating characteristic (AUC ROC) se utiliza en tareas de clasificación, no de regresión."
+---
+"¿Qué tratamiento se aplica a las variables categóricas en el proceso de transformación de datos de Google AutoML?:
+A. Se genera un embedding asociado a cada valor de la variable categórica.
+B. Se genera un índice por cada valor y un embedding asociado al índice.
+C. No se realiza ningún tratamiento, se utilizan los valores tal cual aparecen en el dataset.
+D. Se asigna un valor entero correlativo a cada valor encontrado.";"B";"Este tratamiento permite asociar vectores numéricos que no presuponen relaciones entre los valores de la variable categórica, como sí ocurre con la asignación de números enteros consecutivos (índices)."
+---
+"¿Cuál de las siguientes no es una opción de configuración de CREATE MODEL para el proceso de entrenamiento en BigQuery ML?:
+A. Número máximo de iteraciones.
+B. Ratio de varianza total explicada.
+C. Tipo de modelo.
+D. Parámetros de regularización L1 y L2.";"B";"El ratio de varianza total explicada es un dato que proporciona la función ML.EVALUATE() cuando se ejecuta sobre un modelo PCA. No tiene nada que ver con las opciones de configuración de CREATE MODEL."
+---
+"¿Cuál es la característica diferencial de la técnica bayesian optimization?:
+A. Que prueba exhaustivamente todas las combinaciones posibles.
+B. Que es capaz de seleccionar las combinaciones más prometedoras para maximizar el rendimiento.
+C. Que elige aleatoriamente qué combinaciones probar para hacer que el proceso de optimización sea computacionalmente viable.
+D. Que elige qué combinaciones probar a partir de reglas que especifica el usuario.";"B";"El uso de estadística bayesiana permite aprender de las combinaciones ya probadas para determinar qué dirección seguir, es decir, qué combinaciones deberían probarse a continuación para obtener los mejores resultados."
+---
+"¿Cuál es el espacio de soluciones de neural architecture search?:
+A. Los posibles valores de hiperparámetros de la red neuronal.
+B. Los posibles diseños de arquitectura de la red neuronal.
+C. Los valores de parámetros que se ajustarán en el proceso de entrenamiento de la red neuronal.
+D. Ninguno de los anteriores.";"B";"El NAS es un sistema que genera arquitecturas de redes neuronales y prueba cuál de ellas ofrece mejores resultados para una tarea dada. Por contra, los valores de hiperparámetros se determinan en el proceso de ajuste o tuning."
+---
+"¿En qué se diferencian los métodos de integrated gradients y XRAI para determinar las regiones de una imagen que más contribuyen al resultado de la clasificación?:
+A. Integrated gradients identifica áreas de la imagen XRAI identifica píxeles.
+B. Integrated gradients identifica píxeles XRAI identifica áreas de la imagen.
+C. XRAI es una variante de integrated gradients que se ejecuta más rápido.
+D. Integrated gradients es una versión mejorada de XRAI.";"B";"XRAI es una variante de integrated gradients que produce resultados más fácilmente interpretables, porque en lugar de señalar píxeles aislados en una imagen, determina las regiones de una imagen que más contribuyen al resultado de la clasificación."

@@ -1,0 +1,56 @@
+question;answer;explanation
+---
+"Marca todas las respuestas correctas acerca de la inicialización de parámetros en una red neuronal:
+A. La inicialización de biases no es muy crítica una vez se ha definido una correcta inicialización de weights.
+B. La inicialización de parámetros no es importante, cualquier conjunto de valores iniciales permitirá a la red converger correctamente.
+C. No es buena idea inicializar todos los pesos con el mismo valor.
+D. No es buena idea inicializar todos los biases con el mismo valor.";"A,C";""
+---
+"Si inicializamos todos los pesos con valores muy grandes en valor absoluto (marca la respuesta correcta):
+A. El uso de unidades sigmoid y tanh no sería una buena idea, ya que se encontrarán casi todo el tiempo en régimen de saturación.
+B. En general no es un problema y es normal hacer esto al entrenar redes neuronales.
+C. El entrenamiento de la red irá más rápido ya que los gradientes tendrán un valor mayor.";"A";""
+---
+"Batch normalization (marca todas las respuestas correctas):
+A. Es una técnica que mejora el entrenamiento de redes neuronales.
+B. Mejora los problemas que la inicialización de parámetros crea sobre las redes neuronales profundas.
+C. Obtiene medias y varianzas a nivel de batch.
+D. Funciona de manera distinta en training time (entrenamiento) que en test time (inferencia), ya que en el segundo podríamos querer evaluar inputs independientes sin formar parte de una batch.";"A,B,C,D";""
+---
+"Marca todas las respuestas correctas sobre SGD + Momentum:
+A. SGD + Momentum es diferente a SGD porque no actúa por batches, sino utilizando todos los datos de entrenamiento por cada update.
+B. El vector velocidad con Momentum ayuda a escapar de mínimos locales y puntos de silla.
+C. El vector velocidad contiene información sobre los gradientes de todos los pasos anteriores.
+D. Rho = 0 en el vector de velocidad hace que SGD + Momentum sea idéntico a Sgd";"B,C,D";""
+---
+"En AdaGrad, los gradientes al cuadrado de los parámetros (marca la respuesta correcta):
+A. Se calculan de nuevo en cada paso y, una vez usados, son desechados.
+B. Han de ser guardados, ya que el valor en cada iteración depende del valor anterior. Por tanto, el número de elementos a guardar se duplica (por un lado parámetros, por otro lado suma de gradientes).
+C. No han de ser guardados, se recalcula toda la suma desde el principio en cada iteración.";"B";""
+---
+"Marca todas las respuestas correctas acerca de learning rate:
+A. Una learning rate demasiado grande hace que el coste o loss diverja.
+B. En learning rate decay, la learning rate va aumentando poco a poco para agilizar el entrenamiento.
+C. AdaGrad, RMSProp y Adam utilizan learning rate como hiperparámetro.
+D. Es más seguro utilizar un valor pequeño para asegurar la convergencia. Sin embargo, esto podría hacer que el entrenamiento sea demasiado lento.";"A,C,D";""
+---
+"¿Cuál de las siguientes es una razón por la que las unidades ReLU tienen menos tendencia a «morir» cuando se aplican learning rates pequeñas?:
+A. Los learning rates grandes suelen estar asociados con valores de input negativos. En el caso de la ReLU, esto nos lleva a caer en el régimen negativo con valor de salida 0.
+B. El régimen positivo de la unidad ReLU se caracteriza por tener derivada 1. Esto hace que los gradientes «backpropagados» se magnifiquen con valores grandes de learning rate, llevando a la unidad a la «muerte».
+C. Un valor de learning rate grande lleva a cambios mayores en los parámetros de la red. Esto implica que los pesos pueden cambiar mucho durante SGD e impedir que la unidad ReLU pueda volver a salir de su régimen negativo.";"C";""
+---
+"Marca todas la respuesta correcta acerca del overfitting:
+A. Es un problema por el cual los algoritmos de machine learning no se comportan correctamente en datos no vistos durante el entrenamiento.
+B. Es un problema por el que los algoritmos de machine learning pierden capacidad de generalización- no son capaces de generalizar a datos no vistos durante el entrenamiento.
+C. Puede ser combatido utilizando varias técnicas a la vez, tales como dropout y regularización L2.
+D. No es común en redes neuronales profundas.";"A,B,C";""
+---
+"¿Qué ocurre con los gradientes en las neuronas desactivadas por dropout? (Marca la respuesta correcta):
+A. El proceso de backpropagation es el mismo, anular la salida no implica cambios en la propagación del gradiente.
+B. Los gradientes transmitidos hacia atrás multiplican por p la probabilidad de que la neurona se desactive.
+C. Los gradientes transmitidos hacia atrás son 0 en estas neuronas, ya que la función de salida de la neurona es constante y vale 0.";"C";""
+---
+"Early Stopping (marca las respuestas correctas):
+A. No impone explícitamente restricciones a la capacidad de representación del modelo. Simplemente marca un punto donde se deja de entrenar.
+B. Puede utilizarse en conjunción con otras técnicas.
+C. Garantiza que el test error es menor o igual que el training error.";"A,B";""

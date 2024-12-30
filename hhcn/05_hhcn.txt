@@ -1,0 +1,61 @@
+question;answer;explanation
+---
+"¿Cuáles son los beneficios para la IA generativa de una arquitectura nativa de nube?:
+A. Clasificación de textos, chatbots, generación de imágenes y traducción.
+B. Capacidad de computación, agilidad, innovación e interoperabilidad.
+C. Menor coste de adquisición de infraestructura y más potencia de computación.
+D. Capacidad de computación, agilidad e innovación.";"B";"Estas características permiten expandir la IA generativa, facilitadas por la infraestructura en la nube."
+---
+"¿Cuál es la diferencia entre los modelos de OpenAI Codex y DALL-E?:
+A. El primero se utiliza para generar imágenes a partir de una descripción, el segundo para generar código fuente a partir de lenguaje natural.
+B. El primero se utiliza para generar código fuente a partir de lenguaje natural, el segundo para generar imágenes a partir de una descripción.
+C. Ambos se utilizan para implementar chatbots avanzados.
+D. Son diferentes versiones del mismo modelo que procesa lenguaje natural.";"B";"Codex genera código desde lenguaje natural, mientras que DALL-E genera imágenes desde descripciones."
+---
+"¿Qué es un embedding y qué aplicaciones tiene?:
+A. Es una representación matemática de una palabra o texto. Se utiliza para agilizar las respuestas de un buscador, dado que es más rápido procesar números que texto.
+B. Es una representación matemática de una palabra o texto. Se utiliza para detectar textos similares, búsqueda de información sobre un tema o generación de código fuente a partir de lenguaje natural.
+C. Es el valor numérico asociado al significado de una palabra o texto. Se utiliza para detectar textos similares, búsqueda de información sobre un tema o generación de código fuente a partir de lenguaje natural.
+D. Es una forma de codificación de palabras y texto que permite almacenar información sobre un tema en menos espacio que su equivalente en texto.";"B";"Los embeddings permiten comparar palabras o textos de forma eficiente mediante su representación numérica."
+---
+"¿Para qué se utiliza un Playground en Azure OpenAI Studio?:
+A. Es el entorno utilizado por usuarios avanzados para desarrollar soluciones de IA generativa en Azure.
+B. Para realizar experimentos y pruebas en el proceso de incorporar IA generativa a una aplicación, a través de una interfaz gráfica.
+C. Es un simulador de IA generativa que sirve para aprender los conceptos esenciales, pero no permite construir soluciones reales.
+D. Para realizar experimentos y pruebas en el proceso de incorporar IA generativa a una aplicación, mediante código fuente.";"B";"El Playground permite probar y ajustar modelos de IA generativa en Azure mediante una interfaz gráfica."
+---
+"¿Qué significado tiene el valor de temperatura en un LLM?:
+A. Representa el número de tókenes utilizado en la respuesta.
+B. Representa el grado de determinismo o creatividad en la respuesta a un prompt.
+C. Representa en qué medida aparece en la respuesta contenido violento o inadecuado.
+D. Representa el tiempo invertido por el chatbot en generar la respuesta.";"B";"La temperatura ajusta la aleatoriedad de las respuestas del modelo, afectando su creatividad o precisión."
+---
+"¿Qué procedimiento se debe seguir para desplegar en una aplicación web un chatbot basado en IA generativa construido en un playground?:
+A. Escribir un template de despliegue basado en Azure Resource Manager, y utilizar un agente de despliegue para alojarlo en una URL.
+B. Pulsar el botón «Deploy to» en Azure OpenAI Studio, y proporcionar un nombre y perfil de hardware para la aplicación.
+C. El procedimiento de despliegue implica utilizar el SDK de Python para dar las órdenes de despliegue a través de la API de Azure.
+D. Pulsar el botón «Deploy to» en Azure OpenAI Studio y especificar un JSON con las características del despliegue.";"B";"Desplegar es fácil en Azure OpenAI Studio mediante el botón 'Deploy to', configurando nombre y hardware."
+---
+"¿En qué consiste el fine-tuning de un modelo?:
+A. El proceso de fine-tuning se utiliza para incorporar bases de conocimiento nuevas sobre temáticas especializadas, codificando reglas que determinan en qué casos se debe utilizar el nuevo contenido.
+B. El proceso de fine-tuning se utiliza para incorporar bases de conocimiento nuevas sobre temáticas especializadas, realizando un reentrenamiento de uno de los modelos proporcionados por OpenAI.
+C. El proceso de fine-tuning se utiliza para corregir respuestas inapropiadas a determinados prompts.
+D. El proceso de fine-tuning se utiliza para reducir la complejidad de las respuestas y las posibles alucinaciones del chatbot.";"B";"De esta forma es posible personalizar cualquiera de los modelos preentrenados para adaptarse a escenarios no contemplados en el entrenamiento original o aquellos que se basan en información privada."
+---
+"¿Cuál de las siguientes es una característica de LangChain?:
+A. La posibilidad de actuar como vector store a partir de una base de datos PostgreSQL.
+B. La disponibilidad de una interfaz común para trabajar con cualquiera de los principales LLMs.
+C. La posibilidad de escribir código fuente en Python, C#, Java y GoLang.
+D. La disponibilidad de un entorno de dashboarding para medir la evolución de la precisión en las respuestas de los modelos LLM utilizados.";"B";"LangChain facilita trabajar con múltiples modelos de lenguaje a través de una interfaz unificada."
+---
+"¿A qué se refiere el término data augmented generation (DAG)?:
+A. Se refiere a los mecanismos que permiten realizar actividades de orquestación entre diferentes LLMs.
+B. Se refiere a los mecanismos que permiten incorporar información de fuentes externas en la respuesta.
+C. Se refiere a los mecanismos que permiten generar embeddings para almacenarlos en un vector store.
+D. Se refiere a la posibilidad de mejorar un modelo, incorporando nuevos ejemplos.";"B";"DAG permite añadir información actualizada en las respuestas del modelo, superando las limitaciones de su entrenamiento original."
+---
+"¿En qué se diferencia un agent de un chain de LangChain?:
+A. No existe ninguna diferencia, son términos intercambiables.
+B. Los agentes son capaces de ejecutar diferentes secuencias de acciones en función de los resultados obtenidos en acciones previas, mientras que las chains ejecutan una secuencia estática de acciones.
+C. Los agentes ejecutan una secuencia estática de acciones, mientras que las chains son capaces de ejecutar diferentes secuencias de acciones en función de los resultados obtenidos en acciones previas.
+D. Una chain es una versión especializada de un agente para un determinado LLM.";"B";"Los agentes pueden ajustar su secuencia de acciones dinámicamente, mientras que las chains siguen un flujo fijo."

@@ -1,0 +1,63 @@
+question;answer;explanation
+---
+"¿Cuáles son los dos aspectos clave del paradigma MLOps?:
+A. Uso de MLflow y registro de modelos.
+B. Automatización de tareas repetitivas mediante pipelines y registro de experimentos.
+C. Registro de experimentos y ejecuciones.
+D. Operacionalización de modelos y uso de servicios cloud.";"B";"El uso de pipelines agiliza los procesos de MLOps y además reduce errores derivados de ejecutar tareas repetitivas de forma manual. El registro de experimentos permite encontrar más fácilmente el modelo óptimo."
+---
+"MLflow es una plataforma MLOps open-source que puede desplegarse:
+A. Solo en un data center, pero no en un proveedor de nube. Para implantar MLOps en nube, es necesario utilizar las plataformas proporcionadas por el proveedor.
+B. En un data center o en cualquier proveedor de nube.
+C. Solo en un entorno de computación en la nube.
+D. En un data center o en AWS.";"B";"En efecto, MLflow puede desplegarse de forma local o en la nube. En el caso de AWS, existe una integración nativa, pero también puede funcionar correctamente en cualquier otro proveedor de nube que disponga de instancias de computación."
+---
+"Las principales funciones de MLflow son:
+A. Crear experimentos, registrar ejecuciones, entrenar modelos y desplegar modelos en endpoints para inferencia.
+B. Crear experimentos, registrar ejecuciones, comparar métricas de rendimiento, registrar modelos y desplegar modelos.
+C. Crear experimentos, registrar ejecuciones, entrenar modelos y validar modelos, comparando las métricas de rendimiento entre ellos.
+D. Crear experimentos y desplegar modelos.";"B";"Estas funciones garantizan que se dispone de trazas suficientes acerca de todo el proceso de creación de modelos. Además, la función de despliegue agiliza la puesta en producción de estos modelos."
+---
+"La función mlflow.start_run() de MLflow se utiliza para:
+A. Declarar un nuevo experimento.
+B. Señalizar el inicio de una ejecución, de manera que todas las trazas registradas queden asociadas a este run.
+C. Crear un nuevo experimento, si aún no existe.
+D. Señalizar el inicio de un proceso de registro de modelos.";"B";"La llamada a esta función provoca que las trazas que se registren a continuación quedarán asociadas a una nueva ejecución ( run )."
+---
+"La función log_artifact() de MLFlow puede utilizarse para:
+A. Registrar métricas de rendimiento con valores numéricos.
+B. Registrar imágenes generadas en el proceso de validación.
+C. Registrar modelos en formato binario.
+D. No es una función de MLflow.";"B";"En efecto, la llamada a esta función puede incluir como parámetro la ruta a un fichero de imagen previamente generado para que se incorpore al conjunto de trazas de la ejecución."
+---
+"Para desplegar un servidor de inferencias en MLflow, es necesario especificar:
+A. El identificador del experimento.
+B. El identificador del run y el nombre del modelo.
+C. El nombre del modelo.
+D. El identificador del run.";"B";"Cada versión de un modelo está asociada a un run y un nombre, que se asigna en la llamada a log_model()."
+---
+"Para simplificar el despliegue de una arquitectura MLOps en SageMaker, se utiliza:
+A. Fargate.
+B. Cloud Development Kits.
+C. S3.
+D. RDS.";"B";"Los CDKs son paquetes de iniciación o quickstarts, que permiten a los ingenieros de nube desplegar rápidamente una arquitectura de servicios."
+---
+"La función que permite registrar trazas con MLflow en SageMaker desde el código fuente es:
+A. mlflow.start_run().
+B. mlflow.set_tracking_uri().
+C. mlflow.load_model().
+D. mlflow.infer_signature().";"B";"Esta es la función que permite especificar el destino de las trazas que se generen a continuación. Este es el único cambio en el código fuente para que MLflow funcione con AWS SageMaker.
+mlflow.set_tracking_uri() configura la URL donde se almacenan las trazas de MLflow, ya sea local o en SageMaker."
+---
+"La plataforma de Azure DevOps puede utilizarse para desplegar la infraestructura necesaria a través de:
+A. Una service connection y el servicio Azure Resource Manager (ARM).
+B. Un service principal, una service connection y el servicio Azure Resource Manager (ARM).
+C. Un service principal y el servicio Azure Resource Manager (ARM).
+D. Un service principal, una service connection y el servicio RDS.";"B";"El service principal se encarga de la autenticación, la service connection proporciona la conexión a Azure y el ARM se encarga de la provisión de los recursos de infraestructura necesarios."
+---
+"En la arquitectura MLOps de Google, Vertex Pipelines soporta de forma nativa:
+A. KubeFlow Pipelines únicamente.
+B. KubeFlow Pipelines y TensorFlow Extended.
+C. TensorFlow Extended únicamente.
+D. KubeFlow Pipelines y Keras Pipelines.";"B";"KubeFlow Pipelines se utiliza para desplegar modelos en Kubernetes, mientras que TFX proporciona una funcionalidad similar en TensorFlow.
+Vertex Pipelines soporta KubeFlow Pipelines y TensorFlow Extended, facilitando la integración con herramientas populares."

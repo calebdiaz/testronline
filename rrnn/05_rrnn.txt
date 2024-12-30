@@ -1,0 +1,66 @@
+question;answer;explanation
+---
+"Clasificar imágenes mediante el uso de redes neuronales convencionales con fully connected layers (marca la respuesta correcta):
+A. Se vuelve complicado computacionalmente al aumentar el tamaño de las imágenes.
+B. No es buena idea porque no respetamos las características espaciales de las imágenes.
+C. Es algo bastante común. Muchos problemas de computer vision se solucionan con fully connected neural networks.
+D. Es común entrelazar fully connected layers con convolutional layers.";"A";"Fully connected layers no preservan la estructura espacial de las imágenes, lo que afecta su rendimiento en tareas de clasificación de imágenes."
+---
+"Las CNN (marca todas las respuestas correctas):
+A. Empezaron a tener una gran importancia a partir de 1998.
+B. Se han convertido en una tecnología clave en problemas de visión por computador.
+C. Son utilizadas en self-driving cars para problemas como detectar peatones y otros coches a través de cámaras.
+D. Empezaron a tener una gran importancia en la década de 2010.";"B,C,D";"Las CNN se volvieron importantes en problemas de visión desde 2010 y son fundamentales en aplicaciones modernas como los vehículos autónomos."
+---
+"Cuando movemos un filtro por la imagen aplicando convoluciones (marca la respuesta correcta):
+A. Los parámetros del filtro son parámetros distintos en cada posición de la imagen sobre la que se aplica.
+B. Los parámetros del filtro son parámetros distintos en ciertas posiciones de la imagen detectadas por la red neuronal.
+C. Los parámetros de un filtro son siempre los mismos para toda la imagen.";"C";"Los filtros en convoluciones aplican los mismos parámetros en toda la imagen, permitiendo detectar patrones de manera uniforme."
+---
+"Las max pooling layers (marca la respuesta correcta):
+A. Tienen dos parámetros y dos hiperparámetros.
+B. Tienen dos hiperparámetros y no tienen parámetros.
+C. No tienen parámetros ni hiperparámetros.
+D. Tienen dos hiperparámetros y el número de parámetros de la capa depende del tamaño de la imagen.";"B";"Las max pooling layers solo tienen hiperparámetros como el tamaño y el stride, sin parámetros entrenables."
+---
+"Durante backpropagation, en la max pooling layer (marca la respuesta correcta):
+A. El gradiente no se propaga hacia atrás ya que no hay parámetros.
+B. El gradiente no se propaga hacia atrás ya que max pooling solo reduce dimensionalidad.
+C. El gradiente se propaga de igual manera para todas las inputs.
+D. El gradiente se propaga solo al valor de entrada que tenía el máximo valor durante el forward pass.";"D";"En max pooling, el gradiente se propaga únicamente al valor de entrada con el máximo valor del forward pass."
+---
+"El volumen resultante de aplicar max pooling con pools de 2x2 y stride 2 sobre un volumen de tamaño 24x24x24 es (marca la respuesta correcta):
+A. 12x12x24.
+B. 12x12x12.
+C. 24x24x12.
+D. 24x24x24.
+E. 24x12x12.
+F. 12x24x12.";"A";"Aplicar max pooling reduce cada dimensión espacial a la mitad, resultando en un volumen de 12x12x24."
+---
+"El volumen resultante de aplicar una capa convolucional con 16 filtros de tamaño 2x2 y stride 1 sobre un volumen de tamaño 5x5x4 es (marca la respuesta correcta):
+A. 5x5x4.
+B. 3x3x16.
+C. 4x4x16.
+D. 3x3x4.
+E. 4x4x4.
+F. Ninguna de las anteriores.";"C";"La convolución con 16 filtros de 2x2 y stride 1 sobre un volumen 5x5x4 genera un volumen de salida de 4x4x16."
+---
+"El volumen resultante de aplicar una capa convolucional con 16 filtros de tamaño 2x2 y stride 2 sobre un volumen de tamaño 5x5x4 es (marca la respuesta correcta):
+A. 2,5x2,5x16.
+B. 3x3x16.
+C. 4x4x16.
+D. 3x3x4.
+E. 4x4x4.
+F. Ninguna de las anteriores, las dimensiones no tienen sentido.";"F";""
+---
+"¿Cuál de las siguientes son transformaciones válidas para data augmentation? (Marca todas las respuestas correctas):
+A. Rotar la imagen.
+B. Obtener el recorte de una parte de la imagen. Por ejemplo en una imagen con un gato, obtener la cara del gato.
+C. Pasar una imagen a blanco y negro.
+D. Utilizar un objeto similar en la misma pose. Por ejemplo, en una imagen de un gato, cambiar al gato por un perro en el mismo sitio.
+E. Colorear la imagen con nuevos colores aleatorios.";"A,B,C";"Rotar, recortar y cambiar de color son técnicas válidas de aumento de datos para mejorar la robustez del modelo."
+---
+"Transfer learning (marca todas las respuestas correctas):
+A. Es apropiado cuando no disponemos de suficientes datos y tenemos un problema similar al de datasets como ImageNet.
+B. Permite entrenar CNN complejas con relativamente pocos datos.
+C. Aprovecha las representaciones obtenidas en otro problema rico en datos.";"A,B,C";"El transfer learning reutiliza el conocimiento de modelos previamente entrenados en datasets grandes, optimizando así el entrenamiento en problemas similares con pocos datos."

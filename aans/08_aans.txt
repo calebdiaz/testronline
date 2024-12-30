@@ -1,0 +1,69 @@
+question;answer;explanation
+---
+"¿Qué es una anomalía en el contexto del análisis de datos?:
+A. Un valor que es extremadamente común en el conjunto de datos.
+B. Un valor que se ajusta perfectamente al modelo de datos.
+C. Un valor que se desvía significativamente del comportamiento esperado del conjunto de datos.
+D. Un valor que se encuentra dentro del rango intercuartílico.";"C";"Es un valor que no se comporta como se comportan normalmente los datos. Una anomalía es un valor que se aleja significativamente del comportamiento esperado en los datos, indicando posibles errores o eventos inusuales."
+---
+"¿Cuál de los siguientes métodos se utiliza comúnmente para detectar anomalías en series temporales?:
+A. K-Means clustering.
+B. PCA.
+C. Media móvil.
+D. Árboles de decisión.";"C";"Ayuda a identificar tenencias y detectar anomalías que se desvían de la media.
+La media móvil es una técnica común en series temporales para detectar anomalías comparando los valores actuales con un promedio móvil."
+---
+"¿Qué mide el Z-Score en un conjunto de datos?:
+A. La distancia de un punto de datos al centroide más cercano.
+B. El número de desviaciones estándar que un punto de datos se aleja de la media del conjunto de datos.
+C. La densidad local de un punto de datos en comparación con sus vecinos más cercanos.
+D. La correlación entre dos variables en un conjunto de datos.";"B";"El valor Z-Score es una unidad de distancia que indica la posición que ocupa la observación en la distribución. El número de desviaciones estándar ayuda a detectar datos anómalos.
+El Z-Score mide cuántas desviaciones estándar un punto está alejado de la media, ayudando a identificar valores extremos."
+---
+"¿Cuál de los siguientes es un algoritmo basado en densidad para la detección de anomalías?:
+A. K-Nearest Neighbors (k-NN).
+B. Support Vector Machines (SVM).
+C. DBSCAN.
+D. Árboles de regresión.";"C";"Algoritmo basado en densidad que puede identificar puntos de datos aislados o ruido como anomalías.
+DBSCAN es un algoritmo basado en densidad que detecta clústeres y marca puntos aislados como anomalías."
+---
+"¿Cuál es una desventaja común de los algoritmos de detección de anomalías?:
+A. No pueden manejar grandes volúmenes de datos.
+B. Requieren siempre datos etiquetados.
+C. Pueden generar falsos positivos.
+D. No son compatibles con técnicas de clustering.";"C";"Puntos de datos normales son identificados incorrectamente como anomalías.
+Los algoritmos de detección de anomalías pueden identificar erróneamente valores normales como anómalos, generando falsos positivos."
+---
+"¿Qué técnica estadística se basa en suponer que los datos siguen una distribución normal?:
+A. Método del percentil.
+B. DBSCAN.
+C. Z-Score.
+D. LOF (Local Outlier Factor).";"C";"Se basa en la suposición de que los datos siguen una distribución normal y mide cuántas desviaciones estándar un punto de datos se aleja de la media.
+El Z-Score asume una distribución normal para calcular cuántas desviaciones estándar se alejan los valores de la media."
+---
+"En el contexto de detección de anomalías, ¿qué es un 'outlier'?:
+A. Un valor promedio en el conjunto de datos.
+B. Un valor que está en la mediana del conjunto de datos.
+C. Un valor que se encuentra dentro del rango intercuartílico.
+D. Un valor que se desvía significativamente del resto de los datos.";"D";"Es un valor que se desvía del resto de datos y puede ser considerado anomalía.
+Un 'outlier' es un valor que se aleja considerablemente del resto de los datos, indicando posibles anomalías o errores."
+---
+"¿Qué tipo de algoritmo de detección de anomalías utiliza tanto datos etiquetados como no etiquetados?:
+A. Algoritmos supervisados.
+B. Algoritmos no supervisados.
+C. Algoritmos semisupervisados.
+D. Algoritmos basados en reglas.";"C";"Son capaces de entrenar con los datos etiquetados y con los no etiquetados generar grupos y unir las dos técnicas.
+Los algoritmos semisupervisados combinan datos etiquetados y no etiquetados para mejorar la detección de anomalías."
+---
+"¿Cuál de los siguientes métodos es más adecuado para detectar anomalías en datos multivariados considerando la correlación entre variables?:
+A. K-Means clustering.
+B. Mahalanobis distance.
+C. Media móvil.
+D. Árboles de decisión.";"B";"La distancia de Mahalanobis es adecuada para detectar anomalías en datos multivariados, ya que considera la correlación entre variables."
+---
+"¿Cuál es una ventaja de la detección temprana de anomalías?:
+A. Reduce la necesidad de preprocesamiento de datos.
+B. Mejora la precisión de los modelos sin eliminar valores atípicos.
+C. Ayuda a identificar problemas potenciales antes de que se vuelvan críticos.
+D. Elimina la necesidad de técnicas de aprendizaje supervisado.";"C";"Identificar problemas potenciales es una oportunidad de mejora antes de que se vuelvan críticos, permitiendo tomar medidas proactivas.
+La detección temprana permite abordar problemas antes de que escalen, reduciendo riesgos y costos asociados."

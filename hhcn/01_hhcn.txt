@@ -1,0 +1,61 @@
+question;answer;explanation
+---
+"¿Por qué se considera que el enfoque de IA en la nube es ágil?:
+A. Porque los entornos de trabajo que facilita el proveedor de nube se ejecutan más rápidamente que su equivalente en un centro de datos.
+B. Porque las capacidades de IA pueden provisionarse en minutos.
+C. Porque es sencillo decidir qué proveedor de nube utilizar, independientemente del caso de uso o las necesidades específicas.
+D. Porque el acceso a los servicios de IA puede realizarse directamente desde un navegador web.";"B";"La provisión ágil de servicios de IA es fundamental para que el foco de la organización sea la resolución efectiva de problemáticas de negocio con IA, no las actividades de puesta en marcha de la infraestructura necesaria."
+---
+"¿En qué consiste la ingeniería de variables en AutoML?:
+A. En normalizar los valores de cada variable existente en el dataset.
+B. Es la única actividad para la que el AutoML no proporciona ningún tipo de automatización.
+C. En la clasificación automática de las variables existentes y la detección de su grado de importancia, así como la generación de nuevas variables.
+D. Consiste en identificar el significado de cada variable en el contexto del caso de uso que se pretende resolver con el modelo de IA.";"C";"La ingeniería de variables es una de las actividades clave en el proceso de generación de modelos eficaces. Por eso, las capacidades de automatización que provee el AutoML son muy útiles a la hora de abordarla."
+---
+"¿Qué porcentaje de entornos de nube dispone en la actualidad de servicios de IA contratados según Wiz Research?:
+A. En torno al 70 %.
+B. En torno al 99 %.
+C. En torno al 25 %.
+D. Residual, prácticamente el 0 %.";"A";"La utilización de servicios de IA en la nube era prácticamente impensable hace varios años. Sin embargo, es importante ser consciente de que en la actualidad el grado de adopción es muy alto."
+---
+"¿Cuál es uno de los beneficios de contratar servicios de IA en la nube?:
+A. Que el coste es siempre menor respecto a la provisión de capacidades de IA en un centro de datos propio.
+B. Que parte del trabajo de creación de modelos lo realizan los ingenieros del proveedor.
+C. Que en general se obtienen mejores rendimientos en los modelos proporcionados por el proveedor respecto a los que podemos crear nosotros.
+D. El consumo de modelos preentrenados por el proveedor para resolver problemáticas conocidas.";"D";"El entrenamiento de modelos con datos masivos implica un coste, esfuerzo y tiempo que muchas organizaciones no pueden asumir. Por eso, la disponibilidad de modelos preentrenados es una gran ventaja que ofrecen los proveedores de nube."
+---
+"¿Cuál es un escenario en el que se recomienda desplegar capacidades de IA on premise en lugar de hacerlo a través de un proveedor de nube?:
+A. Cuando se dispone de un presupuesto bajo.
+B. Si el grado de personalización que se requiere es elevado.
+C. Cuando solo se desea experimentar con la IA, pero aún no hay grado de madurez suficiente para llevarla a producción.
+D. Cuando no dispongamos de personal suficientemente especializado.";"B";"Muchas de las ventajas de los proveedores de nube proceden de la industrialización de sus servicios de IA. Sin embargo, esto implica que el margen de personalización es estrecho, y si nuestro caso de uso tiene particularidades muy específicas, es posible que los proveedores de nube no puedan satisfacerlas."
+---
+"¿Cuál de los siguientes es un requisito exigible al proveedor en materia de seguridad?:
+A. La separación de entornos desarrollo preproducción y producción.
+B. El uso de VPNs para acceder a los servicios de IA de forma segura.
+C. La auditoría de los datos que subimos a sus servicios para garantizar que no incumplen regulaciones de privacidad.
+D. Cumplimiento de estándares de seguridad y posesión de certificaciones relacionadas con seguridad.";"D";"El hecho de que un tercero independiente haya certificado las prácticas de seguridad del proveedor de nube es una garantía considerable de que los datos y modelos con los que trabajemos estarán suficientemente protegidos."
+---
+"¿Cuál de los siguientes es un requisito de seguridad que debe adoptar la propia organización que contrata servicios de IA en la nube?:
+A. El parcheado de los sistemas a través de los cuales se prestan los servicios de IA.
+B. La actualización de los sistemas operativos en los servidores.
+C. Establecer una correcta separación de privilegios para que cada usuario solo tenga acceso a la información y funcionalidades que necesita.
+D. La disponibilidad de mecanismos de autenticación robustos para acceder a los servicios de IA.";"C";"En el modelo de responsabilidad compartida, es el cliente quien tiene que determinar qué usuarios pueden acceder a qué datos y funcionalidades de los servicios de IA contratados."
+---
+"¿Cuál es una de las características diferenciales de los principales proveedores de nube en relación con proveedores de nicho en el ámbito de IA?:
+A. La disponibilidad de modelos preentrenados.
+B. La integración con el resto de los servicios de computación en la nube, lo que permite construir una solución de negocio con un único proveedor.
+C. Las capacidades de AutoML.
+D. Las capacidades de visión artificial.";"B";"Es más sencillo integrar los servicios de IA con otros servicios de computación en la nube del mismo proveedor, porque esta integración ya existe y solo debe parametrizarse para que empiece a funcionar."
+---
+"¿Para qué sirve la etapa de extracción de tókenes en los sistemas de procesamiento del lenguaje natural?:
+A. Para detectar de palabras, expresiones o símbolos clave que permitan esclarecer la intención del mensaje.
+B. Para revisar ortográficamente el contenido del mensaje.
+C. Para transformar el mensaje en código fuente interpretable por una máquina.
+D. Para descartar el contenido irrelevante del mensaje.";"A";"El proceso de comprensión de un mensaje escrito en lenguaje natural es complejo, por lo que debe dividirse en fases. La primera de estas fases, la extracción de tókenes, es la clave para tener una primera visión de la intención de dicho mensaje."
+---
+"¿En qué consiste la minimización de datos en relación con la privacidad?:
+A. Consiste en utilizar el menor volumen de datos posible para reducir el impacto de una brecha que afecte a la privacidad.
+B. Consiste en reducir el rango de las variables numéricas para evitar cifras elevadas que pueden interferir con los algoritmos de IA utilizados.
+C. Consiste en comprimir los datos antes de enviarlos al servicio de IA.
+D. Consiste en utilizar únicamente variables relevantes en el proceso de entrenamiento, evitando aquellas que puedan generar sesgos con perjuicio para las personas.";"D";"Incorporar variables irrelevantes implica un esfuerzo y coste adicional, que además pueden desencadenar incumplimientos regulatorios o generación de predicciones que perjudican a un colectivo de personas."

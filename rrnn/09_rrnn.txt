@@ -1,0 +1,60 @@
+question;answer;explanation
+---
+"Las GPU (marca todas las respuestas correctas):
+A. Están optimizadas para realizar operaciones gráficas, por eso son utilizadas solo con CNN.
+B. Están optimizadas para realizar ciertas operaciones con números de coma flotante, Estas operaciones pueden ser utilizadas tanto para gráficos como para computación numérica.
+C. Han permitido disminuir el tiempo de entrenamiento de las redes profundas en gran medida.";"B,C";"Las GPU son ideales para operaciones de coma flotante y han acelerado significativamente el entrenamiento de redes profundas."
+---
+"¿Cuáles son las diferencias entre una CPU y una GPU? (Marca todas las respuestas correctas):
+A. Las GPU tienen un número mucho mayor de cores.
+B. Las GPU son un tipo especial de memoria inteligente, no tienen procesador.
+C. Las GPU tienen memoria RAM propia, mientras que las CPU utilizan la memoria del sistema.
+D. Las GPU utilizan la memoria RAM del sistema, mientras que las CPU tienen una memoria propia e independiente.
+E. Las GPU están optimizadas para grandes anchos de banda de memoria, mientras que las CPU lo están para conseguir latencias bajas al leer de memoria.";"A,C,E";"Las GPUs tienen muchos más cores, usan memoria propia y se optimizan para anchos de banda grandes."
+---
+"¿Qué elementos se necesitan guardar en la memoria de una GPU? (marca la respuesta correcta):
+A. Todos los datos de entrenamiento.
+B. Todos los datos de test.
+C. Los parámetros del modelo.";"C";"En la memoria de la GPU se guardan los parámetros del modelo para realizar los cálculos necesarios."
+---
+"En una multiplicación de matrices con GPU (marca la respuesta correcta):
+A. La GPU lee las matrices a multiplicar de memoria y utiliza sus múltiples cores para obtener los valores resultantes de manera paralela, calculando en cada core un producto escalar.
+B. La CPU y la GPU se coordinan, leen las matrices a multiplicar de memoria y suman sus cores para obtener los valores resultantes de manera paralela, calculando en cada core un producto escalar.
+C. Ninguna de las anteriores.";"A";"Las GPUs aprovechan sus múltiples cores para realizar cálculos en paralelo de manera eficiente."
+---
+"cuDNN (marca todas las respuestas correctas):
+A. Es una librería C genérica para operaciones en paralelo en GPU.
+B. Define primitivas de operaciones comunes en deep learning.
+C. Paraleliza de manera eficiente en código CUDA operaciones como convoluciones y RNN.
+D. Es una librería de código abierto válido en todo tipo de arquitecturas.
+E. Es utilizada por frameworks como TensorFlow, Caffe2 y MXnet.";"B,C,E";"cuDNN está especializada en deep learning y es ampliamente utilizada por frameworks populares."
+---
+"En un sistema distribuido, la velocidad de la red de comunicaciones (marca la respuesta correcta):
+A. Es importante solo para leer los datos de entrenamiento de manera rápida, que no suelen caber en una sola máquina y se encuentran a su vez distribuidos en un sistema tipo HDFS.
+B. Es importante solo para mover los parámetros del modelo entre máquinas de manera rápida.
+C. Es fundamental tanto para leer los datos de entrenamiento como para mover los parámetros del modelo entre máquinas.
+D. No es tan importante como el conseguir el mayor número posible de máquinas.";"C";"La velocidad de la red es crucial para el entrenamiento distribuido y la sincronización de parámetros."
+---
+"Entrenar en un sistema distribuido (marca la respuesta correcta):
+A. Debería hacerse siempre que sea posible para optimizar el entrenamiento.
+B. Si utilizamos 20 máquinas, entrenaremos 20 veces más rápido.
+C. Se ha de recurrir a ello de manera lógica cuando la escala de nuestros datos y modelos nos lleva a tiempos demasiados largos de entrenamiento para nuestra aplicación particular.
+D. Ninguna de las anteriores.";"C";"El entrenamiento distribuido es útil solo cuando la escala de datos y modelos lo justifica."
+---
+"El modelo CNN de AlexNet fue originalmente entrenado usando (marca la respuesta correcta):
+A. Data paralellism.
+B. Model parallelism.
+C. Ambos, data y model parallelism.
+D. Ningún tipo de paralelización.";"B";"Model parallelism"
+---
+"En parameter averaging (marca la respuesta correcta):
+A. No es necesario esperar a todos los workers para actualizar el modelo.
+B. No es necesario tener un parameter server.
+C. Cada worker tiene una copia completa del modelo.
+D. Una vez se ha hecho la media de parámetros, cada worker recibe unos parámetros de vuelta distintos.";"C";"Cada worker tiene una copia completa del modelo en parameter averaging."
+---
+"En Downpour SGD (marca todas las respuestas correctas):
+A. No es necesario esperar a todos los workers para actualizar el modelo.
+B. No es necesario tener un parameter server.
+C. Cada worker tiene una copia completa del modelo.
+D. Cada worker recibe unos parámetros de vuelta distintos al entregar sus updates.";"A,C,D";"Downpour SGD permite actualizaciones asincrónicas, donde cada worker tiene su copia del modelo."

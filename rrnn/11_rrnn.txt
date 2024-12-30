@@ -1,0 +1,55 @@
+question;answer;explanation
+---
+"Con un modelo generativo (marca la respuesta correcta):
+A. Podemos generar nuevos ejemplos de datos a partir de lo aprendido con los datos de entrenamiento.
+B. Aprendemos la distribución de probabilidad de las labels «y» a partir de los datos «x», con lo cual podemos generar nuevos datos.
+C. Ninguna de las anteriores.";"A";"Los modelos generativos aprenden la distribución de los datos de entrenamiento y permiten generar nuevos ejemplos basados en ella."
+---
+"Las generative adversarial networks (marca la respuesta correcta):
+A. Modelan explícitamente una función de densidad.
+B. Modelan implícitamente una función de densidad.
+C. Tanto A como B son ciertas.
+D. Ni A ni B son ciertas.";"B";"Las GAN modelan implícitamente la función de densidad, sin necesidad de definirla explícitamente."
+---
+"Al entrenar una GAN (marca la respuesta correcta):
+A. Solo la generator network mejora con el tiempo. La discriminative network se mantiene constante y el proceso de entrenamiento termina cuando esta es engañada en la mayoría de ocasiones.
+B. Solo la discriminator network mejora con el tiempo. El entrenamiento termina cuando esta es capaz de distinguir entre resultados reales y falsos.
+C. Ambas, generator y discriminator network, mejoran con el tiempo. La generator aprende a obtener resultados más parecidos a los datos reales, mientras que la discriminator aprende a distinguir mejor, forzando a su vez a la otra red a mejorar con el tiempo.
+D. Ninguna de las anteriores.";"C";"En las GAN, ambas redes mejoran a medida que compiten entre sí, forzándose mutuamente a optimizar su rendimiento."
+---
+"El resultado de interés al entrenar una GAN es principalmente (marca la respuesta correcta):
+A. La generator network- es el modelo generativo resultante.
+B. La discriminator network- nos permite distinguir inputs falsos.
+C. La combinación de ambas- nos permite generar imágenes y luego comprobar si son suficientemente buenas.";"A";"La red generadora (generator network) es el resultado final que se utiliza para generar datos sintéticos."
+---
+"La salida de D(x) de la discriminator network (marca la respuesta correcta):
+A. Es una imagen u otro contenido a generar, según la aplicación.
+B. Es la probabilidad de que la imagen de entrada de la red sea verdadera o falsa.
+C. Es la probabilidad de que el generador haya generado una imagen real.
+D. Es la probabilidad de que el generador haya generado una imagen falsa.";"B";"La salida de la red discriminadora es una probabilidad que indica si un dato es real o falso."
+---
+"En una generator network, podemos generar imágenes distintas (marca la respuesta correcta):
+A. Cambiando los valores del input. Distintos valores aleatorios de entrada arrojan distintas imágenes de salida.
+B. Suministrando una imagen distinta al input de la generator network.
+C. Ninguna de las anteriores.";"A";"Los valores aleatorios de entrada permiten generar una variedad de imágenes distintas en la red generadora."
+---
+"Los sistemas actuales de inteligencia artificial (marca la respuesta correcta):
+A. Aprenden rápidamente cualquier tipo de tarea sin necesidad de una gran cantidad de datos y búsqueda de arquitecturas.
+B. Necesitan una gran cantidad de datos para aprender una tarea, pero luego son capaces de aprender tareas similares con una efectividad cercana a las de los humanos.
+C. Principalmente, son muy efectivos en tareas concretas para las que hemos encontrado buenos algoritmos y una buena fuente de datos.";"C";"La IA actual se especializa en tareas concretas con datos abundantes y algoritmos bien definidos."
+---
+"¿Cuáles de las siguientes son formas de aplicar meta-learning? (Marca las respuestas correctas):
+A. Aprender el optimizador a utilizar para una tarea.
+B. Realizar un hyperparameter tuning en nuestro modelo probando varios hiperparámetros distintos al azar.
+C. Aprender cómo generar arquitecturas de redes neuronales más efectivas para una tarea.
+D. Utilizar varios tipos de modelos distintos para ver cuál da mejores resultados en una tarea.";"A,C";"El meta-learning se centra en aprender optimizadores y arquitecturas para mejorar el rendimiento en diversas tareas."
+---
+"En AutoML (marca la respuesta correcta):
+A. Se intenta aprender un optimizador óptimo para un problema en concreto.
+B. Se intenta aprender una serie de hiperparámetros óptimos para un problema en concreto.
+C. Se intenta generar una red neuronal óptima para un problema en concreto.";"C";"AutoML busca optimizar arquitecturas completas para abordar problemas específicos."
+---
+"En few-shot learning (marca la respuesta correcta):
+A. El objetivo es que un sistema de inteligencia artificial sea capaz de generalizar conceptos y aprender a partir de pocos ejemplos.
+B. Se intenta que una máquina aprenda sin ningún dato de entrenamiento.
+C. El objetivo es conseguir mejores arquitecturas de redes neuronales.";"A";"Few-shot learning se centra en permitir que los modelos aprendan y generalicen con una cantidad limitada de ejemplos."

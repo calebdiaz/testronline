@@ -1,0 +1,57 @@
+question;answer;explanation
+---
+"Hacer batching en serving time es deseable porque:
+A. Permite ejecutar varias requests a la vez.
+B. Permite la utilización de varios servidores concurrentes para ejecutar una batch más rápido.
+C. En sistemas con un gran número de requests por segundo permite combinar varias a la vez y calcular la salida más rápido que si se fuera una a una.";"C";"El batching combina múltiples requests para optimizar los recursos computacionales, lo que resulta en una inferencia más eficiente."
+---
+"Durante el proceso de inferencia se realiza:
+A. Solo el forward pass de una red.
+B. Solo el backward pass de una red.
+C. Ambos, forward y backward passes.
+D. Ninguno de ellos.";"A";"La inferencia requiere únicamente calcular el forward pass para generar predicciones."
+---
+"Un servidor con concurrencia:
+A. Explota las capacidades multihilo de los procesadores y permite tratar varias requests a la vez.
+B. Permite reducir el tiempo de respuesta ante la presencia de solicitudes concurrentes.
+C. Permite aumentar el número total de requests por segundo que pueden ser respondidas.
+D. No aporta grandes ventajas si el servidor recibe una request cada minuto.";"A,B,C";"La concurrencia mejora la capacidad de manejar múltiples solicitudes simultáneamente y aumenta la eficiencia del sistema."
+---
+"Un balanceador de carga:
+A. Balancea el versionado de modelos en un conjunto de servidores distribuidos.
+B. Almacena requests y las envía en forma de batch a un servidor.
+C. Mejora el tiempo de respuesta mediante la aplicación de concurrencia en un servidor.
+D. Ninguna de las anteriores.";"D";"Un balanceador de carga distribuye las solicitudes entre múltiples servidores para mejorar el rendimiento y la disponibilidad."
+---
+"Un ecosistema en la nube tipo AWS o GCP:
+A. Facilita el desarrollo de soluciones informáticas permitiendo que los desarrolladores no tengan que centrarse en el código.
+B. Facilita el desarrollo de soluciones informáticas, abstrayendo a los desarrolladores de la complejidad de instalar y mantener complejos sistemas de hardware.
+C. Suele ser más caro que instalar y mantener tu propio hardware.
+D. Es un servicio de hosting de páginas web.";"B";"Las soluciones en la nube abstraen la complejidad del hardware, permitiendo a los desarrolladores centrarse en la creación de software."
+---
+"Una API de inteligencia artificial de un proveedor en la nube:
+A. Puede ser útil cuando necesitamos resolver un problema específico. Por ejemplo, queremos convertir audio a texto, para lo cual existen muchas soluciones disponibles.
+B. Es útil cuando tenemos una necesidad particular y compleja. Por ejemplo, queremos entrenar un modelo que clasifique imágenes de distintas series de televisión.
+C. Ninguna de las anteriores.";"A";"Las APIs de IA proporcionan soluciones listas para usar en problemas específicos, como conversión de audio a texto."
+---
+"¿Cuáles de los siguientes puntos pueden hacer la extracción de datos y features en un proceso complejo?:
+A. Normalmente ninguno, la extracción de datos suele ser siempre la parte más sencilla a implementar.
+B. Los datos necesarios pueden provenir de varias fuentes distintas (bases de datos, logs...).
+C. Los datos en bruto pueden necesitar ser tratados para que sean útiles para nuestro modelo.
+D. Es posible que los datos no estén siendo almacenados hasta el momento, por lo que es necesario crear esa lógica.";"B,C,D";"Las dificultades incluyen múltiples fuentes, transformación de datos y la necesidad de crear nuevas lógicas de almacenamiento."
+---
+"¿Cuáles de los siguientes casos puede dar lugar a training-serving skew?:
+A. Entrenar un modelo de reconocimiento de caras solo con personas de pelo moreno y sin gafas
+B. Olvidar que la feature «edad del usuario» no está disponible a la hora de servir, pero se ha usado para entrenar.
+C. Poner, sin querer, en producción un modelo con malas métricas de entrenamiento.
+D. Entrenar un modelo de recomendación solo con los usuarios que están suscritos al servicio.";"A,B,D";"El skew ocurre cuando las características o datos usados en el entrenamiento no están disponibles o son distintos en producción."
+---
+"Una continuous training pipeline:
+A. Permite entrenar modelos de manera óptima a partir de cualquier fuente de datos.
+B. Es un conjunto de componentes que evitan el training-serving skew y otros problemas en machine learning.
+C. Es un sistema donde un modelo de machine learning es entrenado y puesto en producción de manera automática de forma periódica.";"C";"Este enfoque asegura que los modelos estén actualizados continuamente con nuevos datos y métricas."
+---
+"Una forma de evitar el problema del comportamiento inestable del modelo en subpoblaciones sería:
+A. A la hora de evaluar el modelo entrenado, tener datos de test separados según las subpoblaciones que nos interesan más y comprobar las métricas del modelo en cada una de estas subpoblaciones.
+B. Asegurarnos de que el código que extrae los datos para el modelo es el mismo en training y serving time.
+C. Comprobar que las distribuciones de los datos a la hora de entrenar y servir son las mismas.";"A";"Evaluar el modelo en subpoblaciones específicas asegura que su rendimiento sea estable en diferentes grupos de datos."

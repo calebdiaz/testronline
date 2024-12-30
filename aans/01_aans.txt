@@ -1,0 +1,61 @@
+question;answer;explanation
+---
+"¿Qué es el aprendizaje no supervisado?:
+A. Un tipo de aprendizaje donde se proporcionan ejemplos de entrada junto con sus correspondientes salidas esperadas.
+B. Un tipo de aprendizaje donde se utilizan datos no etiquetados para descubrir patrones o estructuras intrínsecas en los datos.
+C. Un tipo de aprendizaje donde se utilizan datos etiquetados para entrenar un modelo.
+D. Ninguna de las anteriores.";"B";"El aprendizaje no supervisado se enfoca en trabajar con datos no etiquetados."
+---
+"¿Cuál de las siguientes afirmaciones es cierta sobre el aprendizaje no supervisado?:
+A. Se utiliza para predecir una variable de salida basada en variables de entrada.
+B. No requiere la existencia de variables de entrada en los datos de entrenamiento.
+C. Se utiliza para clasificar los datos en dos o más categorías predefinidas.
+D. No requiere la existencia de variables de salida en los datos de entrenamiento, trabaja creando grupos para las instancias teniendo en cuenta las características.";"D";"No se utilizan variables de salida (etiquetas). En lugar de ello, el objetivo es descubrir patrones, como la formación de grupos (clustering), basándose únicamente en las características de los datos de entrada."
+---
+"¿Cuál es uno de los principales objetivos del aprendizaje no supervisado?:
+A. Clasificación.
+B. Regresión.
+C. Exploración y descubrimiento de patrones.
+D. Ninguna de las anteriores.";"C";"Técnicas como el clustering, la reducción de dimensionalidad y el análisis de componentes principales son ejemplos de métodos utilizados en el aprendizaje no supervisado para encontrar estos patrones."
+---
+"¿Cuál de las siguientes técnicas se utiliza comúnmente en el aprendizaje no supervisado para reducir la dimensionalidad de los datos?:
+A. Clustering.
+B. Regresión lineal.
+C. Análisis de componentes principales (PCA).
+D. Vectores y valores propios.";"C";"Análisis de componentes principales (PCA) es una técnica comúnmente utilizada en el aprendizaje no supervisado para reducir la dimensionalidad."
+---
+"¿Cuál de las siguientes afirmaciones describe mejor el proceso de clustering en el aprendizaje no supervisado?:
+A. Agrupar los datos en clústeres basados en similitudes entre ellos.
+B. Dividir los datos en conjuntos de categorías predefinidas.
+C. Asignar valores a las características de entrada para predecir una variable de salida.
+D. Dividir los datos en conjuntos de igual tamaño ordenados por cualquier dimensión.";"A";"El clustering es una técnica de aprendizaje no supervisado que se utiliza para agrupar datos en clústeres o grupos basados en la similitud entre los datos."
+---
+"¿Por qué es importante el preprocesamiento de datos en el aprendizaje no supervisado?:
+A. Para eliminar datos atípicos.
+B. Para mejorar la calidad de los datos y facilitar el análisis.
+C. Para aumentar la complejidad del modelo.
+D. Ninguna de las anteriores.";"B";"Estas tareas mejoran la calidad de los datos y facilitan el análisis al hacer que los datos sean más consistentes y manejables, lo que a su vez ayuda a los algoritmos a descubrir patrones más precisos y útiles."
+---
+"¿Qué tipo de datos se utilizan comúnmente en el aprendizaje no supervisado?:
+A. Datos no estructurados.
+B. Datos categóricos.
+C. Datos numéricos y categóricos.
+D. Datos estructurados y no estructurados.";"C";"Estos tipos de datos son adecuados para los diversos algoritmos de aprendizaje no supervisado, como el clustering y la reducción de dimensionalidad."
+---
+"¿Qué técnica se utiliza para convertir variables categóricas en una representación numérica en el aprendizaje no supervisado?:
+A. Clustering.
+B. Transformación de datos.
+C. Técnicas de visualización.
+D. Encoding de datos categóricos.";"D";"Técnicas de encoding incluyen one-hot encoding y label encoding, que transforman datos categóricos para que puedan ser utilizados por algoritmos de aprendizaje automático."
+---
+"¿Cuál es uno de los retos del aprendizaje no supervisado?:
+A. La necesidad de etiquetas para cada ejemplo de entrenamiento.
+B. La interpretación de los resultados obtenidos.
+C. La falta de algoritmos disponibles.
+D. El manejo de la maldición de la dimensionalidad.";"D";"A medida que aumenta el número de características (dimensiones) en los datos, las distancias entre los puntos de datos se vuelven menos significativas y el volumen del espacio de características crece exponencialmente."
+---
+"¿Cuál es uno de los beneficios del aprendizaje no supervisado?:
+A. La capacidad de predecir valores de salida precisos.
+B. La capacidad de descubrir patrones y estructuras ocultas en los datos.
+C. La capacidad de entrenar modelos con menor cantidad de datos.
+D. Ninguna de las anteriores.";"B";"Esto permite una exploración más profunda de los datos sin la necesidad de etiquetas, facilitando la identificación de grupos."

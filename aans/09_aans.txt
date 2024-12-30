@@ -1,0 +1,69 @@
+question;answer;explanation
+---
+"¿Qué es un agente en el contexto del aprendizaje por refuerzo?:
+A. Un algoritmo que siempre sigue instrucciones predefinidas.
+B. Un programa que interactúa con el entorno y aprende de sus acciones.
+C. Un dispositivo de hardware que ejecuta comandos.
+D. Un conjunto de datos utilizado para entrenar modelos de aprendizaje automáticos.";"B";"Interactúa con su entorno, percibe las consecuencias de sus acciones y ajusta su comportamiento para maximizar las recompensas a lo largo del tiempo.
+Un agente es un programa que interactúa con el entorno, tomando acciones y aprendiendo de las recompensas o retroalimentación obtenidas."
+---
+"¿Cuál de las siguientes características no es propia de un agente inteligente?:
+A. Autonomía.
+B. Percepción y acción.
+C. Almacenamiento de datos en la nube.
+D. Adaptabilidad.";"C";"No es una característica intrínseca de un agente inteligente; las características clave son autonomía, percepción y acción, y adaptabilidad.
+El almacenamiento en la nube no es una característica necesaria para que un agente sea considerado inteligente."
+---
+"¿Qué representan los estados (S) en un proceso de decisión de Markov (MDP)?:
+A. Todas las posibles acciones que un agente puede realizar.
+B. Todos los posibles resultados de una acción.
+C. Todas las posibles situaciones en las que puede encontrarse el agente.
+D. Las recompensas acumuladas en el tiempo.";"C";"Los estados representan todas las posibles situaciones o configuraciones en las que puede encontrarse el agente en su entorno."
+---
+"¿Cuál es el propósito principal de la ecuación de Bellman en aprendizaje por refuerzo?:
+A. Predecir las acciones futuras de otros agentes.
+B. Descomponer problemas de optimización a largo plazo en subproblemas manejables.
+C. Almacenar datos históricos de las recompensas.
+D. Aumentar la velocidad de procesamiento de los algoritmos.";"B";"Al descomponer los problemas complejos en subproblemas más pequeños y manejables, las ecuaciones de Bellman facilitan la solución al problema.
+La ecuación de Bellman permite descomponer un problema de optimización en subproblemas más simples, facilitando la resolución iterativa."
+---
+"¿Qué se entiende por política (π) en el contexto de un MDP?:
+A. Una medida de la recompensa inmediata de una acción.
+B. Una estrategia que el agente sigue para decidir qué acción tomar en cada estado.
+C. La probabilidad de transición entre estados.
+D. El valor esperado de todas las recompensas futuras.";"B";"Regla que guía al agente en la toma de decisiones sobre qué acción realizar en cada estado para maximizar la recompensa total."
+---
+"¿Qué tipo de agente utiliza un modelo interno del entorno para tomar decisiones más informadas?:
+A. Agente reactivo simple.
+B. Agente basado en objetivos.
+C. Agente basado en modelo.
+D. Agente basado en utilidad.";"C";"Mantiene un modelo interno del entorno que le permite tomar decisiones más informadas al anticipar las consecuencias de sus acciones.
+Un agente basado en modelo utiliza una representación interna del entorno para prever las consecuencias de sus acciones y tomar decisiones más informadas."
+---
+"¿Cuál es el factor de descuento (γ) en el contexto de la utilidad descontada?:
+A. La tasa a la que se actualizan los estados.
+B. La probabilidad de transitar a un nuevo estado.
+C. La frecuencia con la que se recompensan las acciones.
+D. Un valor que refleja la importancia relativa de las recompensas futuras frente a las inmediatas.";"D";"Es un valor entre 0 y 1 que refleja cuánto se valoran las recompensas futuras comparadas con las inmediatas, influyendo en la suma total de las utilidades descontadas.
+El factor de descuento (γ) determina cuánta importancia se da a las recompensas futuras en comparación con las inmediatas."
+---
+"¿En el aprendizaje por refuerzo, qué función cumple una recompensa (R)?:
+A. Determina la probabilidad de una transición entre estados.
+B. Proporciona una medida inmediata de la bondad de una acción tomada.
+C. Define la política que un agente debe seguir.
+D. Establece el conjunto de posibles estados.";"B";"Ayudando al agente a aprender qué acciones son más beneficiosas en diferentes situaciones.
+Las recompensas son señales inmediatas que indican al agente qué tan buena fue la acción tomada en un estado dado."
+---
+"¿Qué significa que una política es estacionaria?:
+A. Las decisiones del agente dependen del tiempo.
+B. La política no se puede modificar una vez establecida.
+C. Las decisiones del agente dependen únicamente del estado actual, no del tiempo.
+D. La política cambia en cada iteración.";"C";"Las decisiones del agente dependen únicamente del estado actual y no varían con el tiempo.
+Una política estacionaria depende solo del estado actual y no varía con el tiempo, lo que simplifica el aprendizaje."
+---
+"¿Cuál de las siguientes es una aplicación del aprendizaje por refuerzo en la vida real?:
+A. Reconocimiento facial.
+B. Optimización de motores de búsqueda.
+C. Conducción autónoma.
+D. Clasificación de correos electrónicos.";"C";"Para aprender y optimizar políticas de conducción que maximizan la seguridad y eficiencia en diversas condiciones.
+El aprendizaje por refuerzo se utiliza en tareas complejas como la conducción autónoma, donde el agente debe aprender a interactuar con un entorno dinámico."

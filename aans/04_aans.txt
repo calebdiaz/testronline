@@ -1,0 +1,61 @@
+question;answer;explanation
+---
+"¿Qué método de clustering jerárquico comienza con todos los puntos en un solo clúster y los divide recursivamente en clústeres más pequeños?:
+A. Clustering aglomerativo.
+B. Clustering divisivo.
+C. K-Means.
+D. DBSCAN.";"B";"El clustering divisivo (o top-down) comienza con todos los puntos en un solo clúster y los divide recursivamente en clústeres más pequeños."
+---
+"¿Cuál de las siguientes técnicas de enlace calcula la distancia entre dos clústeres basándose en la distancia mínima entre puntos?:
+A. Complete linkage.
+B. Average linkage.
+C. Single linkage.
+D. Centroid linkage.";"C";"El single linkage calcula la distancia entre dos clústeres como la distancia mínima entre puntos de los dos clústeres."
+---
+"¿Qué representa un dendrograma en el contexto del clustering jerárquico?:
+A. Un gráfico de dispersión.
+B. Una jerarquía de clústeres.
+C. Un histograma de frecuencias.
+D. Un gráfico de líneas.";"B";"Un dendrograma es un gráfico en forma de árbol que representa la jerarquía de clústeres creada durante el clustering jerárquico."
+---
+"¿Cuál es la principal diferencia entre el clustering jerárquico aglomerativo y el divisivo?:
+A. El aglomerativo es más rápido que el divisivo.
+B. El aglomerativo requiere el número de clústeres previamente establecidos.
+C. El divisivo usa técnicas de enlace, mientras que el aglomerativo no.
+D. El aglomerativo fusiona los clústeres, mientras que el divisivo los divide.";"D";"El clustering aglomerativo (bottom-up) fusiona clústeres pequeños en clústeres más grandes, mientras que el divisivo (top-down) divide un clúster grande en clústeres más pequeños."
+---
+"¿Cuál de las siguientes técnicas de enlace calcula la distancia entre dos clústeres basándose en la distancia máxima de puntos?:
+A. Complete linkage.
+B. Average linkage.
+C. Single linkage.
+D. Método Ward.";"A";"El complete linkage calcula la distancia entre los dos puntos más alejados de los clústeres."
+---
+"¿Qué tipos de datos son más adecuados para el clustering jerárquico?:
+A. Datos con forma esférica.
+B. Datos categóricos.
+C. Datos con estructuras complejas y arbitrarias.
+D. Datos que requieren particionamiento rápido.";"C";"El clustering jerárquico puede manejar clústeres con formas complejas y arbitrarias, a diferencia de K-Means, que asume formas esféricas."
+---
+"¿Cuál es una desventaja del clustering jerárquico comparado con K-Means?:
+A. No puede manejar datos categóricos.
+B. Es computacionalmente más costoso.
+C. Requiere el número de clústeres previamente.
+D. No proporciona visualización de resultados.";"B";"El clustering jerárquico es más costoso computacionalmente, especialmente para grandes conjuntos de datos, debido a la necesidad de calcular y actualizar la matriz de distancias."
+---
+"En el contexto del clustering jerárquico, ¿qué método de enlace se basa en la minimización de la varianza?:
+A. Single linkage.
+B. Complete linkage.
+C. Average linkage.
+D. Método Ward.";"D";"El método de Ward se basa en la minimización de la varianza dentro de los clústeres, buscando que la varianza total del nuevo clúster sea lo más baja posible."
+---
+"¿Cuál es el principal beneficio de usar el clustering jerárquico sobre K-Means cuando no se conoce el número de clústeres?:
+A. Es más rápido.
+B. Ofrece una jerarquía de clústeres.
+C. Es menos sensible a la inicialización.
+D. Maneja mejor los datos categóricos.";"B";"El clustering jerárquico no requiere conocer el número de clústeres de antemano y proporciona una jerarquía de clústeres que permite explorar la estructura de los datos en diferentes niveles de granularidad."
+---
+"En el clustering jerárquico, ¿qué se utiliza para representar las relaciones de inclusión entre diferentes grupos?:
+A. Gráfico de barras.
+B. Diagrama de cajas.
+C. Dendrograma.
+D. Gráfico de líneas.";"C";"Un dendrograma se utiliza para representar las relaciones de inclusión entre diferentes grupos en el clustering jerárquico, mostrando cómo se fusionan o dividen los clústeres."

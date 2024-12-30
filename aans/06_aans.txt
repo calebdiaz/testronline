@@ -1,0 +1,61 @@
+question;answer;explanation
+---
+"¿Qué significa PCA?:
+A. Principal Component Analysis.
+B. Pattern Classification Algorithm.
+C. Probability Calculation Approach.
+D. Partial Correlation Adjustment.";"A";"PCA significa Principal Component Analysis (Análisis de Componentes Principales)."
+---
+"¿Cuál es el principal objetivo de PCA?:
+A. Aumentar el número de variables en un conjunto de datos.
+B. Reducir la dimensionalidad manteniendo la mayor cantidad de variabilidad.
+C. Clasificar datos categóricos.
+D. Eliminar datos redundantes sin considerar la variabilidad.";"B";"PCA busca reducir la dimensionalidad sin perder la esencia de los datos, manteniendo la mayor cantidad de variabilidad posible."
+---
+"¿Qué se estandariza en PCA?:
+A. Las filas de la matriz de datos.
+B. Los valores y vectores propios.
+C. Las columnas de la matriz de datos.
+D. Los clústeres resultantes.";"C";"En PCA, se estandarizan las columnas de la matriz de datos para tener media 0 y desviación estándar 1."
+---
+"¿Qué representa un valor propio en PCA?:
+A. La cantidad de varianza explicada por cada componente principal.
+B. El valor de la covarianza entre dos variables.
+C. La media de los datos.
+D. La distancia entre clústeres.";"A";"Un valor propio en PCA indica cuánta varianza de los datos es explicada por cada componente principal."
+---
+"¿Qué se utiliza para calcular la matriz de covarianza en PCA?:
+A. La matriz transpuesta de los datos originales.
+B. Los datos estandarizados.
+C. Los datos en su forma original.
+D. Los valores propios de los datos.";"B";"Para aplicar PCA, primero se estandarizan los datos, luego se calcula la matriz de covarianza sobre estos datos estandarizados."
+---
+"¿Por qué es importante reducir la dimensionalidad de los datos?:
+A. Para aumentar la complejidad computacional.
+B. Para facilitar la visualización y el análisis.
+C. Para eliminar toda la variabilidad.
+D. Para duplicar los datos disponibles.";"B";"Reducir la dimensionalidad ayuda a visualizar y analizar mejor los datos, preservando la información relevante."
+---
+"¿Qué es un vector propio en PCA?:
+A. Un vector que cambia de dirección durante la transformación.
+B. Un vector que se utiliza para estandarizar datos.
+C. Un vector que solo cambia en magnitud, no en dirección.
+D. Un vector que se elimina tras la transformación.";"C";"En PCA, un vector propio cambia su magnitud pero mantiene su dirección tras la transformación."
+---
+"¿Qué técnica de visualización se utiliza para decidir el número de componentes en PCA?:
+A. Matriz de confusión.
+B. Gráfica de codo.
+C. Histograma.
+D. Análisis de regresión.";"B";"La gráfica de codo se usa para identificar el número óptimo de componentes, observando el punto donde la varianza explicada adicional se reduce significativamente."
+---
+"¿Cuál es una ventaja de PCA en clustering?:
+A. Incrementa la dimensionalidad de los datos.
+B. Facilita la identificación de clústeres en datos de alta dimensionalidad.
+C. Elimina completamente el ruido de los datos.
+D. Siempre produce mejores resultados que otros algoritmos.";"B";"Al reducir la dimensionalidad, PCA facilita la agrupación y análisis de datos en alta dimensionalidad."
+---
+"¿Cómo se seleccionan las componentes principales en PCA?:
+A. Por orden alfabético de los nombres de las variables originales.
+B. Por el orden de aparición en el conjunto de datos original.
+C. Ordenando los valores propios de mayor a menor y seleccionando los vectores propios correspondientes.
+D. Aleatoriamente.";"C";"Las componentes principales se eligen ordenando los valores propios de mayor a menor, seleccionando los vectores que explican la mayor varianza."

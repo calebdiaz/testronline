@@ -1,0 +1,84 @@
+question;answer;explanation
+---
+"Los grafos de computación (marca todas las respuestas correctas):
+A. Facilitan el cálculo de derivadas automáticas.
+B. Facilitan la ejecución de subtareas en entornos distribuidos.
+C. Implican normalmente menor velocidad de ejecución ya que tienen que ser definidos de antemano.";"A,B";""
+---
+"En el siguiente código
+ x = 2
+ y = 3
+ add_op = tf.add(x, y)
+ mul_op = tf.multiply(x, y)
+ mul_op_2 = tf.multiply(x, add_op)
+ pow_op = tf.pow(add_op, mul_op)
+ with tf.Session() as sess¦
+    z = sess.run(pow_op)
+ add_op es:
+A. 5.
+B. Un tensor definido por la operación tf.add() sin valor definido.
+C. Un tensor definido por la operación tf.add() con valor 5.";"B";""
+---
+"En el siguiente código
+ x = 2
+ y = 3
+ add_op = tf.add(x, y)
+ mul_op = tf.multiply(x, y)
+ mul_op_2 = tf.multiply(x, add_op)
+ pow_op = tf.pow(add_op, mul_op)
+ with tf.Session() as sess¦
+  z = sess.run(pow_op)
+ mul_op_2 (marca todas las respuestas correctas):
+A. No es utilizado en el resto del grafo y, por tanto, es incorrecto.
+B. No es evaluado como parte de sess.run(pow_op).
+C. Sería evaluado junto con mul_op y add_op si hiciéramos sess.run(mul_op_2).
+D. Sería evaluado junto con add_op si hiciéramos sess.run(mul_op_2).";"B,D";""
+---
+"En el siguiente código
+ x = 2
+ y = 3
+ add_op = tf.add(x, y)
+ mul_op = tf.multiply(x, y)
+ mul_op_2 = tf.multiply(x, add_op)
+ pow_op = tf.pow(add_op, mul_op)
+ with tf.Session() as sess¦
+  z = sess.run(pow_op)
+ z (marca todas las respuestas correctas):
+A. Es un entero y tiene valor 15625.
+B. Es un objeto de tipo tf.Session.
+C. Es un objeto de tipo tf.Session.run().
+D. Es un objeto de tipo tf.Tensor.";"A";""
+---
+"Selecciona todas las sentencias verdaderas sobre grafos de computación estáticos y dinámicos:
+A. Un grafo de computación estático necesita ser definido antes de evaluarlo con datos.
+B. Tanto los grafos de computación estáticos como dinámicos pueden ser evaluados mientras se definen.
+C. Los grafos de computación dinámicos permiten la utilización de sentencias de control como IF/ELSE de manera sencilla, ya que las instrucciones son evaluadas al momento.
+D. Los grafos de computación estáticos permiten la utilización de sentencias de control como IF/ELSE de manera sencilla, ya que las instrucciones son evaluadas al momento.";"A,C";""
+---
+"TensorFlow (marca todas las respuestas correctas):
+A. Es un framework de alto nivel y por tanto es complicado definir nuevos conceptos matemáticos y numéricos.
+B. Tiene una interfaz en Python, pero los cálculos numéricos se hacen en C++.
+C. Utiliza C++ para los cálculos numéricos en vez de Python por su mayor velocidad de cómputo.
+D. Utiliza Python para los cálculos numéricos porque es un lenguaje muy utilizado por la comunidad.
+E. Se utiliza solo para deep learning.";"B,C";""
+---
+"Marcar todos los frameworks que utilizan grafos de computación:
+A. TensorFlow
+B. TensorFlow en su variante Eager Execution
+C. PyTorch
+D. Theano.";"A,D";""
+---
+"Marca todas las respuestas correctas acerca de Keras:
+A. Es utilizado normalmente en investigación para definir novedosas arquitecturas de bajo nivel.
+B. Es una librería derivada de TensorFlow.
+C. Es una librería de alto nivel que define una interfaz limpia y sencilla para el entrenamiento de redes neuronales.";"C";""
+---
+"Cuando un modelo con TensorFlow es definido, hemos visto que se añade un optimizador que minimiza una loss function. Como sabemos, esto implica que es necesario obtener los gradientes que tienen que ser utilizados durante el entrenamiento. ¿Cómo afecta esto al grafo de computación que se calcula para el entrenamiento del modelo? (marca la respuesta correcta):
+A. No afecta al grafo, ya que el cálculo de gradientes no es una operación y no es necesario actualizar ningún tensor.
+B. Al definir el optimizador como parte del modelo, TensorFlow calcula las operaciones de gradientes necesarias a partir del grafo actual y las añade a este, de modo que es posible evaluar los gradientes y aplicar gradient descent durante la ejecución.
+C. No afecta al grafo. Los gradientes son computados de manera automática mediante mecanismos ajenos al grafo de computación.";"B";""
+---
+"En un modelo secuencial con Keras (marca la respuesta correcta):
+A. Las distintas capas se van añadiendo una detrás de otra y el modelo se compila con un optimizador.
+B. Las distintas capas se añaden al estilo de un grafo de computación y el modelo se compila con un optimizador.
+C. No existe el concepto de modelo secuencial en Keras.";"A";""

@@ -1,0 +1,61 @@
+question;answer;explanation
+---
+"¿Cuál es el objetivo principal del t-SNE?:
+A. Maximizar la variación global en los datos.
+B. Preservar las relaciones locales entre puntos de datos.
+C. Minimizar el uso de recursos computacionales.
+D. Garantizar la linealidad de los datos.";"B";"t-SNE se centra en mantener las similitudes locales cuando reduce la dimensionalidad de los datos."
+---
+"¿Cuál de las siguientes técnicas es más adecuada para datos lineales?:
+A. t-SNE
+B. PCA
+C. MDS
+D. Isomap";"B";"PCA es ideal para datos lineales, ya que proyecta los datos en componentes ortogonales que maximizan la variación."
+---
+"¿Cuál es una de las desventajas del t-SNE?:
+A. Es muy eficiente computacionalmente.
+B. Preserva la estructura global de los datos.
+C. Puede quedarse atascado en mínimos locales.
+D. Es muy sensible a los hiperparámetros.";"C";"t-SNE puede quedarse atascado en mínimos locales debido a su naturaleza estocástica y el uso de descenso del gradiente."
+---
+"¿Qué técnica utiliza distribuciones gaussianas para calcular similitudes en alta dimensionalidad?:
+A. PCA
+B. MDS
+C. t-SNE
+D. Isomap";"C";"t-SNE utiliza distribuciones gaussianas alrededor de cada punto para calcular similitudes en alta dimensionalidad."
+---
+"¿Qué significa MDS en el contexto de la reducción de dimensionalidad?:
+A. Minimum Dimension Search.
+B. Multi-Dimensional Scaling.
+C. Maximum Distance Sorting.
+D. Multi-Data Scaling.";"B";"MDS significa Multi-Dimensional Scaling, utilizado para representar datos en espacios de menor dimensión manteniendo sus distancias relativas."
+---
+"¿Cuál de las siguientes técnicas es especialmente útil para datos no lineales?:
+A. Isomap
+B. t-SNE
+C. MDS
+D. Todas las anteriores";"D";"Isomap, t-SNE y MDS intentan capturar mejor la estructura intrínseca de los datos y son útiles para datos no lineales."
+---
+"¿Qué técnica de reducción de dimensionalidad utiliza la divergencia de Kullback-Leibler?:
+A. PCA
+B. MDS
+C. t-SNE
+D. Isomap";"C";"t-SNE utiliza la divergencia de Kullback-Leibler para medir la diferencia entre las distribuciones de probabilidad en el espacio original y el espacio reducido, preservando la estructura local de los datos."
+---
+"¿Cuál de las siguientes aplicaciones es adecuada para t-SNE?:
+A. Reducción de dimensionalidad de datos lineales.
+B. Visualización de datos complejos y no lineales.
+C. Análisis de encuestas de preferencias.
+D. Cálculo de distancias euclidianas entre puntos.";"B";"t-SNE permite la visualización de datos complejos y no lineales al preservar relaciones de proximidad locales en espacios de menor dimensión, destacando patrones subyacentes."
+---
+"¿Qué técnica utiliza el algoritmo de Floyd-Warshall para calcular el camino más corto entre pares de puntos?:
+A. PCA
+B. MDS
+C. t-SNE
+D. Isomap";"D";"Isomap utiliza el algoritmo de Floyd-Warshall para calcular distancias geodésicas entre puntos, esencial para manejar datos no lineales."
+---
+"¿Cuál de las siguientes afirmaciones sobre las técnicas de reducción de dimensionalidad es correcta?:
+A. MDS es más adecuado que t-SNE para datos con estructuras no lineales.
+B. PCA puede preservar mejor las relaciones locales entre los datos que t-SNE
+C. t-SNE es computacionalmente más eficiente que PCA para grandes conjuntos de datos.
+D. Isomap utiliza el cálculo de distancias geodésicas para preservar las relaciones no lineales en los datos.";"D";"Isomap utiliza distancias geodésicas para preservar relaciones no lineales en los datos, adecuado para datos con estructuras complejas."

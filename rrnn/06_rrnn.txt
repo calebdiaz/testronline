@@ -1,0 +1,57 @@
+question;answer;explanation
+---
+"Una base de datos de palabras del estilo de WordNet (marca todas las respuestas correctas):
+A. Está construida por humanos.
+B. Permite obtener sinónimos y antónimos de palabras mediante grupos y reglas definidos por humanos.
+C. Contiene word vectors.";"A,B";"WordNet es una base de datos construida por humanos que permite obtener sinónimos y antónimos organizados en grupos semánticos, pero no contiene word vectors."
+---
+"Bag-of-words (marca todas las respuestas correctas):
+A. Proporciona una representación discreta del texto.
+B. Asigna 0 a los elementos no presentes del vocabulario en el vector resultante.
+C. Asigna 1 a los elementos no presentes del vocabulario en el vector resultante.";"A,B";"Bag-of-words es una representación discreta del texto que asigna 0 a las palabras no presentes en el documento."
+---
+"Un word vector (marca la respuesta correcta):
+A. Es una representación discreta de una palabra.
+B. No permite obtener similitudes con otros word vectors.
+C. Es una representación distribuida de una palabra.";"C";"Un word vector es una representación distribuida que permite medir similitudes entre palabras en un espacio semántico."
+---
+"Los word vectors también se conocen como (marca la respuesta correcta):
+A. Word embeddings.
+B. Word discrete vectors.
+C. Discrete representations.
+D. Word contexts.";"A";"Los word vectors son comúnmente llamados word embeddings, ya que representan palabras en un espacio continuo."
+---
+"El tamaño de window o contexto -m- (marca la respuesta correcta):
+A. Es un parámetro del modelo word2vec y se aprende durante el entrenamiento.
+B. Es un hiperparámetro del modelo word2vec y se elige antes de entrenar el modelo.
+C. Un valor lógico para este parámetro sería m=T .
+D. Un valor lógico para este parámetro sería m=0.";"B";"El tamaño de la ventana de contexto es un hiperparámetro que se establece antes del entrenamiento en word2vec."
+---
+"La dimensión de los word vectors (marca la respuesta correcta):
+A. Es un parámetro del modelo word2vec y se aprende durante el entrenamiento.
+B. Es un hiperparámetro del modelo word2vec y se elige antes de entrenar el modelo.
+C. No es un parámetro ni un hiperparámetro y su valor no reviste importancia.";"B";"La dimensión del vector de palabras es un hiperparámetro elegido antes del entrenamiento y afecta la capacidad del modelo."
+---
+"La similitud mediante cosenos (marca todas las respuestas correctas):
+A. Se basa en el ángulo entre dos vectores.
+B. Varía entre -1 y 1, con 1 siendo la máxima similitud y -1, la mínima.
+C. Varía entre 0 y 1, con 1 siendo la máxima similitud y 0 la mínima.
+D. Se obtiene a partir de un producto escalar normalizado mediante el módulo de los vectores.";"A,C,D";"La similitud de coseno se basa en el ángulo entre vectores, al estar normalizado varía entre 0 y 1 y se calcula con un producto escalar normalizado."
+---
+"Word2vec utiliza como datos (marca la respuesta correcta):
+A. Una representación discreta de un conjunto de textos.
+B. Un conjunto de textos.
+C. Un conjunto de textos, pero necesitamos a humanos que asignen a cada texto una clase correcta, como en un problema de clasificación.
+D. Word2vec no necesita datos.";"B";"Word2vec toma como entrada un conjunto de textos no etiquetados para aprender las relaciones semánticas entre palabras."
+---
+"Los word vectors resultantes de word2vec (marca la respuesta correcta):
+A. Codifican una representación de las palabras con ciertos valores semánticos, de manera que pueden calcularse palabras similares a otras y detectar relaciones entre ellas.
+B. Codifican una representación de las palabras con valores puramente estructurales, de manera que solo podemos saber palabras que se suelen comportar como sustantivos, verbos, adverbios, etc.
+C. Codifican una representación discreta de las palabras.
+D. Ninguna de las anteriores.";"A";"Los word vectors de word2vec codifican valores semánticos y permiten calcular similitudes y relaciones entre palabras."
+---
+"Negative sampling (marca la respuesta correcta):
+A. Es una técnica que no se usa en la práctica, ya que basta con aplicar gradient descent sobre el problema completo de word2vec.
+B. Consiste en utilizar solo una pequeña parte aleatoria de los textos de los que disponemos.
+C. Es una aproximación al problema de optimización completo de word2vec que resulta mucho más eficiente computacionalmente.
+D. Ninguna de las anteriores.";"C";"Negative sampling es una técnica para optimizar word2vec de manera más eficiente, centrándose solo en una parte del problema."

@@ -1,0 +1,61 @@
+question;answer;explanation
+---
+"¿Cuál es la principal diferencia entre los algoritmos de Lloyd y MacQueen?:
+A. Lloyd actualiza los centroides de manera continua, mientras que MacQueen lo hace en pasos discretos.
+B. MacQueen actualiza los centroides de manera continua, mientras que Lloyd lo hace en pasos discretos.
+C. Lloyd y MacQueen actualizan los centroides de la misma manera.
+D. Lloyd y MacQueen no recalculan los centroides.";"B";"MacQueen actualiza los centroides con cada nueva asignación."
+---
+"¿Cuál de las siguientes afirmaciones es correcta sobre el algoritmo de Hartigan-Wong?:
+A. No realiza actualizaciones de centroides.
+B. Es menos eficiente que Lloyd en términos de cálculo.
+C. Es más simple de implementar que Lloyd.
+D. Realiza actualizaciones de centroides más frecuentes y locales.";"D";"Considera la reubicación de puntos individuales entre clústeres durante las iteraciones."
+---
+"¿Qué ventaja tiene el algoritmo de Elkan sobre K-Means estándar?:
+A. No necesita calcular distancias.
+B. No necesita inicializar centroides.
+C. Usa límites superiores e inferiores para reducir cálculos de distancia.
+D. Siempre converge al óptimo global.";"C";"Utiliza la desigualdad triangular, reduciendo así el número de cálculos."
+---
+"¿Cuál es la desventaja del algoritmo de Fuzzy K-Means?:
+A. No permite superponer agrupaciones.
+B. Es menos robusto ante valores atípicos.
+C. Computacionalmente es más costoso.
+D. No puede manejar conjuntos de datos grandes.";"C";"Tiene que calcular el grado de membresía a cada grupo."
+---
+"¿Cuál es una ventaja del Fuzzy K-Means respecto al K-Means clásico?:
+A. Mayor robustez ante valores atípicos y ruido.
+B. Menor flexibilidad en la asignación de puntos.
+C. Mayor sensibilidad a la inicialización de centroides.
+D. Menor interpretación de datos.";"A";"Permite una transición gradual entre grupos."
+---
+"En el algoritmo de Elkan, ¿qué se actualiza cada vez que se recalculan los centroides?:
+A. Solo los límites superiores.
+B. Solo los límites inferiores.
+C. Los límites superiores e inferiores de las distancias.
+D. Ninguna de las anteriores.";"C";"Cada vez que se actualizan los centroides, también se actualizan los límites superiores e inferiores de las distancias."
+---
+"¿Cuál es el objetivo principal de la inicialización en los algoritmos de K-Means?:
+A. Seleccionar puntos que representen el centro de cada clúster.
+B. Evitar la convergencia.
+C. Asegurar que todos los puntos estén en el mismo clúster.
+D. Reducir el número de iteraciones.";"A";"Selección de los puntos que representen el centro de cada grupo."
+---
+"¿Qué técnica utiliza el algoritmo de Elkan para evitar calcular distancias innecesarias?:
+A. Inicialización aleatoria.
+B. Distancia euclidiana.
+C. Desigualdad triangular.
+D. Clustering jerárquico.";"C";"Aprovecha la desigualdad triangular para evitar calcular distancias innecesarias."
+---
+"¿Cuál es un problema común en la mayoría de las implementaciones de K-Means?:
+A. La sensibilidad a la inicialización de los centroides.
+B. La interpretación de los resultados obtenidos.
+C. La convergencia rápida.
+D. La sobreestimación de la cantidad de clústeres.";"A";"Como se inicializan al azar, puede hacer que el algoritmo no converja."
+---
+"¿Qué tipo de datos se agrupan en la segmentación de imágenes utilizando Fuzzy K-Means?:
+A. Textos con propiedades similares.
+B. Píxeles con propiedades similares como color y textura.
+C. Puntos de datos sin relación.
+D. Palabras con significados similares.";"B";"Ayuda a agrupar píxeles con propiedades similares. En el caso de las imágenes, esas propiedades son el color y la textura."

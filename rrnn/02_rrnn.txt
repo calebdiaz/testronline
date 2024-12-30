@@ -1,0 +1,62 @@
+question;answer;explanation
+---
+"Marca las respuestas verdaderas sobre el algoritmo stochastic gradient descent:
+A. En SGD obtenemos una estimación del gradiente. Si bien el gradiente no es exacto, la dirección de este es más o menos correcta de modo que el proceso de minimización todavía funciona.
+B. El tamaño de la batch m cuanto más pequeño, mejor para acelerar el entrenamiento. De hecho es buena idea usar valores de batch como 1, 2 o 3.
+C. La elección de m afecta a la velocidad de entrenamiento de nuestra red neuronal.
+D. Hay que elegir batch m con un balancen de modo que la aproximación al gradiente sea buena, pero no necesitemos utilizar una gran cantidad de puntos del dataset.";"A,C,D";""
+---
+"Seleccionar un motivo por el que en SGD utilizamos batches aleatorias hasta agotar todos los training examples del dataset (completar una epoch), en vez de utilizar siempre elementos al azar, es decir, sin la necesidad de utilizar todos los training examples del dataset antes de repetir elementos:
+A. Programar una lógica de muestreo con reemplazamiento es más difícil y computacionalmente costoso.
+B. Una estimación utilizando elementos siempre al azar es una estimación incorrecta y la red neuronal nunca llegaría a aprender nada.
+C. Todos los training examples del dataset son importantes y poseen una variabilidad que la red neuronal tiene que saber explicar. Al forzar a la red a entrenar con todos ellos, permitimos que todos estos datos sean tomados en cuenta.";"C";""
+---
+"Para aplicar gradient descent, la función de coste tiene que ser (marca la respuesta correcta):
+A. Diferenciable.
+B. Integrable.
+C. Contener cuadrados de valores.
+D. Convexa.";"A";""
+---
+"Si aplicamos un valor demasiado grande de learning rate (marca la respuesta correcta):
+A. La red neuronal aprendería y lo haría de manera más rápida.
+B. La red neuronal aprendería igualmente, el efecto de la learning rate no es realmente importante.
+C. La red neuronal podría no aprender, ya que SGD acabaría convergiendo en un máximo en vez de en un mínimo.
+D. La red neuronal podría no aprender. La aproximación local de la derivada deja de tener efecto y podríamos overshoot a un punto lejano donde el valor de la función es de hecho mayor.";"D";""
+---
+"Si un dataset tiene 10,000 puntos y utilizamos batches de 10 examples para entrenar una red neuronal (marca la respuesta correcta):
+A. Una epoch o época de entrenamiento consiste en 10 steps.
+B. Una epoch o época de entrenamiento consiste en 100 steps.
+C. Una epoch o época de entrenamiento consiste en 1000 steps.
+D. Una epoch o época de entrenamiento consiste en 10.000 steps.
+E. Ninguna de las anteriores.";"C";""
+---
+"Las funciones de coste o loss functions (marca todas las respuestas correctas):
+A. Definen un valor de error que queremos minimizar.
+B. Definen un valor de coste que queremos maximizar.
+C. Son siempre variaciones de la función mean squared error.
+D. Implican un objetivo distinto a la hora de entrenar una red neuronal y, por tanto, son una parte importante a definir en un problema de machine learning.
+E. Son poco importantes a la hora de entrenar.";"A,D";""
+---
+"Durante el algoritmo de backpropagation (marca la respuesta correcta):
+A. No es necesario almacenar los valores de salida de cada nodo, solo nos interesa el valor final de la función de coste tras ejecutar el forward pass.
+B. Guardamos los valores de salida de cada nodo, ya que son necesarios para el cálculo de gradientes durante el backward pass.
+C. Guardamos los valores de salida de cada nodo, ya que son necesarios para aplicar gradient descent, pero no son usados en el cálculo de gradientes.
+D. Ninguna de las anteriores.";"B";""
+---
+"Marca todas las respuestas correctas acerca del algoritmo de backpropagation:
+A. Es una forma eficiente de calcular los gradientes necesarios para redes neuronales arbitrariamente complejas.
+B. Se llama backpropagation ya que el gradiente se propaga de manera recursiva hacia atrás.
+C. Fue un gran avance, ya que calcular fórmulas de los gradientes analíticamente se vuelve muy complejo para las redes neuronales.";"A,B,C";""
+---
+"En una operación suma q = x + y + z, si el gradiente propagado de salida es 5 (marca la respuesta correcta):
+A. El gradiente es 15 en todas las variables.
+B. El gradiente es 1 en todas las variables.
+C. El gradiente es 5 en todas las variables.
+D. No es posible saber el valor del gradiente con la información suministrada.";"C";""
+---
+"El número de neuronas a utilizar en las hidden layer (marca las respuestas correctas):
+A. Suele estar comprendido entre 10 y 100 neuronas. Menos es insuficiente y más es superfluo.
+B. Puede ser obtenido mediante una búsqueda de hiperparámetros.
+C. A más neuronas, más gradientes a calcular y, por tanto, más requisitos de memoria y tiempo de ejecución.
+D. No es muy importante a la hora de entrenar una red neuronal.
+E. A más neuronas, más capacidad de representación que tiene la red.";"B,C,E";""

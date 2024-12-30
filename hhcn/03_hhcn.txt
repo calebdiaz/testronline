@@ -1,0 +1,61 @@
+question;answer;explanation
+---
+"¿Qué es un entorno (environment) de entrenamiento en Azure Machine Learning?:
+A. Es una máquina virtual en la que se ejecuta el proceso de entrenamiento.
+B. Es un contenedor Docker con el software necesario para las tareas de desarrollo en el proceso de entrenamiento.
+C. Es un sinónimo de experimento (experiment).
+D. Es un contenedor Docker especializado en el ajuste de hiperparámetros.";"B";"En efecto, la configuración del entorno incluye las librerías que necesita el código fuente para ejecutar correctamente el proceso de entrenamiento."
+---
+"¿Para qué sirve la utilidad AzCopy de Azure?:
+A. Es el cliente de línea de comandos de Azure, que sirve para crear, modificar o eliminar un recurso en Azure.
+B. Es una utilidad de línea de comandos diseñada para subir datos a Azure.
+C. Es una herramienta disponible en el portal de Azure para subir datos a un workspace de Azure Machine Learning.
+D. Es una herramienta disponible en el portal de Azure para copiar datos entre cuentas de almacenamiento.";"B";"AzCopy puede descargarse desde el sitio web de Microsoft para diferentes sistemas operativos, y permite subir datos a Azure desde otros proveedores, como Amazon o Google."
+---
+"¿Cuál es la diferencia entre un dataset y un datastore en Azure Machine Learning?:
+A. Un dataset es una fuente de datos, mientras que un datastore es una abstracción de los datos reales que están almacenados en un dataset.
+B. Un datastore es una fuente de datos, mientras que un dataset es una abstracción de los datos reales que están almacenados en un datastore.
+C. Ambos son conceptos equivalentes en Azure Machine Learning.
+D. Un dataset es una abstracción de los datos reales, mientras que el datastore son los datos reales.";"B";"Ambos conceptos permiten abstraerse de los detalles de ubicación y formato de los datos y la fuente que los proporciona, y centrarse en su utilidad para construir modelos predictivos eficaces."
+---
+"¿Qué función cumple un HyperDriveStep en un pipeline de Azure Machine Learning?:
+A. Permite transferir datos de un datastore a un workspace de Azure Machine Learning.
+B. Permite automatizar el ajuste de hiperparámetros.
+C. Permite paralelizar la ejecución de procesos de entrenamiento.
+D. Sirve para configurar la infraestructura en la que se ejecutarán los procesos de entrenamiento.";"B";"La posibilidad de automatizar el proceso de ajuste de hiperparámetros agiliza el proceso de creación de modelos, dado que, si tiene que realizarse de forma manual, resulta una actividad tediosa y repetitiva."
+---
+"¿Cuál es la principal ventaja en el uso de pipelines en Azure Machine Learning?:
+A. Visualmente, queda mucho más claro qué finalidad tiene el modelo que se genera como resultado de la ejecución del pipeline.
+B. Permiten reutilizar código fuente asociado a determinadas tareas repetitivas entre experimentos.
+C. No presenta ninguna ventaja, es simplemente el enfoque adoptado en Azure Machine Learning para abordar la creación de modelos. Otros proveedores de nube han adoptado enfoques diferentes igualmente válidos.
+D. El hecho de que cada bloque del pipeline se realiza de forma automática, a diferencia de los notebooks, en los que el trabajo es 100 % manual.";"B";"En el proceso de creación de modelos, el foco debe ponerse en las tareas de mayor valor, fomentando la reutilización de código en todas aquellas que no sufrirán variaciones entre experimentos, como, por ejemplo, la preparación de los datos."
+---
+"¿Qué es Horovod y para qué se utiliza en Azure Machine Learning?:
+A. Es un lenguaje de programación orientado a redes neuronales.
+B. El framework Horovod sirve para implementar paralelismo de datos en redes neuronales.
+C. Horovod es un lenguaje de programación que sirve para implementar paralelismo de datos en redes neuronales.
+D. Es un framework diseñado para entrenar redes neuronales con GPUs.";"B";"Desarrollado por Uber, este framework permite agilizar el proceso de entrenamiento mediante el uso de una arquitectura distribuida."
+---
+"¿Para qué sirve el parámetro evaluation_interval en HyperDrive?:
+A. Indica en qué posiciones del dataset se encuentran los datos de validación.
+B. Indica cada cuántas ejecuciones debe evaluarse la política de finalización temprana.
+C. Indica cada cuántos minutos debe evaluarse la política de finalización temprana.
+D. Indica en qué ejecuciones específicas debe evaluarse la política de finalización temprana.";"B";"Este parámetro determina en qué momento se debe comparar el rendimiento de los diferentes runs de HyperDrive para, según la política de finalización temprana elegida, puedan cancelarse aquellos que están obteniendo peores resultados."
+---
+"¿En qué se diferencia gradient descent de distributed gradient descent?:
+A. En el caso de Azure Machine Learning, son términos intercambiables.
+B. DGD es un optimizador similar a gradient descent, pero diseñado para funcionar en entornos distribuidos (con múltiples nodos que participan en el proceso de entrenamiento).
+C. Gradient descent está optimizado para entornos distribuidos en general, mientras que DGD se especializa en entornos distribuidos con GPUs.
+D. DGD es una variante optimizada de gradient descent que se ejecuta más rápidamente, y por tanto permite completar el proceso de entrenamiento en un tiempo inferior.";"B";"La capacidad de DGD de funcionar en un entorno distribuido es clave para reducir el tiempo de entrenamiento de redes neuronales, que habitualmente requieren grandes volúmenes de datos para proporcionar resultados precisos."
+---
+"¿Para qué sirve la clase azureml.datadrift.DataDriftDetector del SDK?:
+A. Sirve para corregir el concept drift detectado en los datos.
+B. Sirve para detectar concept drift en los datos.
+C. Sirve para detectar y corregir el concept drift en los datos.
+D. Sirve para detectar datos obsoletos en un dataset.";"B";"El concept drift se refiere a los cambios que experimentan las relaciones entre los datos, lo que provoca que un modelo entrenado con datos antiguos deje de ser eficaz con las nuevas predicciones."
+---
+"¿Cómo funciona la median stopping policy, en el contexto de la finalización temprana de HyperDrive?:
+A. Se cancela una ejecución (run) si la mediana de los valores de rendimiento (según la métrica elegida) obtenidos hasta el intervalo actual está por debajo de la mediana de las medias móviles del resto de ejecuciones (runs).
+B. Se cancela una ejecución (run) si la media móvil de los valores de rendimiento (según la métrica elegida) obtenidos hasta el intervalo actual está por debajo de la mediana de las medias móviles del resto de ejecuciones (runs).
+C. Se cancela una ejecución (run) si la mediana de los valores de rendimiento (según la métrica elegida) obtenidos hasta el intervalo actual está por debajo del promedio de las medias móviles del resto de ejecuciones (runs).
+D. Se cancela una ejecución (run) si la mediana de los valores de rendimiento (según la métrica elegida) obtenidos hasta el intervalo actual está por encima del promedio de las medias móviles del resto de ejecuciones (runs).";"A";"Esta política utiliza la combinación de la mediana y la media móvil como valor de referencia. Otras alternativas son truncation selection o bandit policy, también disponibles en Azure Machine Learning con HyperDrive."

@@ -1,0 +1,61 @@
+question;answer;explanation
+---
+"Las RNN se diferencian de las redes neuronales tradicionales en que (marca todas las respuestas correctas):
+A. Pueden trabajar sobre una secuencia de inputs de manera natural.
+B. Pueden producir una secuencia de outputs de manera natural.
+C. Tienen un estado interno que permite guardar información sobre lo que la red ha visto hasta ahora.";"A,B,C";"Las RNN pueden manejar secuencias de datos debido a su arquitectura y el uso de un estado interno que almacena información previa, permitiendo modelar relaciones temporales."
+---
+"En un problema de traducción automática (marca la respuesta correcta):
+A. Tenemos un solo input y producimos una secuencia.
+B. Tenemos una secuencia de entrada y producimos una sola salida.
+C. Tenemos una secuencia de entrada y producimos una secuencia de salida.
+D. Ninguna de las anteriores.";"C";"La traducción automática implica una secuencia de entrada (frase en un idioma) y una secuencia de salida (frase traducida), por lo que ambas secuencias son necesarias."
+---
+"En una vanilla RNN, los parámetros a aprender en la red son (marca la respuesta correcta):
+A. Las matrices Whh, Wxh, y Why.
+B. Las matrices Whh y Wxh.
+C. Los estados internos ht para cada t.
+D. Los valores de las input xt.
+E. Ninguna de las anteriores.";"A";"En una vanilla RNN, las matrices Whh, Wxh, y Why son los parámetros aprendidos que determinan cómo se propaga la información entre capas y el estado oculto."
+---
+"El vector de hidden state ht (marca la respuesta correcta):
+A. Almacena todas las inputs que la red ha visto hasta el momento.
+B. A menor tamaño, más capacidad de memorizar el pasado.
+C. A mayor tamaño, la red neuronal entrenará o se ejecutará más rápido.
+D. Es una representación interna en forma de vector que codifica los estados por los que la red ha pasado y las inputs que ha ido viendo en el tiempo.";"D";"El vector ht representa un estado interno que acumula información sobre las entradas previas de la RNN, permitiendo así modelar dependencias en la secuencia."
+---
+"Marca todas las respuestas correctas acerca de backpropagation through time:
+A. Es el equivalente al algoritmo de backpropagation aplicado a RNN.
+B. En el forward pass calculamos todas las salidas a lo largo del tiempo.
+C. A veces las secuencias pueden ser muy largas (por ejemplo, un texto completo para entrenar un modelo del lenguaje), por lo que se recurre a truncated backpropagation through time.";"A,B,C";"Backpropagation through time es una extensión del backpropagation para RNNs, que permite calcular gradientes en secuencias temporales; cuando las secuencias son largas, se suele truncar para reducir complejidad."
+---
+"¿Cuál es una diferencia entre los modelos del lenguaje tradicionales vistos en clase y un modelo del lenguaje con RNN? (Marca la respuesta correcta):
+A. En un modelo del lenguaje con RNN no modelamos probabilidades.
+B. En un modelo del lenguaje con RNN el hidden state es la probabilidad de una palabra dadas todas las anteriores, no hace falta contar las ocurrencias de palabras.
+C. Los modelos tradicionales utilizan redes neuronales no recurrentes.
+D. Un modelo del lenguaje con RNN no necesita modelar probabilidades con cuentas, se utiliza un modelo de predicción en el que el estado interno de la red codifica la información necesaria para obtener las probabilidades buscadas.";"D";"En una RNN, el estado interno almacena la información de las palabras previas sin necesidad de contar ocurrencias, lo que permite modelar probabilidades de forma continua y contextual."
+---
+"¿Qué ventajas puede tener utilizar word vectors en vez de representaciones one-hot como entrada en una red recurrente? (Marca todas las respuestas correctas):
+A. Ninguna, ambas son equivalentes.
+B. Con una representación one-hot no podemos distinguir entre palabras distintas.
+C. Los word vectors contienen información semántica de la palabra que una red neuronal puede utilizar para modelar mejor el problema a resolver.
+D. Si el vocabulario es muy grande, una representación discreta como la one-hot da lugar a vectores de entrada muy grandes, mientras que una representación densa como los word vectors permite un vector más compacto.";"C,D";"Los word vectors son más compactos y contienen relaciones semánticas entre palabras, lo cual mejora la capacidad de modelado de la RNN frente a las representaciones one-hot."
+---
+"Gradient clipping (marca la respuesta correcta):
+A. Controla la magnitud del gradiente durante backpropagation. Si este se hace muy grande, se reduce su magnitud para evitar el problema de exploding gradients.
+B. Controla la magnitud del gradiente durante backpropagation. Si este se hace muy pequeño, se incrementa su magnitud para evitar el problema de vanishing gradients.
+C. Controla la magnitud del gradiente durante el forward pass. Si este se hace muy grande, se reduce su magnitud para evitar el problema de exploding gradients.
+D. Controla la magnitud del gradiente durante el forward pass. Si este se hace muy pequeño, se reduce su magnitud para evitar el problema de vanishing gradients.";"A";"Gradient clipping limita el valor máximo del gradiente durante el backpropagation para evitar que los gradientes exploten, problema común en RNNs."
+---
+"La arquitectura LSTM (marca las respuestas correctas):
+A. Surge como una arquitectura que trata de modelar con éxito relaciones temporales de larga distancia.
+B. La input gate (i) controla cuánto olvidamos del estado interno anterior.
+C. Utiliza tanto sigmoids como tanhs en sus representaciones internas.
+D. La forget gate (f) controla cuánta información fluye hacia el hidden state.
+E. Soluciona el problema de los vanishing gradients.";"A,D,E";"LSTM está diseñada para capturar dependencias a largo plazo en secuencias, utilizando funciones de activación específicas y resolviendo problemas como los vanishing gradients."
+---
+"Al apilar RNN (marca la respuesta correcta):
+A. La salida del último time step de una RNN se pasa como primer input a la siguiente RNN.
+B. Solo la salida del primer time step de una RNN se pasa como input a la siguiente RNN.
+C. Las salidas de cada time step de la primera RNN son las entradas de la siguiente RNN.
+D. Ninguna de las anteriores.";"C";"En una red apilada, cada RNN de la siguiente capa recibe la salida de cada time step de la capa anterior, permitiendo capturar patrones más complejos."

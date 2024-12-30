@@ -1,0 +1,69 @@
+question;answer;explanation
+---
+"El aprendizaje profundo (marca todas las respuestas correctas):
+A. Es una técnica dentro del aprendizaje automático.
+B. Es un área de la inteligencia artificial.
+C. Está basado en reglas formales diseñadas por humanos.
+D. Depende de bases de conocimiento diseñadas por humanos.
+E. Se basa en entender conceptos cada vez más complejos.";"A,B,E";
+---
+"¿Qué factores pueden explicar el concepto «profundo» en el término de aprendizaje profundo? (Marca todas las respuestas correctas):
+A. Los algoritmos de aprendizaje profundo aprenden con una profundidad nunca vista hasta ahora.
+B. Las redes neuronales se hacen profundas con la introducción de múltiples capas.
+C. Las redes neuronales pueden aprender jerarquías complejas de conceptos.
+D. Los problemas resueltos por el aprendizaje profundo son más complejos y complicados para el hombre.
+E. El deep learning es capaz de realizar razonamientos como una persona.";"B,C";""
+---
+"En un problema de clasificación de personas a partir de imágenes con aprendizaje profundo, ¿cuál es la entrada que recibiría la red neuronal?:
+A. Una serie de features diseñadas por humanos en la imagen. Por ejemplo, color de cabello, uso de gafas o no, color de ojos, color de piel...
+B. Una representación de la imagen dada por otros algoritmos.
+C. Los píxeles de la imagen.";"C";""
+---
+"El deep learning (marca la respuesta correcta):
+A. Ha tenido varios nombres a lo largo de la historia.
+B. Consiste en una serie de técnicas y avances muy recientes.
+C. Ha tenido siempre una posición predominante en el mundo de la inteligencia artificial.
+D. Es, tras todos sus avances, la mejor solución para todos los problemas de aprendizaje automático.";"A";""
+---
+"¿Qué cantidad de datos es necesaria para entrenar con éxito una red neuronal profunda?:
+A. Entre 100 y 1000 training examples.
+B. Entre 1000 y 100 000 training examples.
+C. Más de 100 000 training examples.
+D. La cantidad depende del problema a tratar.";"D";""
+
+---
+"¿Cuáles son algunas de las aplicaciones del deep learning? (Marca todas las respuestas correctas):
+A. Visión por computador.
+B. Traducción automática.
+C. Agentes que aprenden a jugar a juegos.
+D. Reconocer el habla.";"A,B,C,D";""
+
+---
+"Señala la afirmación correcta:
+A. Una red neuronal es un cerebro artificial.
+B. El aprendizaje profundo está inspirado en el funcionamiento del cerebro, pero las similitudes entre los algoritmos de deep learning y el cerebro acaban pronto.
+C. El aprendizaje profundo está inspirado en el funcionamiento del cerebro y cada nuevo avance en el área lo acerca más a este.";"B";""
+
+---
+"En una red neuronal, si una neurona tiene 5 inputs, ¿cuántos parámetros la modelan?:
+A. 5
+B. 6
+C. 7
+D. 10
+E. 11
+F. 12.";"B";"Pesos: Un peso para cada input, Bias: Un valor adicional que permite a la neurona desplazarse hacia arriba o hacia abajo. 5 inputs + 1 bias de la neurona = 6"
+
+---
+"En una red neuronal fully connected con una input layer con 10 nodos una hidden layer con 5 nodos y una output layer con 10 nodos, ¿cuántos parámetros tiene en total la red neuronal?:
+A. 25.
+B. 110.
+C. 115.
+D. 125.
+E. 220.";"C";"Pesos: Un peso para cada input, Bias: Un valor adicional que permite a la neurona desplazarse hacia arriba o hacia abajo. 10*5 =50 +5 = 55 + (5*10+10bias = 60). En total 55+60=115.  los biases Solo se consideran en: Las capas ocultas y La capa de salida."
+
+---
+"Marca todas las respuestas correctas acerca del funcionamiento de una red neuronal:
+A. La salida de una neurona es una representación de una probabilidad.
+B. La input layer es una representación de los datos de entrada y no conlleva cálculos.
+C. Las neuronas se activan con un valor definido por la función de activación.
+D. En una feed-forward network, la información siempre fluye hacia delante.";"B,C,D";""

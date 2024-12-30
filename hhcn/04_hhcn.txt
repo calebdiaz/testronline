@@ -1,0 +1,61 @@
+question;answer;explanation
+---
+"¿Para qué sirve la herramienta JumpStart de SageMaker?:
+A. JumpStart es la infraestructura de computación gestionada por Amazon, que podemos utilizar para ejecutar procesos de entrenamiento.
+B. JumpStart es un catálogo de soluciones y modelos que resuelven los casos de uso más habituales de cada sector.
+C. JumpStart es una colección de datasets proporcionados por Amazon para realizar pruebas de algoritmos y establecer benchmarks.
+D. JumpStart es la solución de Amazon que permite detectar sesgos e importancia de características en una predicción.";"B";"Esta herramienta de SageMaker permite agilizar la implementación de casos de uso comunes en las organizaciones."
+---
+"¿Qué datos se pueden almacenar en cada trial de un experimento?:
+A. Solo la información relativa al experimento, es decir, su nombre y su descripción.
+B. Datos empleados, transformaciones aplicadas, valores de hiperparámetros, estimador elegido, métricas de rendimiento y gráficas generadas.
+C. Datos empleados, transformaciones aplicadas y valores de hiperparámetros.
+D. Datos empleados, transformaciones aplicadas, valores de hiperparámetros, estimador elegido y métricas de rendimiento.";"B";"Todos estos elementos pueden almacenarse en las trazas de un trial y permiten comparar resultados entre trials."
+---
+"¿Qué efecto tiene la llamada sagemaker.Session()?:
+A. Devuelve información acerca de la sesión SageMaker en curso.
+B. Crea una sesión de SageMaker, a través de la cual se utilizan todas las funcionalidades que ofrece el SDK.
+C. No tiene efecto, puesto que el notebook ya dispone de una sesión que puede utilizar para realizar llamadas al SDK.
+D. Crea una sesión de SageMaker, que posteriormente tenemos que activar con la llamada enable() para acceder a las funcionalidades del SDK.";"B";"Esta llamada es parte del proceso de inicialización en un notebook Jupyter en SageMaker."
+---
+"¿Para qué puede utilizarse en Data Wrangler un scatter plot que enfrenta los valores de dos características?:
+A. No es posible representar los valores de dos características en un scatter plot.
+B. Para detectar correlación entre las características.
+C. Para determinar la frecuencia de cada valor o rango de valores de cada una de las características.
+D. Data Wrangler no ofrece la posibilidad de visualizar un scatter plot.";"B";"Un scatter plot permite detectar la correlación entre características al observar patrones visuales entre ellas."
+---
+"¿Qué es el modelado rápido de Data Wrangler?:
+A. Un ejercicio de construcción de un modelo con el perfil de hardware más potente del que dispone Amazon.
+B. Un ejercicio de construcción de un modelo a partir de un fragmento de los datos para anticipar la viabilidad de un modelo completo.
+C. Un ejercicio de construcción de un modelo con GPUs, que son el hardware óptimo para acelerar el proceso de entrenamiento.
+D. Un ejercicio de construcción de un modelo con un algoritmo trivial, lo que permite obtener resultados aproximados rápidamente.";"B";"El modelado rápido permite evaluar la viabilidad de un modelo usando solo una parte de los datos."
+---
+"¿Cuáles son los tres componentes de un Feature Store?:
+A. Experimentos, definiciones de características y datos ingestados.
+B. Colección de fuentes de datos de las que extrae características y datos, definiciones de características y datos ingestados.
+C. Colección de fuentes de datos de las que extrae características y datos, definiciones de características e hiperparámetros.
+D. Colección de fuentes de datos de las que extrae características y datos, modelos e hiperparámetros.";"B";"Un Feature Store incluye fuentes de datos, definiciones de características y datos procesados."
+---
+"¿Qué implicaciones positivas tiene la centralización de características en un único repositorio?:
+A. Permite que se utilicen las mismas características en el entrenamiento y en la inferencia.
+B. Evita que varios científicos de datos construyan las mismas características por separado, y permite que se utilicen las mismas características en el entrenamiento y en la inferencia.
+C. Evita que varios científicos de datos construyan las mismas características por separado.
+D. Evita que cada científico de datos construya su propio feature store.";"B";"La centralización permite la reutilización de características entre entrenamiento e inferencia y evita duplicación de esfuerzos."
+---
+"¿Para qué sirve la llamada sagemaker.image_uris.retrieve()?:
+A. Retorna un puntero a un contenedor que incluye los paquetes de software correspondientes a un framework, como TensorFlow o PyTorch.
+B. Retorna un puntero a una imagen que contiene los paquetes de software correspondientes a un framework, como TensorFlow o PyTorch.
+C. Retorna un puntero a una imagen que contiene un sistema operativo optimizado para la creación de modelos.
+D. Retorna el listado de imágenes disponibles para encapsular procesos de preparación de datos o entrenamiento.";"B";"Esta imagen puede ser usada para construir un contenedor que ejecute el proceso de entrenamiento en SageMaker."
+---
+"¿Qué ventaja tiene incorporar los notebooks a un repositorio Git?:
+A. Que se dispone de un backup en caso de que se borren accidentalmente las copias originales.
+B. La posibilidad de identificar fácilmente los cambios que se han realizado de una versión a otra.
+C. No presenta ninguna ventaja, simplemente es una práctica habitual en el ámbito DevOps.
+D. La posibilidad de identificar fácilmente las diferencias entre dos notebooks similares.";"B";"El control de versiones permite identificar cambios entre versiones y proporciona trazabilidad en el desarrollo de modelos."
+---
+"¿En qué consiste el sesgo de modelos?:
+A. En que un modelo genera predicciones erróneas, porque no disponía de suficientes datos durante el proceso de entrenamiento.
+B. En que un modelo genera una predicción favorable a un grupo o desfavorable o errónea a otro grupo, por la simple pertenencia a estos grupos.
+C. En que un modelo genera una predicción favorable a un grupo o desfavorable o errónea a otro grupo, basándose en múltiples criterios objetivos.
+D. El sesgo solo existe en los datos, no en los modelos.";"B";"El sesgo de modelos puede causar que ciertos grupos reciban predicciones desbalanceadas, afectando la equidad del modelo."

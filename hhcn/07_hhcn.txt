@@ -1,0 +1,61 @@
+question;answer;explanation
+---
+"En la terminología de Azure Bot Framework, ¿qué es un diálogo?:
+A. Un diálogo es el componente visual a través del cual se registran las conversaciones entre el chatbot y el usuario.
+B. Un diálogo representa una funcionalidad del bot, y define cómo reaccionará a las peticiones del usuario.
+C. Un diálogo se refiere al conjunto de mensajes que intercambian el usuario y el chatbot.
+D. Un diálogo es un conjunto de respuestas posibles del chatbot a la petición de un usuario.";"B";"El concepto de diálogo permite encapsular diferentes funcionalidades para que el diseño del chatbot sea modular."
+---
+"¿Para qué sirve un recognizer en Azure Bot Framework?:
+A. AAA
+B. Un recognizer detecta el significado de la petición del usuario (intent) y extrae sus principales entidades (entities).
+C. Un recognizer es llamado cuando sucede algún evento relevante en la conversación.
+D. Un recognizer implementa acciones de respuesta a partir de la activación de un trigger.";"B";"La detección del significado es un proceso clave para poder generar una respuesta válida y ajustada a los condicionantes que expresa el usuario."
+---
+"¿Cómo se realiza la implementación del concepto de memoria en un chatbot creado en Azure Bot Framework?:
+A. La memoria se implementa a través de variables y constantes, que tienen un nombre y un valor.
+B. La memoria se implementa a través de propiedades (properties), que tienen un nombre, un alcance y un valor.
+C. La memoria se implementa a través de propiedades (properties), que tienen un nombre y un valor.
+D. La memoria se implementa a través de variables y constantes, que tienen un nombre, un alcance y un valor.";"B";"Las propiedades pueden utilizarse posteriormente para recordar los aspectos clave de los mensajes intercambiados con el usuario hasta el momento."
+---
+"¿Qué es y para qué sirve el Adaptive Runtime?:
+A. Es el entorno de ejecución en el que se hospedan los chatbots.
+B. Es el entorno de ejecución que debe incorporarse como dependencia a un proyecto de chatbot para acceder a la SDK de Bot Framework.
+C. Es el entorno de ejecución que debe incorporarse como dependencia a un proyecto de chatbot para acceder a la SDK de Microsoft Copilot Studio.
+D. Es el entorno a través del cual se puede desplegar un chatbot.";"B";"El SDK de Bot Framework proporciona todas las funcionalidades disponibles a través del canvas de Composer y otras más avanzadas que requieren de programación explícita con código fuente en C# o Javascript."
+---
+"¿Para qué se utiliza un sitio web de fallback en Microsoft Copilot Studio?:
+A. Es la URL a la que accede el copilot cuando se produce un error durante el intercambio de mensajes en la conversación con el usuario.
+B. Es la URL a la que accede el copilot cuando desconoce la respuesta a una petición del usuario para buscar información relevante que permita dar con dicha respuesta.
+C. Es la URL a partir de la que el copilot genera todas sus respuestas, lo que evita tener que entrenar un modelo previamente.
+D. Es la URL a través de la cual puede utilizarse el copilot.";"B";"Esta funcionalidad es clave para extender la capacidad del bot de generar respuestas útiles a peticiones que quizá no fueron consideradas en el proceso de desarrollo."
+---
+"¿Qué es un perfil de publicación (publishing profile) en Azure Bot Framework?:
+A. Se refiere al nivel de autenticación necesario para utilizar un chatbot.
+B. Se refiere a la configuración utilizada para hacer despliegues de chatbots, incluyendo la infraestructura de Azure en la que se hospedan.
+C. Se refiere al nivel de autorización necesario para desplegar un chatbot.
+D. Se refiere a la configuración utilizada para hacer pruebas de chatbots, como paso previo a su despliegue en producción.";"B";"El uso de perfiles de publicación permite reutilizar los parámetros de despliegue para diferentes bots, reduciendo los tiempos de puesta en producción y las actualizaciones posteriores."
+---
+"¿Qué aplicaciones tiene un chatbot en el sector de seguros?:
+A. El sector seguros no se beneficia de las ventajas de un chatbot.
+B. Permite resolver dudas de los clientes, relacionadas con la cobertura de su póliza, el procedimiento para generar un parte o el estado de tramitación de un parte.
+C. Se utilizan para que los agentes de seguros puedan determinar la probabilidad de venta de un seguro a un potencial cliente.
+D. Se utilizan para atraer a nuevos clientes con mensajes promocionales, pero no tienen aplicaciones en los clientes existentes por la complejidad de los procesos de negocio en este sector.";"B";"El sector de seguros se beneficia considerablemente de los chatbots, porque se basa en actividades repetitivas y sujetas a un procedimiento, con información que cambia con cierta frecuencia. Entrenar a un equipo de personas para interactuar de la misma forma con clientes es costoso y susceptible de errores."
+---
+"¿En qué lenguajes de programación puede escribirse el código fuente de los chatbots creados en Azure Bot Framework?:
+A. Python y Java.
+B. C#/.NET, Node.js o Javascript.
+C. C# exclusivamente.
+D. Node.js o Java.";"B";"C#/.NET son tecnologías propias de Microsoft, mientras que Node.js o Javascript son lenguajes ampliamente reconocidos en la comunidad de desarrolladores. Por tanto, cualquiera de las dos opciones es igualmente recomendable para desarrollar chatbots."
+---
+"¿Cuál de las siguientes no es una mejor práctica en el diseño de la experiencia conversacional?:
+A. Incluir un diálogo para pedir ayuda o finalizar la conversación.
+B. Utilizar exactamente las mismas respuestas cada vez a una misma petición del usuario para no dar lugar a una interpretación incorrecta.
+C. Mantener los diálogos breves.
+D. Añadir variaciones a las respuestas";"B";"La variación de las respuestas (sin alterar su significado) genera en el usuario la sensación de estar conversando con un humano. Lo contrario genera rechazo, porque evidencia que se está hablando con una máquina."
+---
+"¿Qué diferencia a un skill de un chatbot convencional?:
+A. Una habilidad o skill es el tipo de bot que interactúa directamente con el usuario.
+B. Una habilidad o skill es un bot que no interactúa directamente con el usuario, sino que proporciona una funcionalidad determinada a otros bots.
+C. Una habilidad o skill está programado en un lenguaje diferente que un bot convencional. A pesar de ellos, ambos son interoperables.
+D. No existen diferencias, dado que se trata de términos utilizados para referirse al mismo tipo de tecnología conversacional.";"B";"Estos bots están especializados en determinadas tareas, y su uso por parte de bots convencionales facilita una arquitectura modular en la que las tareas pueden ser reutilizadas en diferentes escenarios."

@@ -1,0 +1,60 @@
+question;answer;explanation
+---
+"¿Cuál de las siguientes no es una característica del servicio Computer Vision?:
+A. Detección de objetos.
+B. Clasificación de imágenes clínicas.
+C. Reconocimiento de texto manuscrito e impreso.
+D. Paleta de colores.";"B";"El servicio Computer Vision reconoce un amplio abanico de información contenida en una imagen. Sin embargo, es Azure AI Language quien puede realizar el análisis de textos (no imágenes) clínicas."
+---
+"¿En qué se diferencian los servicios Computer Vision y Custom Vision?:
+A. En Computer Vision se proporcionan imágenes propias para reentrenar los modelos de acuerdo con categorías personalizadas.
+B. En Custom Vision se proporcionan imágenes propias para reentrenar los modelos de acuerdo con categorías personalizadas.
+C. No existen ninguna diferencia, son dos nombres utilizados para referirse al mismo servicio.
+D. Custom Vision proporciona una mayor precisión en la información extraída, dado que utiliza modelos con mejores procesos de entrenamiento.";"B";"En efecto, Custom Vision permite extender la funcionalidad por defecto de Computer Vision para adaptarse a casos de uso personalizados en los que la categorización estándar no es suficiente."
+---
+"¿Qué características deben tener las imágenes de entrenamiento de Custom Vision?:
+A. Deben tener el formato JPG.
+B. Deben incluir diferentes tipos de iluminación, ángulos y fondos.
+C. Deben tener una resolución adecuada, de al menos 1920x1080px.
+D. Deben incluir el mismo tipo de iluminación, ángulos y fondos.";"B";"El uso de imágenes que varían en estos aspectos permite entrenar modelos más precisos para la clasificación de imágenes nuevas, dado que se considera un amplio abanico de posibles configuraciones."
+---
+"¿Cuál de las siguientes no es una característica del servicio Face?:
+A. Detección de caras similares a una dada.
+B. Incorporación de filtros de imagen a las caras detectadas para corregir circunstancias habituales, como por ejemplo los ojos cerrados.
+C. Agrupación de imágenes con caras de aspecto similar.
+D. Comprobación de que las caras mostradas en dos imágenes pertenecen a la misma persona.";"B";"En efecto, el servicio Face se centra exclusivamente en la detección y comparación de caras para diferentes propósitos, pero no realiza mejoras a la imagen original."
+---
+"¿Qué atributos incluye el JSON de resultados devuelto por detect_with_url() en el servicio Face?:
+A. Solo indica que se trata de una cara, pero no aporta ningún dato adicional.
+B. Edad, sexo y coordenadas de posición.
+C. Coordenadas de posición.
+D. Coordenadas de posición y sexo.";"B";"El JSON incorpora la edad aproximada de la persona, su sexo y las coordenadas del rectángulo que enmarca la cara encontrada en la imagen."
+---
+"El servicio Form Recognizer permite reconocer campos y valores de un formulario sin necesidad de entrenar un modelo específico para nuestros documentos:
+A. Falso.
+B. Verdadero.";"B";"Se puede utilizar el General Document Model para extraer información de un documento en cualquier formato. Solo en caso de que los resultados no sean satisfactorios se recomienda entrenar modelos personalizados a partir de muestras de los tipos de documentos considerados."
+---
+"¿Cuáles son los principales casos de uso de la funcionalidad de clasificación personalizada de textos en Azure AI Language?:
+A. Resumen de libros.
+B. Categorización automática de correos o tiques y buscadores semánticos.
+C. Creación de chatbots.
+D. Integración en Power BI.";"B";"Mediante los modelos personalizados de clasificación, es posible automatizar la lectura de correos para determinar cómo deben gestionarse. También es posible asignar etiquetas a documentos internos de una organización para facilitar su recuperación mediante búsquedas semánticas."
+---
+"¿En qué consiste la funcionalidad de detección de entidades en Azure AI Language?:
+A. Permite identificar contenido ofensivo en un texto y reemplazarlo por asteriscos.
+B. Permite extraer las entidades clave de un texto, tales como lugares, fechas, cantidades, nombres o marcas.
+C. Permite extraer nombres de personas que aparecen en el texto.
+D. Permite extraer información personal o sensible detectada en el texto.";"B";"Estas entidades representan información valiosa para generar la respuesta a un mensaje o ejecutar acciones relacionadas con este.
+La detección de entidades extrae información clave como lugares, fechas, cantidades y nombres."
+---
+"¿Cuáles son las tecnologías de Power Platform en las que pueden integrarse servicios cognitivos de Azure?:
+A. Power Apps y Power BI.
+B. Power Apps, Power BI y Power Automate.
+C. Power Automate y Power BI.
+D. Los servicios cognitivos de Azure no pueden integrarse en la Power Platform.";"B";"En efecto, los servicios cognitivos pueden integrarse en los flujos creados con Power Automate, en el análisis de datos realizado con Power BI o en las funcionalidades de aplicaciones desarrolladas con Power Apps."
+---
+"¿Cuál de los siguientes tipos de información no es identificada por la funcionalidad de detección de información personal o sensible de Azure AI Language?:
+A. Direcciones postales.
+B. Números de identificación de asociaciones regionales.
+C. Fechas.
+D. Puesto que ocupa un empleado en la organización.";"B";"La detección de información personal o sensible se centra en aquellos elementos que pueden comprometer la confidencialidad de datos o el cumplimiento regulatorio en una organización."
