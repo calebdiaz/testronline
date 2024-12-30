@@ -32,3 +32,132 @@ A. Da como resultado un aprendizaje más rápido y con mejores resultados porque
 B. Genera un modelo inicial que converge más rápido pero puede llevar a un modelo subóptimo debido a la falta de diversidad en los pesos.
 C. No afecta significativamente al aprendizaje, pero reduce la variabilidad inicial del modelo.
 D. Impide que el modelo aprenda correctamente, ya que todos los elementos de la matriz W tienen el mismo valor y no permite la diferenciación de características durante el entrenamiento.";"D";"Inicializar todos los pesos y sesgos a cero en un clasificador lineal resulta problemático porque conduce a la simetría en las actualizaciones de los parámetros durante el entrenamiento. En algoritmos como el gradiente descendente, todas las características se tratarían de manera idéntica, y las actualizaciones para cada peso serían idénticas, impidiendo que el modelo aprenda a diferenciar la importancia relativa de las características. Esto se conoce como el problema de la simetría rota. <a target="_blank" href="https://en.wikipedia.org/wiki/Weight_initialization"/>link</a> Para garantizar un entrenamiento efectivo, es crucial inicializar los pesos con valores pequeños y aleatorios, lo que introduce suficiente asimetría para que las características se actualicen de forma independiente, permitiendo al modelo aprender patrones significativos en los datos."
+---
+"Para un clasificador lineal, inicializar todos los pesos y sesgos a cero dará como resultado un aprendizaje más rápido y con mejores resultados ya que aumenta la velocidad de convergencia pues todos los elementos de la matriz W contienen el mismo valor (mira luego la expli):
+A. Cierto
+B. No";"B";"Inicializar todos los pesos y sesgos a cero en un clasificador lineal no mejora el aprendizaje ni los resultados, ya que conduce al problema de simetría rota- <a target="_blank" href="https://en.wikipedia.org/wiki/Weight_initialization"/>link</a> Para garantizar un entrenamiento efectivo, es crucial inicializar los pesos con valores pequeños y aleatorios, lo que introduce suficiente asimetría para que las características se actualicen de forma independiente, permitiendo al modelo aprender patrones significativos en los datos.
+
+Los sesgos (bias) pueden inicializarse a cero sin causar problemas significativos en el aprendizaje de un modelo. A diferencia de los pesos, los sesgos no están sujetos al problema de simetría rota, ya que su papel principal es desplazar las activaciones, y no participan en la ponderación relativa de las entradas.
+"
+---
+"Disponemos de un dataset pequeño que contiene caracteres manuscritos de la A a la Z y queremos desarrollar un modelo de reconocimiento de escritura. Como el dataset es pequeño, una buena idea es aumentar el conjunto de datos volteando aleatoriamente cada imagen horizontal y verticalmente, dado que sabemos que cada letra está representada por igual en el dataset original (mira exp):
+A. Verdadero.
+B. Falso";"B";"Voltear aleatoriamente las imágenes horizontal y verticalmente no es una buena idea en este caso porque alteraría la semántica de las letras. Por ejemplo, al voltear horizontalmente una "b" se parecería a una "d", y al voltear verticalmente una "u" podría parecer una "n". Esto introduciría ruido en los datos y confundiría al modelo durante el entrenamiento. Una mejor estrategia sería emplear aumentaciones que preserven las características distintivas de las letras, como rotaciones muy pequeñas, cambios en el brillo o ruido gaussiano, para enriquecer el conjunto de datos sin alterar la naturaleza de las letras <a target="_blank" href="https://arxiv.org/pdf/2308.13791">Enlace</a> "
+---
+"Añadir capas de Batch Normalization ayuda a mitigar el problema del "Exploding Gradient". Para cada apartado la puntuación es la mitad por decir si es verdadero o falso y la otra mitad por indicar el motivo correctamente (expli):
+A. Verdad
+B. Nop";"A";"Las capas de Batch Normalization ayudan a mitigar el problema del exploding gradient (y también el vanishing gradient) al normalizar las activaciones de cada capa, manteniéndolas dentro de un rango estable. Esto reduce el riesgo de que los gradientes crezcan exponencialmente durante el retropropagado en redes profundas, lo que podría saturar los valores de los pesos y dificultar la convergencia. Además, al mantener las activaciones más consistentes, Batch Normalization contribuye a un entrenamiento más estable y a una mayor eficiencia en la optimización. Sin embargo, aunque mitiga el problema, no lo resuelve por completo en casos extremos.
+
+Es importante señalar que, en redes muy profundas, el Batch Normalization por sí solo puede no ser suficiente para resolver completamente este problema. En algunos casos, se ha observado que puede incluso contribuir al fenómeno de explosión de gradientes si no se combina con otras técnicas adecuadas, como las conexiones residuales.
+
+Aunque el Batch Normalization es una herramienta útil para mitigar el problema del exploding gradient, su efectividad puede depender de la arquitectura específica de la red y de su combinación con otras técnicas de normalización y regularización.
+<a target="_blank" href="https://spotintelligence.com/2023/12/06/exploding-gradient-problem/?utm_source=chatgpt.com">Explo Grad</a>
+"
+---
+"Estás entrenando una red GAN para generar imágenes de puestas de sol en la playa usando imágenes que has tomado en tus últimas vacaciones en Almería. Tienes un número limitado de imágenes y decides aplicar técnicas de Data Augmentation para mejorar el entrenamiento de la red GAN. Para empezar, usas cuatro técnicas de Data Augmentation que son bien conocidas. ¿Cuáles de estas técnicas crees que pueden ser una buena idea para ayudar a que la red GAN genere mejores imágenes? mirar expli:
+A. Cambiar el color de algunos píxeles de forma aleatorio.
+B. Voltear la imagen de izquierda a derecha.
+C. Hacer recortes de partes de la imagen.
+D. Aplicar desenfoques.";"B,C";" -Cambiar el color de algunos píxeles de forma aleatoria.
+No es una buena idea. Cambiar colores de píxeles al azar introduce ruido en los datos y puede llevar a que el modelo aprenda patrones irreales o indeseados, ya que las imágenes originales se distorsionan de forma no natural. Esto perjudica el realismo de las imágenes generadas.
+
+- Voltear la imagen de izquierda a derecha.
+Es una buena idea. En el caso de las puestas de sol en la playa, voltear las imágenes horizontalmente no altera la semántica de la escena y genera mayor diversidad en el conjunto de datos. Esto puede ayudar a la red GAN a aprender patrones más variados.
+
+- Hacer recortes de partes de la imagen.
+Es una buena idea con precaución. Realizar recortes puede ser útil para forzar al modelo a aprender detalles locales y generar imágenes más realistas. Sin embargo, los recortes deben mantenerse dentro de un rango razonable para no perder el contexto general de las puestas de sol y la playa.
+
+- Aplicar desenfoques.
+Depende del objetivo. Aplicar desenfoques puede ser útil en ciertos casos para aprender a generar variaciones en profundidad de campo o para imitar condiciones específicas. Sin embargo, si se usa excesivamente, podría generar un modelo que produzca imágenes borrosas, lo que no es deseable en la mayoría de los casos."
+---
+"Para poder detectar si en la imagen aparece un gato o no decides diseñar una Red Neur Convo con una neurona de salida y activación ReLU. La salida de esta neurona es z. Así la salida final y, de la neurona z, viene dada por la  expresión y = ReLU (z) Decides clasificar como gatos todos los valores de y>5.
+¿Qué problema encuentras?:
+A. La función de activación ReLU no permite clasificar correctamente valores por debajo de 0, ya que los resultados negativos de z se convierten en 0.
+B. Clasificar basándote en y > 5 puede ser arbitrario y dificulta la interpretación de los resultados del modelo.
+C. La función de activación ReLU es inadecuada, ya que no permite manejar adecuadamente valores por encima del umbral de clasificación.
+D. La configuración actual garantiza que siempre se clasifiquen todas las imágenes correctamente como -gato- o -no gato-.";"A,B";"- La función de activación ReLU no permite clasificar correctamente valores por debajo de 0, ya que los resultados negativos de z se convierten en 0.
+Correcto. Esto significa que las imágenes que deberían producir valores negativos de z no se distinguirán de aquellas con z cercano a 0, lo que puede llevar a errores en la clasificación.
+
+- Clasificar basándote en y > 5 puede ser arbitrario y dificulta la interpretación de los resultados del modelo.
+Correcto. Establecer un umbral como 5 sin un motivo claro no está respaldado por un criterio sólido y podría afectar la precisión del modelo, ya que depende del rango de salida de z.
+
+- La función de activación ReLU es inadecuada, ya que no permite manejar adecuadamente valores por encima del umbral de clasificación.
+Falso. ReLU es adecuada para manejar valores mayores que 0 y no presenta problemas con valores altos de z, el problema radica en la configuración del umbral o la función de decisión, no en ReLU misma.
+
+- La configuración actual garantiza que siempre se clasifiquen todas las imágenes correctamente como "gato" o "no gato".
+Falso. La configuración no garantiza esto porque los valores de salida de y dependen de la distribución de z, que puede no estar bien ajustada para clasificar efectivamente las imágenes en base al umbral definido."
+---
+"Para poder detectar si en la imagen aparece un gato o no decides diseñar una Red Neur Convo con una neurona de salida y activación ReLU. La salida de esta neurona es z. Así la salida final y, de la neurona z, viene dada por la  expresión y = ReLU (z) Decides clasificar como gatos todos los valores de y>5.
+¿Cómo solucionas el problema que surge?:
+A. Cambiar la función de activación de la neurona de salida a una función sigmoide, que produce valores en el rango [0, 1], y ajustar el umbral de clasificación.
+B. Es sencillo - mantener la función ReLU pero cambiar el umbral de clasificación a y > 0
+C. Añadir una capa de normalización a la salida de la función ReLU para que los valores de y estén en un rango adecuado antes de clasificar
+D. Cambiar el criterio de clasificación a "todos los valores de y > 1" para simplificar la decisión.";"A";"<a target="_blank" href="https://ml-explained.com/blog/activation-functions-explained">
+<img src="https://ml-explained.com/_ipx/sizes_xs:320px%20md:768px%20lg:1024px,w_768,f_webp/articles/activation-functions-explained/Sigmoid_Function.png"/>
+</a>
+- Cambiar la función de activación de la neurona de salida a una función sigmoide, que produce valores en el rango [0, 1], y ajustar el umbral de clasificación.
+Cierto. Cambiar a una función sigmoide permite que la salida esté en un rango bien definido, lo que facilita interpretar la probabilidad de que la imagen sea un gato. El umbral podría ajustarse, por ejemplo, a 0.5 para clasificar correctamente.
+
+- Mantener la función ReLU pero cambiar el umbral de clasificación a y > 0.
+Falso. Esto eliminaría el problema de los valores negativos de z, pero no resuelve la arbitrariedad del umbral 5. Además, podría reducir la precisión de la clasificación, ya que valores bajos positivos podrían ser incorrectamente clasificados como gatos.
+
+- Añadir una capa de normalización a la salida de la función ReLU para que los valores de y estén en un rango adecuado antes de clasificar.
+Falso. La normalización de los valores de salida no resuelve el problema principal de la arbitrariedad del umbral ni la falta de interpretación probabilística de la salida de ReLU.
+
+- Cambiar el criterio de clasificación a "todos los valores de y > 1" para simplificar la decisión.
+Falso. Cambiar el umbral a 1 no resuelve el problema de fondo, ya que sigue siendo un criterio arbitrario y no ajustado a una escala probabilística.
+"
+---
+"Qué afirmaciones sobre las Redes Neuronales Recurrentes (RNN) son correctas?:
+A. Las RNN son redes diseñadas para procesar secuencias de datos, como series temporales o texto, gracias a su capacidad para mantener información del pasado en sus cálculos.
+B. Las RNN no tienen problemas para manejar dependencias a largo plazo en secuencias largas.
+C. Las RNN pueden ser mejoradas mediante arquitecturas como LSTM o GRU, que están diseñadas para mitigar el problema de desvanecimiento del gradiente.
+D. Una desventaja clave de las RNN es que no pueden procesar secuencias de diferentes longitudes.";"A,C";"
+<a target="_blank" href="https://lamaquinaoraculo.com/deep-learning/redes-neuronales-recurrentes">RNN link</a>
+
+<a target="_blank" href="https://www.themachinelearners.com/modelos-secuencia/">Modelos de Secuencia</a>
+
+- Las RNN son redes diseñadas para procesar secuencias de datos, como series temporales o texto, gracias a su capacidad para mantener información del pasado en sus cálculos.
+Cierto. Esta es la principal característica de las RNN, ya que tienen conexiones recurrentes que permiten recordar estados previos.
+
+- Las RNN no tienen problemas para manejar dependencias a largo plazo en secuencias largas.
+Falso. Las RNN básicas sufren del problema de desvanecimiento del gradiente, lo que dificulta aprender dependencias a largo plazo.
+
+- Las RNN pueden ser mejoradas mediante arquitecturas como LSTM o GRU, que están diseñadas para mitigar el problema de desvanecimiento del gradiente.
+Cierto. LSTM (Long Short-Term Memory) y GRU (Gated Recurrent Units) introducen mecanismos de memoria y puertas que les permiten aprender dependencias a largo plazo de manera más efectiva.
+
+- Una desventaja clave de las RNN es que no pueden procesar secuencias de diferentes longitudes.
+Falso. Las RNN pueden procesar secuencias de diferentes longitudes gracias a su diseño recurrente.
+
+Una Red Neuronal Recurrente (RNN) es un tipo de red neuronal diseñada específicamente para procesar datos secuenciales, como series temporales, texto, o audio. A diferencia de redes como las densas (MLP) o convolucionales (CNN), las RNN tienen conexiones recurrentes que les permiten mantener un estado interno, lo cual es útil para capturar relaciones y patrones en secuencias.
+
+En las RNN, cada paso de tiempo procesa un elemento de la secuencia y actualiza su estado interno para incorporar información previa. Esto les otorga la capacidad de modelar dependencias temporales, haciendo que sean ideales para tareas como traducción automática, análisis de sentimientos y reconocimiento de voz.
+
+Principales diferencias respecto a otras redes:
+
+    Las RNN pueden manejar datos de longitud variable, mientras que las redes densas requieren entradas de tamaño fijo.
+    A diferencia de las CNN, que se especializan en datos espaciales, las RNN están optimizadas para datos temporales o secuenciales.
+
+Ventajas:
+
+    Pueden capturar dependencias temporales en secuencias.
+    Manejan datos de longitud variable.
+    Son aptas para tareas como predicción de series temporales o procesamiento de lenguaje natural.
+
+Desventajas:
+
+    Desvanecimiento y explosión del gradiente: Las RNN básicas tienen dificultades para aprender dependencias a largo plazo debido a problemas con los gradientes en el entrenamiento.
+    Procesamiento secuencial: El cálculo secuencial limita la velocidad de entrenamiento y dificulta la paralelización.
+
+Técnicas para mitigar desventajas:
+
+    LSTM (Long Short-Term Memory): Introduce una arquitectura con "puertas" que controlan el flujo de información, resolviendo el problema del desvanecimiento del gradiente y permitiendo aprender dependencias a largo plazo.
+    GRU (Gated Recurrent Unit): Simplifica las LSTM, logrando un desempeño similar con menos parámetros.
+    Regularización: Técnicas como Dropout en conexiones recurrentes ayudan a evitar sobreajuste.
+    Bidireccional RNN: Procesan la secuencia en ambas direcciones para capturar contextos pasados y futuros.
+    Transformers: Aunque no son RNN, los Transformers han demostrado ser más eficientes para secuencias largas, reemplazando RNN en muchas aplicaciones modernas.
+"
+
+
+
+
