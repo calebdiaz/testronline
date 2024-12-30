@@ -1,0 +1,34 @@
+question;answer;explanation
+---
+"...La empresa trabaja con un total de 10 piezas distintas que la fresadora va construyendo... -
+
+
+
+model = tf.keras.models.Sequential([
+
+    tf.keras.layers.Conv2D(64, (3, 3), activation='relu', input_shape=(128, 128, 3)),
+    tf.keras.layers.MaxPooling2D((2, 2)),
+
+    ...(más capas por aquí)
+
+    tf.keras.layers.Dense(512, activation='relu'),
+
+    tf.keras.layers.Dense(7, activation='softmax')
+])
+:
+A. Eso que tiene que ver con Navidad?.
+B. Falta una tf.keras.Flatten(), antes de Dense.
+C. Clasificar 10 cosas y tenemos 7 neuronas a la salida, vamos mal.";"B,C";"No tiene nada que ver con la Navidad pero...
+
+ Err1 - nos falta aplanar el vector a 1D antes de enviarlo a la capa Dense.
+
+ Err2 - Si vamos a clasificar 10 items o 20 o los que sea no podemos tener menos neuronas a la salida.
+
+
+ "
+---
+"¿Qué ocurre al inicializar todos los pesos y sesgos a cero en un clasificador lineal?:
+A. Da como resultado un aprendizaje más rápido y con mejores resultados porque aumenta la velocidad de convergencia al tener la matriz W el mismo valor en todos sus elementos.
+B. Genera un modelo inicial que converge más rápido pero puede llevar a un modelo subóptimo debido a la falta de diversidad en los pesos.
+C. No afecta significativamente al aprendizaje, pero reduce la variabilidad inicial del modelo.
+D. Impide que el modelo aprenda correctamente, ya que todos los elementos de la matriz W tienen el mismo valor y no permite la diferenciación de características durante el entrenamiento.";"D";"Inicializar todos los pesos y sesgos a cero en un clasificador lineal resulta problemático porque conduce a la simetría en las actualizaciones de los parámetros durante el entrenamiento. En algoritmos como el gradiente descendente, todas las características se tratarían de manera idéntica, y las actualizaciones para cada peso serían idénticas, impidiendo que el modelo aprenda a diferenciar la importancia relativa de las características. Esto se conoce como el problema de la simetría rota. <a target="_blank" href="https://en.wikipedia.org/wiki/Weight_initialization"/>link</a> Para garantizar un entrenamiento efectivo, es crucial inicializar los pesos con valores pequeños y aleatorios, lo que introduce suficiente asimetría para que las características se actualicen de forma independiente, permitiendo al modelo aprender patrones significativos en los datos."
