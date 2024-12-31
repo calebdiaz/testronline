@@ -1,0 +1,126 @@
+question;answer;explanation
+---
+"¿Qué se busca en el aprendizaje no supervisado?:
+A. Realizar predicciones precisas basadas en datos de entrada.
+B. Entrenar un modelo para clasificar los datos en clases predefinidas.
+C. Descubrir estructuras ocultas o relaciones en los datos.
+D. Etiquetar automáticamente grandes conjuntos de datos.";"C";"
+Enlaces de interés:
+
+<a target="_blank" href="https://www.aionlinecourse.com/ai-quiz-questions/machine-learning/unsupervised-learning">Quiz UML</a>
+
+<a target="_blank" href="https://www.mlstack.cafe/blog/unsupervised-learning-interview-questions">UML Questions</a>
+
+"
+---
+"¿Cuál es el criterio que utiliza el algoritmo K-Means para agrupar los datos?:
+A. Minimizar la distancia entre los datos y el centroide del clúster al que pertenecen.
+B. Maximizar la correlación entre las variables de entrada.
+C. Aumentar la distancia entre los clústeres y los datos de entrada.
+D. Reducir el número de variables en el conjunto de datos.";"A";""
+---
+"¿Qué sucede si se eligen centroides iniciales que están muy lejos del centro de los datos en K-Means?:
+A. El algoritmo no converge.
+B. Los resultados pueden ser diferentes en cada ejecución.
+C. Se asignan todos los datos a un único clúster.
+D. K-Means optimiza automáticamente los centroides iniciales.";"B";"K-Means es sensible a la inicialización de los centroides, lo que puede llevar a diferentes resultados en ejecuciones distintas si no se utiliza una estrategia 0 para elegir mejores posiciones iniciales."
+---
+"¿Qué sucede si se corta un dendrograma a una cierta altura?:
+A. Se obtienen los clústeres correspondientes para esa distancia de enlace.
+B. Se eliminan las anomalías.
+C. Se reduce el número de datos analizados.
+D. No afecta al agrupamiento, solo a la visualización.";"A";"Al cortar un dendrograma a una altura específica, se determina el número de clústeres basándose en las distancias de enlace entre los datos."
+---
+"¿Qué tipo de puntos son la base para iniciar la formación de un clúster en DBSCAN?:
+A. Puntos fronterizos.
+B. Puntos ruidosos.
+C. Puntos centrales.
+D. Puntos aislados.";"C";"Los puntos centrales son aquellos que tienen al menos MinPts vecinos dentro de la distancia ϵ. Estos puntos son el núcleo del clúster y permiten expandirlo conectando con otros puntos cercanos."
+---
+"Un investigador aplica PCA a un conjunto de datos con 20 variables y obtiene 20 componentes principales. Descubre que las primeras 2 componentes explican el 90% de la varianza. Decide realizar un modelo de clustering usando únicamente estas 2 componentes. ¿Por qué esta decisión podría ser adecuada?:
+A. Porque las 2 componentes retienen la mayoría de la información relevante y eliminan redundancias de las variables originales.
+B. Porque al usar solo 2 componentes, garantiza una reducción total del ruido y de los valores atípicos.
+C. Porque el uso de todas las 2 componentes podría mejorar los resultados de clustering.
+D. Porque PCA transforma las variables en componentes ortogonales, eliminando automáticamente cualquier variabilidad en los datos.";"A";"Utilizar solo las 2 componentes principales que explican el 90% de la varianza permite reducir la dimensionalidad y trabajar con un subconjunto más manejable de datos, reteniendo la información más relevante y eliminando redundancias, lo cual mejora la eficiencia y claridad del modelo de clustering."
+---
+"Se aplica PCA a un conjunto de datos de 4 dimensiones para reducirlo a 2 componentes principales.
+Si un punto en el espacio original tiene las siguientes coordenadas [4, 2, -1, 3] y las componentes principales están definidas por los vectores propios
+    • Primer componente principal [0.5, 0.5, 0.5, 0.5]
+    • Segundo componente principal [0.7, -0.7, 0.1, -0.1]
+¿Cuál sería la proyección de este punto en las dos primeras componentes principales?:
+A. [2.0, 3.2]
+B. [4.0, -1.8]
+C. [4.0, 1.0]
+D. [3.5, 2.0]";"C";"La proyección se calcula como el producto punto del vector de coordenadas del punto con cada uno de los vectores propios:
+
+    • Para el primer componente principal:
+(4)(0.5)+(2)(0.5)+(−1)(0.5)+(3)(0.5)=4.0
+
+    • Para el segundo componente principal:
+(4)(0.7)+(2)(−0.7)+(−1)(0.1)+(3)(−0.1)=2.8-1.4-0.1-0.3=1
+
+Por lo tanto, la proyección del punto en las dos primeras componentes es [4.0, 1.0]."
+---
+"Un analista aplica el algoritmo DBSCAN a un conjunto de datos con los siguientes parámetros
+
+    • Epsilon (ϵ) = 0.5
+    • MinPts = 5
+
+Tras ejecutar el algoritmo, identifica que un punto en el dataset tiene 3 vecinos dentro de la distancia ϵ y pertenece al clúster 1. ¿Cómo clasificaría este punto DBSCAN y por qué?:
+A. Como un punto central, porque tiene al menos MinPts vecinos dentro de ϵ.
+B. Como un punto fronterizo, porque tiene menos de MinPts vecinos, pero está dentro del alcance de un punto central.
+C. Como un punto de ruido, porque tiene menos de MinPts vecinos dentro de ϵ.
+D. Como un punto aislado, porque no pertenece a ningún clúster.";"B";"El punto tiene menos de MinPts vecinos dentro de ϵ, por lo que no puede ser un punto central. Sin embargo, como está dentro del alcance de un punto central que pertenece al clúster 1, se clasifica como un punto fronterizo y se asigna al mismo clúster."
+---
+"Un sistema de monitoreo de redes detecta un aumento repentino en el tráfico de datos en un servidor específico. Tras analizarlo con un modelo basado en densidad como DBSCAN, se clasifica el evento como una anomalía. ¿Qué característica del algoritmo DBSCAN permite esta clasificación?:
+A. Su capacidad para manejar grandes volúmenes de datos en redes.
+B. Su enfoque en la minimización de la distancia entre todos los puntos.
+C. Su capacidad para identificar puntos de baja densidad como anomalías.
+D. Su habilidad para requerir datos etiquetados para detectar anomalías.
+";"C";"DBSCAN detecta anomalías al identificar puntos de baja densidad que no tienen suficientes vecinos dentro de un radio ϵ. Esto lo hace ideal para encontrar patrones de comportamiento inusuales en conjuntos de datos con estructuras densas y dispersas, como el tráfico de red."
+---
+"Un robot aprende a moverse en una habitación para encontrar una fuente de energía. Cada vez que avanza hacia la fuente, recibe una recompensa positiva. si choca con una pared, recibe una recompensa negativa. ¿Cómo define este escenario el aprendizaje por refuerzo?:
+A. Como un problema de clasificación supervisada basado en recompensas.
+B. Como un proceso en el que el robot utiliza recompensas para ajustar su política de acciones.
+C. Como un modelo donde el robot necesita datos etiquetados para aprender.
+D. Como un sistema reactivo que toma decisiones sin considerar recompensas futuras.";"B";"En este caso, el robot actúa como un agente que interactúa con su entorno (la habitación). Aprende a ajustar su política de acciones (cómo moverse) utilizando las recompensas positivas o negativas que recibe en función de las consecuencias de sus acciones, característica central del aprendizaje por refuerzo."
+---
+En un conjunto de datos, se realiza un análisis de clustering con tres clústeres y se calculan las siguientes distancias promedio
+
+    • Distancia intra-clúster para el clúster 1= 2.5
+    • Distancia intra-clúster para el clúster 2= 3.0
+    • Distancia intra-clúster para el clúster 3= 2.8
+    • Distancia inter-clúster promedio entre todos los pares de clústeres= 7.5
+
+¿Qué puede inferirse sobre la calidad del clustering con base en estas distancias?:
+A. El clustering es de alta calidad porque las distancias intra-clúster son mayores que las inter-clúster.
+B. El clustering es de baja calidad porque las distancias intra-clúster son mayores que las inter-clúster.
+C. El clustering es de alta calidad porque las distancias inter-clúster son mayores que las intra-clúster.
+D. No es posible evaluar la calidad del clustering únicamente con estas métricas.";"C";"La calidad del clustering mejora cuando las distancias intra-clúster (dentro de un clúster) son bajas, indicando que los puntos dentro de cada clúster están agrupados de manera compacta, y las distancias inter-clúster (entre clústeres) son altas, lo que sugiere que los clústeres están bien separados entre sí. En este caso, la distancia inter-clúster promedio de 7.5 es significativamente mayor que las intra-clúster, lo que indica un buen agrupamiento."
+---
+"Dados tres clústeres con los siguientes centroides en un espacio bidimensional
+    • Clúster 1= (2, 3)
+    • Clúster 2= (5, 6)
+    • Clúster 3= (1, 8)
+Un nuevo punto tiene las coordenadas (4, 4). ¿A qué clúster debería asignarse el punto, utilizando la distancia euclidiana como métrica?:
+A. Clúster 1
+B. Clúster 2
+C. Clúster 3
+D. No se puede determinar con los datos dados.";"A,B";"Cálculo:
+
+La distancia euclidiana entre el punto y cada centroide se calcula como:
+
+<img src="assets/calculo_distancia_eucl1.png"/>
+
+    • Distancia al clúster 1 =2.24
+    • Distancia al clúster 2 =2.24
+    • Distancia al clúster 3 =5
+
+Respuesta correcta:
+Como las distancias al clúster 1 y al clúster 2 son iguales puede asignarse a cualquier clúster. (no se asigna a los 2 a la vez)"
+
+
+
+
+
+

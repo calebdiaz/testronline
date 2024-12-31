@@ -39,11 +39,40 @@ history = model.fit(x, y, epochs=20, verbose=1, validation_data=(X_t, y_t))
 :
 A. No están bien las capas de Convolución.
 B. Falta una tf.keras.Flatten(), antes de Dense.
-C. Clasificar 10 cosas y tenemos 7 neuronas a la salida, vamos mal.";"B,C";"No tiene nada que ver con la Navidad pero...
+C. Pocas neur en la salida.
+D. Demasiadas neurs en la salida.";"B,C";"Hay dos errores
+- Err1 - nos falta aplanar el vector a 1D antes de enviarlo a la capa Dense.
 
- Err1 - nos falta aplanar el vector a 1D antes de enviarlo a la capa Dense.
+- Err2 - Si vamos a clasificar 10 items o 20 o los que sea no podemos tener menos neuronas a la salida.
 
- Err2 - Si vamos a clasificar 10 items o 20 o los que sea no podemos tener menos neuronas a la salida.
+
+- Mediante el uso de operaciones de convolución y pooling, las CNN reducen la cantidad de parámetros necesarios, haciendo que el modelo sea más eficiente y menos propenso al sobreajuste. Esto es clave para trabajar con imágenes grandes.
+
+- Las CNN reutilizan los mismos filtros en diferentes partes de la imagen, lo que reduce los cálculos y mejora la generalización, ya que el modelo aprende características comunes en toda la imagen. Esto es crucial para problemas de visión por computadora.
+
+- Las redes convolucionales son ideales para imágenes porque capturan características automáticamente, son computacionalmente eficientes y permiten la reutilización de pesos. Estas ventajas las han convertido en el estándar para problemas de visión por computadora.
+
+<a target="_blank" href="https://data-universe.org/redes-neuronales-convolucionales-aplicaciones-en-procesamiento-de-imagenes/">CNN procesamiento imágenes</a>
+
+
+Pooling, como el max pooling o el average pooling, es una técnica utilizada en redes convolucionales para reducir la dimensionalidad espacial (alto y ancho) de los mapas de características. Esto se realiza seleccionando los valores más importantes de regiones pequeñas del mapa de características.
+
+    - Dropout no elimina neuronas de forma permanente, solo las "desactiva" temporalmente durante el entrenamiento.
+
+- Dropout funciona al desactivar aleatoriamente neuronas durante el entrenamiento, lo que ayuda a la red a aprender representaciones más generales y evita el sobreajuste.
+
+- Dropout SÍ afecta directamente a las neuronas, no solo a las conexiones.
+
+- Dropout NO es exclusivo de redes recurrentes- se aplica en redes convolucionales (CNN), densas (Dense) y recurrentes (RNN).
+
+<a target="_blank" href="https://es.wikipedia.org/wiki/Abandono_(redes_neuronales)">
+Dropout / Abandono RRNN
+</a>
+
+<h4>¿Qué es Dropout?</h4>
+
+Dropout es una técnica regularizadora utilizada en redes neuronales para reducir el riesgo de overfitting (sobreajuste). Durante el entrenamiento, se desactivan aleatoriamente un porcentaje de neuronas en cada iteración, lo que significa que estas neuronas no contribuyen ni al cálculo hacia adelante (forward pass) ni a la retropropagación (backpropagation). Al hacer esto, se fuerza a la red a no depender excesivamente de neuronas específicas, obligándola a aprender patrones más generales y robustos en los datos de entrada.
+
 "
 ---
 "¿Qué ocurre al inicializar todos los pesos y sesgos a cero en un clasificador lineal?:
