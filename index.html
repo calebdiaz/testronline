@@ -16,16 +16,24 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/phaser@v3.55.2/dist/phaser.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
   
-    <link rel="stylesheet" href="css/feather.min.css">
+  <link rel="stylesheet" href="css/feather.min.css">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai-sublime.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
 
+  <style >
+    code {
+      font-size:13px;
+      line-height:14px;
+    }
+  </style>
      
 </head>
 <body style="background:black">
   <div id="appx"></div>
   <script type="module">
     
-    import { init, close_exp } from "./js/testr.js?v2";
+    import { init, close_exp } from "./js/testr.js?v3";
 
     const game = init();
 

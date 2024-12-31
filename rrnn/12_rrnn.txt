@@ -1,31 +1,50 @@
 question;answer;explanation
 ---
-"...La empresa trabaja con un total de 10 piezas distintas que la fresadora va construyendo... -
+"Estás trabajando en la automatización de la salida de piezas de una máquina fresadora para que un robot cartesiano pueda coger la pieza producida en la misma y la lleve a la estantería donde se almacena temporalmente antes de su empaquetado y envío al cliente. La empresa trabaja con un total de 10 piezas distintas que la fresadora va construyendo de forma automatizada..
 
+...has diseñado un modelo usando keras que emplea el código de la figura.¿Podrías identificar los 2 errores que hay en el código, las implicaciones que tendrían y cómo solucionarlos?
 
+<pre><code class="python">
 
 model = tf.keras.models.Sequential([
-
+    # Primera capa convolucional
     tf.keras.layers.Conv2D(64, (3, 3), activation='relu', input_shape=(128, 128, 3)),
     tf.keras.layers.MaxPooling2D((2, 2)),
 
-    ...(más capas por aquí)
+    # Segunda capa convolucional
+    tf.keras.layers.Conv2D(64, (3, 3), activation='relu'),
+    tf.keras.layers.MaxPooling2D((2, 2)),
 
+    # Tercera capa convolucional
+    tf.keras.layers.Conv2D(128, (3, 3), activation='relu'),
+    tf.keras.layers.MaxPooling2D((2, 2)),
+
+    # Proceso de regularización con dropout con una desactivación del 50% de las neuronas
+    tf.keras.layers.Dropout(0.5),
+
+    # Capa oculta de 512 neuronas
     tf.keras.layers.Dense(512, activation='relu'),
 
+    # Capa de salida de 7 neuronas
     tf.keras.layers.Dense(7, activation='softmax')
 ])
+
+model.compile(loss='sparse_categorical_crossentropy', optimizer='rmsprop', metrics=['accuracy'])
+
+history = model.fit(x, y, epochs=20, verbose=1, validation_data=(X_t, y_t))
+
+
+</code></pre>
+
 :
-A. Eso que tiene que ver con Navidad?.
+A. No están bien las capas de Convolución.
 B. Falta una tf.keras.Flatten(), antes de Dense.
 C. Clasificar 10 cosas y tenemos 7 neuronas a la salida, vamos mal.";"B,C";"No tiene nada que ver con la Navidad pero...
 
  Err1 - nos falta aplanar el vector a 1D antes de enviarlo a la capa Dense.
 
  Err2 - Si vamos a clasificar 10 items o 20 o los que sea no podemos tener menos neuronas a la salida.
-
-
- "
+"
 ---
 "¿Qué ocurre al inicializar todos los pesos y sesgos a cero en un clasificador lineal?:
 A. Da como resultado un aprendizaje más rápido y con mejores resultados porque aumenta la velocidad de convergencia al tener la matriz W el mismo valor en todos sus elementos.
@@ -157,6 +176,545 @@ Técnicas para mitigar desventajas:
     Bidireccional RNN: Procesan la secuencia en ambas direcciones para capturar contextos pasados y futuros.
     Transformers: Aunque no son RNN, los Transformers han demostrado ser más eficientes para secuencias largas, reemplazando RNN en muchas aplicaciones modernas.
 "
+---
+"En tu lugar de trabajo te han asignado un nuevo proyecto. Dada la confianza que tu empresa tiene en ti, te han dado acceso al dataset completo desde el primer momento.
+
+Para empezar a trabajar has decidido utilizar los datos de los últimos 6 meses de forma que has utilizado los datos de los 5 primeros meses para entrenar un modelo basado en redes neuronales y el sexto mes para probarlo. 
+
+Tras hacer muchas pruebas te sigue apareciendo de forma constante una diferencia muy grande entre el rendimiento de los datos de entrenamiento y los datos de prueba. Concretamente, el modelo funciona bien con los datos de entrenamiento pero le cuesta con los datos de prueba. ¿Cuál de las siguientes razones puede ser válida para lo que te está sucediendo? (mira expli después)
+(0.5 puntos seleccionar la opción correcta. 1.5 puntos explicar los motivos por los que esa es la opción correcta y las otras no):
+A. El optimizador que usas es incorrecto y no es válido para este problema. 
+B. La función de coste que estás utilizando no es correcta para este problema. 
+C. Los datos de entrenamiento y de prueba no siguen la misma distribución.
+D. El modelo que usas no tiene la complejidad necesaria para capturar señales relevantes en los datos, debes aumentar el número de capas y/o de neuronas en cada capa.";"C";"Cuando el modelo funciona bien con los datos de entrenamiento pero tiene problemas con los datos de prueba, es un indicativo clásico de desajuste de distribución (data shift). Esto ocurre cuando los datos de entrenamiento y los de prueba no provienen de la misma distribución o no representan el mismo fenómeno. Por ejemplo:
+
+  - Estacionalidad: Si los datos abarcan diferentes períodos de tiempo (ejemplo: 5 meses de entrenamiento y un sexto mes de prueba), puede haber un cambio en los patrones de los datos debido a estacionalidad, tendencias del mercado, eventos externos, etc.
+
+  - Cambio en la fuente de datos: Podría haber una diferencia en cómo se generan los datos del sexto mes respecto a los primeros cinco meses (por ejemplo, cambios en el proceso de recolección de datos o características de los clientes).
+
+  - Representatividad: Es posible que los datos de entrenamiento no representen suficientemente los patrones presentes en los datos de prueba.
+
+El resto de opciones podrían ser posibles pero no deberían ya que se ha tenido suficiente tiempo para crear el modelo.
+"
+---
+"Tras mucho tiempo trabajando has puesto en producción el último modelo que has creado haciendo uso de técnicas Deep Learning como redes neuronales.
+Estás muy ilusionado porque los datos de accuracy sobre tus datos de entrenamiento son excelentes.
+
+Sin embargo, al poner el modelo en producción los resultados <b>no han sido para nada buenos 💀</b>.
+
+Piensas que tu modelo puede sufrir overfitting. ¿Cuál de las siguientes técnicas crees que pueden ayudar a reducción el overfitting sobre tus datos de entrenamiento? (Explica en qué consiste cada una de ellas y justifica por qué puede ayudar (o no) a reducir el overfitting - mira expli):
+A. Early Stopping.
+B. Dropout.
+C. Data Augmentation.
+D. Pooling.";"A,B,C";"<h4>Early Stopping</h4>
+
+    ¿En qué consiste? Early stopping es una técnica que detiene el entrenamiento del modelo cuando el rendimiento sobre los datos de validación deja de mejorar durante varias épocas consecutivas. Esto evita que el modelo siga aprendiendo patrones específicos de los datos de entrenamiento (sobreajuste).
+
+    ¿Por qué puede ayudar a reducir el overfitting? Si un modelo entrena durante demasiadas épocas, puede comenzar a memorizar los datos de entrenamiento en lugar de generalizar patrones. Al detener el entrenamiento justo antes de que esto ocurra, el modelo se queda en un punto óptimo donde se minimiza el error de generalización.
+
+    Ejemplo de implementación en Keras
+
+<pre><code class="python">
+    early_stopping = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=5, restore_best_weights=True)
+    model.fit(x_train, y_train, validation_data=(x_val, y_val), callbacks=[early_stopping])
+</code></pre>
+
+<h4>Dropout</h4>
+
+    ¿En qué consiste? Dropout es una técnica de regularización que, durante el entrenamiento, "apaga" aleatoriamente un porcentaje de neuronas en una capa. Esto evita que las neuronas dependan demasiado unas de otras y fomenta que el modelo aprenda representaciones más generalizables.
+
+    ¿Por qué puede ayudar a reducir el overfitting? Dropout actúa como un mecanismo de regularización que introduce ruido en el entrenamiento, dificultando que el modelo memorice los datos de entrenamiento. En su lugar, lo obliga a aprender características más robustas y generalizables.
+
+    Ejemplo de implementación en Keras
+
+<pre><code class="python">
+    model.add(tf.keras.layers.Dropout(0.5))  # Apaga el 50% de las neuronas
+</code></pre>
+
+<h4>Data Augmentation</h4>
+
+    ¿En qué consiste? Data augmentation implica crear nuevas muestras de datos a partir de los datos originales mediante transformaciones como rotaciones, zooms, recortes, reflejos o cambios de color. Esto aumenta la diversidad del conjunto de datos sin necesidad de recopilar más datos reales.
+
+    ¿Por qué puede ayudar a reducir el overfitting? Al proporcionar un conjunto de datos más diverso y rico, el modelo se ve obligado a aprender patrones más generales en lugar de memorizar características específicas de los datos de entrenamiento. Esto es especialmente útil cuando el conjunto de datos original es pequeño.
+
+    Ejemplo de implementación en Keras
+
+<pre><code class="python">
+    datagen = tf.keras.preprocessing.image.ImageDataGenerator(
+        rotation_range=20,
+        width_shift_range=0.2,
+        height_shift_range=0.2,
+        shear_range=0.2,
+        zoom_range=0.2,
+        horizontal_flip=True,
+        fill_mode='nearest')
+    datagen.fit(x_train)
+</code></pre>
+
+<h4>Pooling</h4>
+
+    ¿En qué consiste? Pooling, como el max pooling o el average pooling, es una técnica utilizada en redes convolucionales para reducir la dimensionalidad espacial (alto y ancho) de los mapas de características. Esto se realiza seleccionando los valores más importantes de regiones pequeñas del mapa de características.
+
+    ¿Por qué puede (o no) ayudar a reducir el overfitting? Pooling reduce la complejidad del modelo al disminuir el número de parámetros aprendidos, lo cual puede ayudar a evitar el sobreajuste. Sin embargo, su principal objetivo no es reducir el overfitting, sino capturar las características más importantes mientras reduce la resolución espacial. Su efecto en la regularización es más un subproducto que un propósito principal.
+
+    Ejemplo de implementación en Keras
+
+<pre><code class="python">
+    model.add(tf.keras.layers.MaxPooling2D(pool_size=(2, 2)))
+</code></pre>
+
+<h4>Conclusión</h4>
+
+Las técnicas más efectivas para reducir el overfitting serían Early Stopping, Dropout y Data Augmentation, ya que atacan directamente el problema del sobreajuste:
+
+    - Early Stopping previene un sobreentrenamiento al detenerse en el momento óptimo.
+
+    - Dropout introduce regularización en las capas del modelo, forzándolo a aprender patrones más robustos.
+
+    - Data Augmentation incrementa la diversidad del conjunto de datos, reduciendo la probabilidad de memorizar características específicas.
+
+- Pooling, aunque útil para reducir la dimensionalidad, no está diseñado específicamente para combatir el overfitting. Su impacto en este sentido es más indirecto."
+---
+"Estás trabajando en la automatización de la salida de piezas de una máquina fresadora para que un robot cartesiano pueda coger la pieza
+...trabaja con un total de 10 piezas distintas que la fresadora va construyendo
+
+...has diseñado un modelo usando keras que emplea el código.
+¿Podrías identificar los 2 errores que hay en el código, las implicaciones que tendrían y cómo solucionarlos? (mirar expli después)
+<pre><code class="python">
+model = tf.keras.models.Sequential([
+    # Primera capa convolucional
+    tf.keras.layers.Conv2D(64, (120, 120), activation='relu', input_shape=(128, 128, 3)),
+    tf.keras.layers.MaxPooling2D((2, 2)),
+
+    # Segunda capa convolucional
+    tf.keras.layers.Conv2D(64, (120, 120), activation='relu'),
+    tf.keras.layers.MaxPooling2D((2, 2)),
+
+    # Tercera Capa Convolucional
+    tf.keras.layers.Conv2D(128, (120, 120), activation='relu'),
+    tf.keras.layers.MaxPooling2D((2, 2)),
+
+    # Convierte las matrices a vector para que sirvan de entrada a una red neuronal totalmente conectada.
+    tf.keras.layers.Flatten(),
+
+    # Proceso de regularización con dropout con una desactivación del 50% de las neuronas
+    tf.keras.layers.Dropout(0.5),
+
+    # Capa oculta de 512 neuronas
+    tf.keras.layers.Dense(512, activation='relu'),
+
+    # Capa de salida de 7 neuronas
+    tf.keras.layers.Dense(7, activation='softmax')
+])
+
+model.compile(loss='sparse_categorical_crossentropy', optimizer='rmsprop', metrics=['accuracy'])
+
+history = model.fit(X, y, epochs=20, verbose=1, validation_data=(X_t, y_t))
+
+</code></pre>:
+A. número de neuronas en la salida pequeño.
+B. tamaño del kernel en las capas convolucionales es grande.
+C. número de neuronas en la salida grande.
+D. tamaño del kernel en las capas convolucionales es pequeño.
+E. La entrada a la capa Dense tiene un formato no adecuado.";"A,B";"Errores -
+
+Err1 - El tamaño del kernel en las capas convolucionales es demasiado grande: (120, 120). Esto significa que cada filtro intentará abarcar casi toda la imagen (o una gran parte de ella), lo que es poco práctico y desperdicia la capacidad de aprendizaje del modelo.
+
+  Reducir el tamaño del kernel: Cambiar de (120, 120) a algo más razonable, como (3, 3) o (5, 5).
+
+Err2 - La capa de salida tiene 7 neuronas:
+
+tf.keras.layers.Dense(7, activation='softmax')
+
+Esto es incorrecto porque el problema implica clasificar 10 piezas distintas producidas por la fresadora. La capa de salida debe tener tantas neuronas como categorías a clasificar.
+
+"
+---
+"Estás construyendo una red neuronal profunda para trabajar con imágenes de animales de un Zoo. Algunos ejemplos de las imágenes de las que dispones son las siguientes
+
+<img src="assets/animales_examen.png" />
+
+Concretamente, el objetivo es determinar qué animales de especies distintas pasan tiempo juntos entre ellos.
+
+Por eso, si hay un tigre blanco y un mono en la misma imagen, la salida de la red neuronal debe indicar que estos dos animales están presentes en la imagen.
+
+No importa que alguno de ellos aparezca más de una vez.
+
+Estás decidiendo qué función de activación usar en la última capa.
+¿Cuál crees que es la más idónea para ser usada en este problema? Justifica tu respuesta. (0.5 puntos responder cuál es la función de activación adecuada) (1.5 puntos determinar las razones que justifica que esa es la función de activación adecuada y el resto no):
+A. Sigmoide.
+B. Tangente Hiperbólica
+C. ReLU
+D. Softmax.";"A";"El problema implica una clasificación multietiqueta (multi-label classification), donde la red neuronal debe predecir de manera independiente la presencia o ausencia de cada especie de animal en una imagen.
+
+Esto implica que:
+
+    Cada salida de la red debe ser independiente de las demás.
+        Por ejemplo, la presencia de un tigre no afecta la probabilidad de que también haya un mono.
+        Esto es diferente a la clasificación multiclase (donde una sola clase es seleccionada), que requiere que las probabilidades sumen 1 (como sucede con Softmax).
+
+    Sigmoide es ideal para este caso porque:
+        Produce una probabilidad individual para cada neurona de salida (entre 0 y 1).
+        Esto permite que cada neurona indique la probabilidad de presencia de un animal en la imagen, sin depender de las otras neuronas.
+
+<a target="_blank" href="https://ml-explained.com/blog/activation-functions-explained">
+Funciones Activación Explicadas
+</a>
+
+
+Razones por las que las otras funciones de activación no son adecuadas:
+
+    Tangente Hiperbólica (tanh):
+        Rango de salida: (−1,1)(−1,1).
+        Problema: La tangente hiperbólica no es adecuada para representar probabilidades, ya que los valores negativos no tienen sentido en este contexto. Además, no produce una escala directamente interpretable como "probabilidad de presencia".
+
+    ReLU (Rectified Linear Unit):
+        Rango de salida: [0,∞)[0,∞).
+        Problema: Aunque produce valores positivos, ReLU no está limitada a un rango específico (como 0 a 1), lo que dificulta interpretarlos como probabilidades. Además, puede producir salidas excesivamente grandes o quedarse atrapada en ceros (problema de "dying ReLU").
+
+    Softmax:
+        Rango de salida: [0,1][0,1], con la suma de todas las salidas igual a 1.
+        Problema: Softmax fuerza las salidas a ser mutuamente excluyentes y a sumar 1, lo cual es ideal para clasificación multiclase (donde una sola clase es válida). Sin embargo, en este caso, los animales pueden aparecer juntos en la imagen, por lo que las salidas no deben ser excluyentes.
+
+
+<b>Func Act | ¿Adecuada? | Razón</b>
+
+<b>Sigmoide</b> | Sí | Ideal para clasificación multietiqueta: genera probabilidades independientes por salida.
+
+<b>Tangente Hiperbólica</b> | No | No produce probabilidades (rango: (-1, 1)).
+
+<b>ReLU</b> | No | No produce probabilidades ni está limitada a un rango útil ([0, ∞)).
+
+<b>Softmax</b> | No | Asume exclusividad entre clases (clasificación multiclase), lo que no aplica en este caso.
+
+
+"
+---
+"La técnica de Data Augmentation consiste en:
+A. Solo funciona con datos tabulares y es útil para aumentar su cantidad mediante copias exactas.
+B. Es una técnica que solo funciona con imágenes y consiste en añadir ruido aleatorio para simular variaciones.
+C. Se utiliza para aumentar artificialmente el tamaño del conjunto de datos aplicando transformaciones a los datos existentes, como rotaciones, recortes, espejado, o ajustes de brillo.
+D. Vale para diferentes tipos de datos (imágenes, texto, audio) incluye técnicas como rotación de imágenes, sinónimos en texto o cambios de tono en audio.";"C,D";"incluye transformaciones comunes para imágenes.
+el Data Augmentation no se limita solo a imágenes. también se aplica a texto (sinónimos, cambios en frases) y audio (ajustes de velocidad, tono, etc.)."
+---
+"La técnica de Data Augmentation consiste en:
+A. Solo es útil en redes densas (Dense) y funciona generando nuevas combinaciones de los pesos y sesgos de las neuronas.
+B. Es una técnica fundamental en redes convolucionales (CNN) para aumentar artificialmente el tamaño del conjunto de datos aplicando transformaciones como rotaciones, recortes, espejado o ajustes de brillo en imágenes.
+C. Es exclusiva de redes recurrentes (RNN) y se usa para duplicar secuencias de texto o audio añadiendo pequeñas variaciones.
+D. Se aplica tanto en redes convolucionales (CNN) como en redes recurrentes (RNN) y redes densas (Dense), pero las transformaciones típicas varían dependiendo del tipo de datos, como rotaciones en imágenes para CNN y sinónimos en texto para RNN.";"B,D";"Data Augmentation es una técnica utilizada para aumentar artificialmente el tamaño y la diversidad del conjunto de datos de entrenamiento en problemas de aprendizaje automático, especialmente en redes neuronales profundas. La idea principal es aplicar transformaciones o modificaciones a los datos existentes, generando nuevas versiones de los mismos que mantienen la información relevante. Esto es particularmente útil cuando el conjunto de datos original es pequeño, ya que ayuda a prevenir el sobreajuste (overfitting) y mejora la capacidad del modelo para generalizar en datos nunca antes vistos.
+
+Relación con redes neuronales (RNN, Dense, CNN):
+Data Augmentation es especialmente relevante en redes convolucionales (CNN) debido a su capacidad para aprender patrones espaciales en datos como imágenes.
+
+En este caso, se aplican transformaciones como rotación, recorte, cambio de brillo, volteo horizontal o vertical, y escalado para simular diferentes perspectivas de la misma imagen. En redes recurrentes (RNN), que procesan datos secuenciales como texto o audio, se pueden usar técnicas como la sustitución de palabras por sinónimos, reorganización de frases, o cambios en la velocidad y el tono en señales de audio. Aunque menos frecuente, en redes densas (Dense) también se pueden generar datos sintéticos mediante interpolaciones o simulaciones en conjuntos de datos tabulares.
+
+Ejemplos de transformaciones típicas:
+
+* En imágenes:
+
+    - Rotación: Girar la imagen en ciertos grados para simular diferentes orientaciones.
+
+    - Recorte y
+
+    - escalado: Ampliar o reducir partes de la imagen para simular diferentes enfoques.
+
+    - Volteo horizontal o vertical: Invertir la imagen para cubrir simetrías comunes.
+
+* En texto:
+
+  - reemplazar palabras por sinónimos,
+
+  - eliminar palabras irrelevantes,
+
+  - reordenar frases sin cambiar el significado
+
+* En audio,
+
+  - ajustes en el tono,
+
+  - la velocidad
+
+  - la intensidad.
+
+Estas técnicas permiten que los modelos aprendan a ser más robustos y generalicen mejor ante variaciones de los datos en el mundo real."
+---
+"¿Qué es Dropout y cómo reduce el Overfitting?:
+A. Dropout consiste en eliminar de forma permanente un porcentaje de neuronas de la red para hacerla más pequeña y eficiente.
+B. Es una técnica en la que se desactivan aleatoriamente algunas neuronas durante el entrenamiento, lo que fuerza a la red a no depender de neuronas específicas y aprender representaciones más generales.
+C. Dropout elimina conexiones entre capas durante el entrenamiento, pero no afecta las neuronas ni las capas directamente.
+D. Es una técnica que se utiliza únicamente en redes recurrentes (RNN) para evitar problemas relacionados con la memoria a largo plazo.";"B";"- Dropout no elimina neuronas de forma permanente, solo las "desactiva" temporalmente durante el entrenamiento.
+
+- Dropout funciona al desactivar aleatoriamente neuronas durante el entrenamiento, lo que ayuda a la red a aprender representaciones más generales y evita el sobreajuste.
+
+- Dropout SÍ afecta directamente a las neuronas, no solo a las conexiones.
+
+- Dropout NO es exclusivo de redes recurrentes- se aplica en redes convolucionales (CNN), densas (Dense) y recurrentes (RNN).
+
+<a target="_blank" href="https://es.wikipedia.org/wiki/Abandono_(redes_neuronales)">
+Dropout / Abandono RRNN
+</a>
+
+<h4>¿Qué es Dropout?</h4>
+
+Dropout es una técnica regularizadora utilizada en redes neuronales para reducir el riesgo de overfitting (sobreajuste). Durante el entrenamiento, se desactivan aleatoriamente un porcentaje de neuronas en cada iteración, lo que significa que estas neuronas no contribuyen ni al cálculo hacia adelante (forward pass) ni a la retropropagación (backpropagation). Al hacer esto, se fuerza a la red a no depender excesivamente de neuronas específicas, obligándola a aprender patrones más generales y robustos en los datos de entrada.
+
+<h4>¿Cómo reduce el overfitting?</h4>
+
+Al apagar neuronas de forma aleatoria, Dropout simula el entrenamiento de múltiples redes neuronales diferentes (un enfoque conocido como ensamble implícito). Como cada iteración utiliza un subconjunto diferente de neuronas, la red no se "memoriza" los datos de entrenamiento, sino que aprende características más universales. Durante la fase de inferencia, Dropout no se aplica en su lugar, todas las neuronas están activas y sus pesos se escalan adecuadamente para reflejar las contribuciones promedio durante el entrenamiento. Esto resulta en un modelo más generalizable y con menor riesgo de sobreajuste."
+---
+"¿Cuál es la característica principal de cada tipo de aprendizaje automático?:
+A. Aprendizaje supervisado - aprender patrones a partir de datos etiquetados, donde cada entrada tiene su correspondiente salida esperada. Clasificar correos electrónicos como spam o no spam.
+B. Aprendizaje no supervisado- aprender patrones a partir de datos no etiquetados, agrupando o descubriendo estructuras subyacentes. Agrupar clientes según su comportamiento de compra.
+C. Aprendizaje por refuerzo - entrenar un modelo para tomar decisiones secuenciales, obteniendo recompensas o penalizaciones. Enseñar a un robot a navegar por un entorno evitando obstáculos.
+D. Aprendizaje supervisado y no supervisado son equivalentes";"A,B,C";"- El aprendizaje supervisado requiere datos etiquetados y tiene aplicaciones como clasificación y regresión.
+
+- El aprendizaje no supervisado se centra en datos sin etiquetas, buscando agrupar o reducir dimensionalidad.
+
+- El aprendizaje por refuerzo es un enfoque basado en interacciones y recompensas para optimizar una política de acción.
+
+- Supervisado y no supervisado son métodos distintos uno requiere etiquetas y el otro no.
+
+<h4>Aprendizaje supervisado</h4>
+
+El aprendizaje supervisado se basa en un conjunto de datos etiquetados, donde cada entrada tiene una salida correspondiente conocida. El objetivo es que el modelo aprenda a mapear las entradas a las salidas para predecir correctamente nuevos datos no vistos. Este tipo de aprendizaje se utiliza en tareas como clasificación, por ejemplo, clasificar correos electrónicos como spam o no spam, y regresión, como predecir precios de casas. Requiere un gran volumen de datos etiquetados, lo cual puede ser costoso o difícil de obtener.
+
+<h4>Aprendizaje no supervisado</h4>
+
+En el aprendizaje no supervisado, los datos no tienen etiquetas asociadas, y el modelo debe identificar patrones, estructuras o agrupaciones inherentes en los datos. Este enfoque se utiliza para problemas como el clustering o la reducción de dimensionalidad. Un ejemplo común es agrupar clientes en segmentos de mercado según su comportamiento de compra o descubrir grupos de genes similares en biología. Este tipo de aprendizaje es útil cuando no es factible obtener etiquetas para los datos.
+
+<h4>Aprendizaje por refuerzo</h4>
+
+El aprendizaje por refuerzo es un enfoque basado en la interacción de un agente con un entorno, donde el agente toma decisiones secuenciales y recibe recompensas o penalizaciones basadas en sus acciones. El objetivo es aprender una política óptima que maximice las recompensas acumuladas. Este método se utiliza en problemas como enseñar a un robot a navegar por un entorno, entrenar agentes para jugar videojuegos o desarrollar sistemas autónomos como autos que conducen solos. Es especialmente útil para problemas donde las decisiones influyen en el resultado a largo plazo.
+---
+"¿Cuál es una característica distintiva de las redes neuronales recurrentes LSTM en comparación con las redes recurrentes tradicionales?:
+A. Las LSTM no tienen un estado interno, solo utilizan el estado oculto como en las redes recurrentes tradicionales.
+B. Las LSTM introducen un estado interno llamado cell state que les permite recordar información durante periodos de tiempo más largos.
+C. Las LSTM eliminan el estado oculto y lo reemplazan completamente por el cell state.
+D. Las LSTM funcionan igual que las redes recurrentes tradicionales pero con mayor profundidad en las capas.";"B";"las LSTM introducen un cell state que les permite manejar información de largo plazo, evitando problemas como el desvanecimiento del gradiente.
+- el funcionamiento de las LSTM es distinto al de las redes recurrentes tradicionales, ya que incorporan mecanismos como puertas de entrada, salida y olvido.
+- las LSTM mantienen tanto el estado interno (cell state) como el estado oculto (hidden state)
+-  las LSTM sí tienen un estado interno adicional (cell state), además del estado oculto (hidden state).
+
+<a target="_blank" href="https://www.geeksforgeeks.org/whats-the-difference-between-the-cell-and-hidden-state-in-lstm">LSTM Hidden State</a>
+
+<a target="_blank" href="https://dotneteers.net/understanding-lstm-networks-long-short-term-memory-networks/">Understanding LSTM</a>
+"
+---
+"¿Cuáles son los factores que intervienen en el cálculo del cell state y del hidden state en una LSTM y qué información aportan?:
+A. Puerta de entrada, puerta de olvido, vector de entrada modificado y puerta de salida- Cada una de estas puertas controla aspectos clave del flujo de información en la LSTM, como agregar, descartar y enviar información.
+B. Solo se usan dos factores cell state y hidden state - El cálculo en LSTM no utiliza puertas, solo el estado de celda y el estado oculto.
+C. Puerta de entrada controla cuánta información nueva será agregada, puerta de olvido decide cuánta información previa debe ser descartada, vector de entrada modificado propone nueva información para el cell state, y puerta de salida decide cuánta información del cell state se enviará al hidden state
+D. Puerta de entrada controla la entrada, puerta de olvido decide cuánta información nueva agregar, vector de entrada elimina información irrelevante y puerta de salida descarta información del hidden state";"A,C";"Las redes neuronales Long Short-Term Memory (LSTM) tienen un mecanismo de puertas que regula el flujo de información dentro de la red. Estas puertas permiten que las LSTM manejen de manera eficiente tanto la memoria de corto como de largo plazo, resolviendo problemas comunes de las redes recurrentes tradicionales, como el desvanecimiento del gradiente. A continuación, se explican las cuatro principales componentes:
+
+    Puerta de entrada (Input Gate):
+    La puerta de entrada controla qué información nueva, proveniente de la entrada actual y del estado oculto previo, debe ser añadida al estado interno (cell state). Utiliza una activación sigmoide para determinar qué partes de la información pasan y una activación tanh para procesar la información propuesta (vector de entrada modificado).
+
+    Puerta de olvido (Forget Gate):
+    La puerta de olvido regula cuánta información previa del cell state debe ser descartada. Es esencial para decidir qué datos históricos son irrelevantes y deben ser eliminados para mantener una memoria eficiente. Esta puerta también utiliza una activación sigmoide.
+
+    Vector de entrada modificado (Candidate Vector):
+    Este vector representa una versión procesada de la información nueva que podría añadirse al cell state. Se calcula aplicando una activación tanh a la entrada actual y al estado oculto previo. Es modulado por la puerta de entrada antes de ser integrado al cell state.
+
+    Puerta de salida (Output Gate):
+    La puerta de salida controla cuánta información del cell state actual debe ser transferida al hidden state y, por lo tanto, a la salida de la red. Esto permite que la LSTM seleccione qué información es relevante para las predicciones actuales, mientras mantiene el resto en el cell state.
+
+<a target="_blank" href="https://colah.github.io/posts/2015-08-Understanding-LSTMs/">Understanding LSTM</a>
+
+"
+---
+"¿Cuáles son las ventajas de utilizar la función de activación ReLU en redes neuronales?:
+A. Es computacionalmente eficiente, evita problemas de desvanecimiento del gradiente, y permite entrenar redes profundas. Esto se debe a su naturaleza lineal a partir de cero, lo que facilita la propagación del gradiente.
+
+B. Es la mejor función de activación porque nunca genera valores nulos y siempre propaga información.
+
+C. ReLU introduce sparsity, evita problemas de saturación en valores positivos y permite una propagación eficiente del gradiente. Estas características la hacen ideal para redes profundas.
+
+D. ReLU funciona igual que Softmax, ya que normaliza los valores entre 0 y 1 para cada neurona en la capa de salida.";"A,C";"- ReLU es computacionalmente eficiente porque solo realiza una operación condicional: max(0, x).
+
+- ReLU evita el desvanecimiento del gradiente porque no satura para valores positivos (a diferencia de sigmoide o tanh).
+
+- Esto permite entrenar redes profundas de manera más efectiva
+
+- Aunque ReLU tiene ventajas, no es "perfecta". Puede generar valores nulos (problema de "dying ReLU") si muchas neuronas quedan inactivas.
+
+- ReLU introduce sparsity (muchos valores activados son 0), lo que mejora la eficiencia de cálculo y la capacidad de generalización.
+
+- También evita problemas de saturación en valores positivos, lo que facilita una mejor propagación del gradiente.
+
+- ReLU no normaliza valores entre 0 y 1 como Softmax. ReLU simplemente devuelve 0 para valores negativos y x para valores positivos.
+
+- La función de activación ReLU (Rectified Linear Unit) es ampliamente utilizada en redes neuronales debido a sus múltiples ventajas. Su principal beneficio es su eficiencia computacional, ya que la operación max(0,x)max(0,x) es muy simple y rápida de calcular. Además, evita el problema del desvanecimiento del gradiente, que ocurre en funciones como sigmoide o tanh, ya que no satura para valores positivos. Esto permite que las redes neuronales profundas puedan ser entrenadas de manera efectiva.
+
+ - Otra ventaja importante de ReLU es que introduce sparsity en la activación de las neuronas. Muchas activaciones se convierten en 0, lo que simplifica los cálculos posteriores y reduce la complejidad del modelo. Sin embargo, ReLU también tiene limitaciones, como el problema de "dying ReLU", donde algunas neuronas pueden quedarse inactivas permanentemente si reciben siempre valores negativos.
+
+<a target="_blank" href="https://ml-explained.com/blog/activation-functions-explained">Activation functions explained</a>
+
+<a target="_blank" href="https://towardsdatascience.com/vanishing-gradient-problem-69bf08b15484">Understanding the Vanishing Gradient Problem in Neural Networks</a>
+
+<a target="_blank" href="https://www.deeplearningbook.org">DL Book</a>"
+---
+"<img src="assets/sigmoid_graph.png"/>
+
+¿Cuál sería el gradiente de la función sigmoide con respecto a una entrada muy grande?:
+A. El gradiente será cercano a cero, ya que la función sigmoide se satura en valores altos de entrada.
+B. El gradiente será exactamente igual a 1, ya que la sigmoide alcanza su máximo.
+C. El gradiente será negativo, ya que la sigmoide invierte su dirección en valores altos.
+D. El gradiente será muy grande, ya que la función crece exponencialmente para entradas grandes.";"A";"Cuando la entrada es muy grande (positiva), la salida de la sigmoide se acerca a 1, lo que significa que el gradiente σ(z)(1−σ(z))σ(z)(1−σ(z)) se aproxima a 1⋅(1−1)=01⋅(1−1)=0.
+
+Esto refleja la saturación de la función en valores altos, lo que genera un gradiente pequeño.
+
+- El gradiente nunca es exactamente 1 en los extremos de la sigmoide. Solo alcanza valores cercanos a 1 cuando la entrada está cerca de 0.
+
+- El gradiente no puede ser negativo porque σ(z)(1−σ(z))σ(z)(1−σ(z)) siempre es positivo.
+
+- Aunque la función sigmoide tiene un componente exponencial, su gradiente disminuye a medida que la salida se satura, no aumenta.
+
+El gradiente de la función sigmoide está dado por:
+
+<img src="assets/sigmoid_gradient.png"/>
+
+Cuando zz es muy grande (positiva), σ(z)≈1σ(z)≈1, y el término (1−σ(z))(1−σ(z)) se aproxima a 0. Esto hace que el gradiente sea muy pequeño, lo que puede causar problemas como el desvanecimiento del gradiente en redes profundas. Este es uno de los motivos por los que la sigmoide se usa menos en redes profundas en comparación con ReLU o funciones similares.
+
+<a target="_blank" href="https://ml-explained.com/blog/activation-functions-explained">Activation functions explained</a>"
+---
+"<img src="assets/sigmoid_graph.png"/>
+
+¿Por qué el comportamiento de la función sigmoide podría suponer un problema en el entrenamiento de redes neuronales?:
+A. sig satura en valores extremos, genera gradientes muy pequeños y provoca desvanecimiento del gradiente en redes profundas.
+
+B. sig genera gradientes negativos en los valores extremos, impide la convergencia del modelo.
+
+C. sig no permite valores negativos, elimina patrones importantes en los datos de entrada.
+
+D. sig es computacionalmente ineficiente en comparación con funciones como ReLU, y requiere más tiempo para entrenar RRNN profun.";"A,D";"- La función sigmoide satura en valores extremos (cercanos a 0 o 1), lo que genera gradientes muy pequeños (σ(z)(1−σ(z))≈0σ(z)(1−σ(z))≈0) en estas regiones. Esto provoca el problema conocido como desvanecimiento del gradiente, donde los parámetros de las capas iniciales de la red neuronal dejan de actualizarse eficazmente, dificultando el entrenamiento de redes profundas.
+
+- El gradiente de la sigmoide nunca es negativo porque está definido como σ(z)(1−σ(z))σ(z)(1−σ(z)), que siempre es positivo para cualquier valor de zz.
+
+<img src="assets/sigmoid_gradient.png"/>
+
+- La sigmoide no elimina patrones importantes porque permite valores de salida entre 0 y 1. Aunque no admite valores negativos en la salida, esto no elimina información.
+
+- El cálculo de la sigmoide implica la evaluación de una función exponencial, lo que la hace menos eficiente computacionalmente que funciones más simples como ReLU. Esto puede aumentar el tiempo necesario para entrenar redes profundas, especialmente en arquitecturas modernas con millones de parámetros.
+
+El problema principal de la función sigmoide radica en su tendencia a saturarse en los valores extremos, donde el gradiente se aproxima a 0. Esto hace que las actualizaciones de los pesos durante el entrenamiento sean insignificantes en capas iniciales, ralentizando el aprendizaje o incluso deteniéndolo en redes profundas. Además, la computación de la función sigmoide es más costosa en términos computacionales, lo que la hace menos práctica frente a alternativas como ReLU o Leaky ReLU. Por estas razones, la sigmoide se usa principalmente en salidas de redes (como clasificación binaria), pero rara vez en capas ocultas de redes profundas.
+
+<a target="_blank" href="https://ml-explained.com/blog/activation-functions-explained">Activation functions explained</a>"
+---
+"¿Cómo puede la función de activación ReLU solventar los problemas de la función sigmoide durante el entrenamiento?:
+A. ReLU no se satura en valores positivos, permite que el grad. se mantenga constante en gran parte de su dominio, evitando el desvanecimiento del grad.
+
+B. ReLU utiliza la fun exponenc internamente, mejorando el cálculo del grad. en redes profundas.
+
+C. ReLU devuelve valores exactos de 0 o mayores en los datos negativos, evitando errores durante el entrenamiento.
+
+D. ReLU(z) = max(0, z) permite un cálculo más eficiente computacionalmente, no requiere operaciones costosas como exponenciales o divisiones, y mantiene grads útiles en redes profundas.";"A,D";"- ReLU no tiene la tendencia a saturarse como la sigmoide. Para valores positivos de entrada, el gradiente de ReLU es constante (1), mientras que para valores negativos es 0. Esto ayuda a evitar el problema del desvanecimiento del gradiente, especialmente en redes profundas.
+
+- ReLU no utiliza la función exponencial en su cálculo. Su simplicidad (max(0, z)) es una de las razones por las que es computacionalmente eficiente.
+
+- Aunque ReLU devuelve 0 para valores negativos, esto puede causar el problema de "dying ReLU", donde algunas neuronas quedan permanentemente inactivas. Este comportamiento no evita errores, sino que es una limitación de ReLU.
+
+- ReLU es computacionalmente eficiente porque no involucra cálculos complejos como exponenciales o divisiones, a diferencia de sigmoide. Esto la hace ideal para entrenar redes profundas rápidamente mientras mantiene gradientes útiles en gran parte del dominio de la entrada.
+
+<img src="assets/relu_gelu_graph.png"/>
+<img src="assets/sigmoid_graph.png"/>
+<img src="assets/relu_graph.png"/>
+
+- La función ReLU se define como ReLU(z)=max⁡(0,z)ReLU(z)=max(0,z). A diferencia de la sigmoide, que tiende a saturarse y generar gradientes muy pequeños en valores extremos, ReLU mantiene un gradiente constante de 11 para entradas positivas. Esto permite que las actualizaciones de los pesos sean significativas, evitando el problema de desvanecimiento del gradiente, lo que es crucial para entrenar redes profundas.
+
+- Además, ReLU es mucho más eficiente computacionalmente, ya que no requiere cálculos costosos como exponentes. Sin embargo, ReLU no es perfecta y puede causar el problema de "dying ReLU", donde algunas neuronas quedan inactivas para siempre si reciben entradas negativas constantemente. Variantes como Leaky ReLU solucionan este problema permitiendo un gradiente pequeño en valores negativos.
+
+<a target="_blank" href="https://ml-explained.com/blog/activation-functions-explained">Activation functions explained</a>
+
+<a target="_blank" href="https://www.deeplearningbook.org">DL Book</a>
+"
+---
+"¿Cuáles son las ventajas de utilizar Redes Neuronales Convolucionales (CNN) para trabajar con imágenes?:
+A. Capturan características espaciales y patrones locales automáticamente utilizando filtros y capas convolucionales. Esto elimina la necesidad de diseñar manualmente características relevantes.
+
+B. Reducen significativamente la cantidad de parámetros mediante el uso de convoluciones y pooling, lo que permite trabajar con imágenes grandes sin necesidad de computación intensiva.
+
+C. Son adecuadas para datos secuenciales como texto y series temporales, ya que las CNN procesan las entradas en orden.
+
+D. Permiten la reutilización de pesos, lo que optimiza el entrenamiento y mejora la generalización en problemas de visión por computadora.";"A,B,D";"- Las CNN son especialmente diseñadas para trabajar con imágenes porque utilizan filtros que capturan automáticamente patrones locales y características espaciales como bordes, texturas o formas. Esto elimina la necesidad de diseñar manualmente estas características, lo que era común en los métodos tradicionales.
+
+- Mediante el uso de operaciones de convolución y pooling, las CNN reducen la cantidad de parámetros necesarios, haciendo que el modelo sea más eficiente y menos propenso al sobreajuste. Esto es clave para trabajar con imágenes grandes.
+
+- Las CNN no están diseñadas específicamente para datos secuenciales como texto o series temporales. Este tipo de datos se maneja mejor con redes recurrentes (RNN) o transformadores. Aunque se pueden adaptar para estos casos, no es su ventaja principal.
+
+- Las CNN reutilizan los mismos filtros en diferentes partes de la imagen, lo que reduce los cálculos y mejora la generalización, ya que el modelo aprende características comunes en toda la imagen. Esto es crucial para problemas de visión por computadora.
+
+- Las redes convolucionales son ideales para imágenes porque capturan características automáticamente, son computacionalmente eficientes y permiten la reutilización de pesos. Estas ventajas las han convertido en el estándar para problemas de visión por computadora.
+
+<a target="_blank" href="https://data-universe.org/redes-neuronales-convolucionales-aplicaciones-en-procesamiento-de-imagenes/">CNN procesamiento imágenes</a>
+
+<a target="_blank" href="https://lovtechnology.com/redes-neuronales-convolucionales-para-vision-por-computadora/">CNN visión por computadora</a>
+
+<a target="_blank" href="https://cadenaser.com/nacional/2024/08/27/cientificos-espanoles-combinan-ia-con-mejores-microscopios-para-detectar-antes-el-cancer-y-las-infecciones-cadena-ser/">Detección enfermedades</a>
+
+"
+---
+"¿Qué tipo de red neuronal usarías para trabajar con datos que tienen un alto componente secuencial como series temporales y por qué?:
+A. Redes Recurrentes (RNN) - ideales para datos secuenciales porque tienen conexiones recurrentes que les permiten retener información de pasos anteriores y aprender dependencias temporales.
+B. Redes Convolucionales (CNN)- ideales para capturar patrones locales en datos secuenciales, como las tendencias cortas en series temporales.
+C. Redes Neuronales Densas (Dense)- estas redes generalizan bien a cualquier tipo de dato, incluyendo secuencias, al procesar cada entrada independientemente.
+D. Redes GAN (Generative Adversarial Networks)- son muy eficaces para generar datos sintéticos, pero también pueden aprender dependencias temporales en series.";"A";"- Las Redes Recurrentes (RNN), y sus variantes como LSTM (Long Short-Term Memory) y GRU (Gated Recurrent Units), son específicamente diseñadas para trabajar con datos secuenciales como series temporales. Su principal característica es la capacidad de retener información a través del tiempo mediante conexiones recurrentes, lo que les permite aprender dependencias temporales y patrones a largo plazo.
+
+
+- Aunque las CNN pueden ser adaptadas para trabajar con datos secuenciales, no están diseñadas para capturar dependencias temporales explícitas. Son más adecuadas para datos espaciales, como imágenes, donde el orden no es tan crucial.
+
+- Las redes densas procesan cada entrada de forma independiente y no tienen mecanismos para aprender relaciones temporales entre datos. Por lo tanto, no son ideales para series temporales.
+
+- Las GAN son redes generativas y no están diseñadas para aprender dependencias temporales directamente. Su propósito principal es generar nuevos datos a partir de un conjunto de entrenamiento, como imágenes o audio, pero no modelan explícitamente secuencias.
+
+- Las redes recurrentes (RNN) se destacan por su capacidad de retener información previa a través de un estado oculto que se actualiza en cada paso de la secuencia. Esto las hace especialmente útiles para tareas como:
+
+-     Predicción de series temporales.
+-     Traducción automática.
+-     Reconocimiento de voz.
+-     Procesamiento de texto.
+
+Las variantes como LSTM y GRU superan los problemas de las RNN tradicionales, como el desvanecimiento y explosión del gradiente, al introducir mecanismos de control (puertas) para gestionar qué información se retiene o se descarta en cada paso.
+
+<a target="_blank" href="https://colah.github.io/posts/2015-08-Understanding-LSTMs/">Understanding LSTMs</a>"
+---
+"¿Qué tipo de red neuronal usarías para generar obras de arte únicas y cómo funciona internamente esta arquitectura?:
+A. Redes Generativas Adversariales (GAN) - utilizan un modelo generador para crear datos nuevos y un modelo discriminador que evalúa si los datos generados son reales o falsos, logrando mejorar iterativamente la calidad de las obras.
+B. Redes Recurrentes (RNN) - retienen información a través del tiempo, lo que permite generar arte visual con patrones secuenciales únicos.
+C. Redes Convolucionales (CNN) - perfectas para generar arte porque extraen características locales de imágenes y las combinan para crear nuevas obras.
+D. Redes Densas (Dense) - redes densas porque procesan todos los datos de entrada de forma independiente, generando obras de arte a partir de combinaciones aleatorias de píxeles.";"A";"- Las Redes Generativas Adversariales (GAN) son el enfoque ideal para generar arte único desde cero. Utilizan dos redes: un generador, que crea imágenes nuevas, y un discriminador, que evalúa si las imágenes generadas son realistas. Este enfoque de "competencia" permite al generador mejorar continuamente, resultando en obras de arte únicas y de alta calidad.
+
+
+- Las Redes Recurrentes (RNN) son más adecuadas para datos secuenciales como texto, audio o series temporales. No están diseñadas para generar imágenes o arte visual.
+
+
+- Aunque las Redes Convolucionales (CNN) son excelentes para procesar y analizar imágenes, no están diseñadas para generar nuevas imágenes desde cero. Sin embargo, las GAN suelen incluir CNN en su arquitectura para trabajar con imágenes.
+
+- Las Redes Densas (Dense) no son prácticas para generar imágenes, ya que no tienen mecanismos para capturar la estructura espacial de las imágenes ni para generar datos con coherencia visual.
+
+<h4>GAN</h4>
+
+Las GAN (Redes Generativas Adversariales) constan de dos componentes principales:
+
+-    Generador:
+    Este modelo toma un vector de ruido aleatorio como entrada y genera una imagen nueva. Inicialmente, las imágenes generadas son aleatorias y no tienen sentido, pero el generador mejora progresivamente durante el entrenamiento.
+
+-    Discriminador:
+    Este modelo clasifica las imágenes como "reales" (extraídas del conjunto de datos) o "falsas" (generadas por el generador). Su objetivo es detectar las imágenes falsas producidas por el generador.
+
+* Ambas redes se entrenan de manera adversarial: el generador intenta engañar al discriminador creando imágenes más realistas, mientras que el discriminador intenta mejorar en la detección de imágenes falsas. Este proceso iterativo mejora continuamente la calidad de las imágenes generadas. Las GAN han sido ampliamente utilizadas para generar arte, imágenes fotorrealistas, videos y más.
+
+
+<a target="_blank" href="https://inteligenciaartificial360.com/fundamentos-ia/redes-adversarias-generativas-gan-fundamentos-y-aplicaciones/">GAN</a>
+
+<a target="_blank" href="https://iccsi.com.ar/gans-inteligencia-artificial/">GAN IA</a>
+
+<a target="_blank" href="https://lovtechnology.com/redes-generativas-adversarias-gans-creando-contenido-artificial-realista/">Creando con GAN</a>
+
+<a target="_blank" href="https://arxiv.org/abs/1406.2661">artículo original GAN</a>
+
+"
+
+
 
 
 
