@@ -553,13 +553,11 @@ D. ReLU funciona igual que Softmax, ya que normaliza los valores entre 0 y 1 par
 
 <a target="_blank" href="https://www.deeplearningbook.org">DL Book</a>"
 ---
-"<img src="assets/sigmoid_graph.png"/>
-
-¿Cuál sería el gradiente de la función sigmoide con respecto a una entrada muy grande?:
-A. El gradiente será cercano a cero, ya que la función sigmoide se satura en valores altos de entrada.
-B. El gradiente será exactamente igual a 1, ya que la sigmoide alcanza su máximo.
-C. El gradiente será negativo, ya que la sigmoide invierte su dirección en valores altos.
-D. El gradiente será muy grande, ya que la función crece exponencialmente para entradas grandes.";"A";"Cuando la entrada es muy grande (positiva), la salida de la sigmoide se acerca a 1, lo que significa que el gradiente σ(z)(1−σ(z))σ(z)(1−σ(z)) se aproxima a 1⋅(1−1)=01⋅(1−1)=0.
+"Cuál sería el gradiente de la función sigmoide con respecto a una entrada muy grande?:
+A. grad será cercano a cero, ya que la función sigmoide se satura en valores altos de entrada.
+B. grad será exactamente igual a 1, ya que la sigmoide alcanza su máximo.
+C. grad será negativo, ya que la sigmoide invierte su dirección en valores altos.
+D. grad será muy grande, ya que la función crece exponencialmente para entradas grandes.";"A";"Cuando la entrada es muy grande (positiva), la salida de la sigmoide se acerca a 1, lo que significa que el gradiente σ(z)(1−σ(z))σ(z)(1−σ(z)) se aproxima a 1⋅(1−1)=01⋅(1−1)=0.
 
 Esto refleja la saturación de la función en valores altos, lo que genera un gradiente pequeño.
 
