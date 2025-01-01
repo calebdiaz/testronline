@@ -1,5 +1,349 @@
 question;answer;explanation
 ---
+"En un análisis de Componentes Principales (PCA) en un espacio tridimensional, se han calculado las siguientes cargas para las tres primeras CPs
+
+ - Componente Principal 1 (CP1)= (0.6,0.5,0.4)
+ - Componente Principal 2 (CP2)= (0.7,−0.4,0.2)
+ - Componente Principal 3 (CP3)= (−0.3,0.8,0.5)
+
+ Dado un punto con valores originales (2,4,6), calcula su representación en el sistema de coordenadas definido por estas componentes principales.  (mira expli):
+A. Proyección en los tres CP mediante el producto punto. CP1=>(2,4,6)⋅(0.6,0.5,0.4)=(2⋅0.6)+(4⋅0.5)+(6⋅0.4)=5.6 ...CP2, CP3... (5.6, 1.0, 5.6)
+B. Proyeccción en los tres CP sumando las coordenadas. CP1= 2 + 4 + 6 = 12, CP2= 0.7-0.4+0.2 = 0.5, CP3 = -0.3+0.8+0.5 = 1, ... (12, 0.5, 1.0)
+C. Proyección en los tres CP -CP1=2, CP2=4, CP3=6 ... (2, 4, 6)
+";"A";"
+
+En un análisis de Componentes Principales (PCA) en un espacio tridimensional, se han calculado las siguientes cargas para las tres primeras componentes principales:
+
+    Componente Principal 1 (CP1): (0.6,0.5,0.4)
+    Componente Principal 2 (CP2): (0.7,−0.4,0.2)
+    Componente Principal 3 (CP3): (−0.3,0.8,0.5)
+
+Dado un punto con valores originales (2,4,6), calcula su representación en el sistema de coordenadas definido por estas componentes principales.
+
+Resolución:
+
+    Proyección en la Componente Principal 1 (CP1):
+    (2,4,6)⋅(0.6,0.5,0.4)=(2⋅0.6)+(4⋅0.5)+(6⋅0.4)=1.2+2.0+2.4=5.6
+
+    Proyección en la Componente Principal 2 (CP2):
+    (2,4,6)⋅(0.7,−0.4,0.2)=(2⋅0.7)+(4⋅−0.4)+(6⋅0.2)=1.4−1.6+1.2=1.0
+
+    Proyección en la Componente Principal 3 (CP3):
+    (2,4,6)⋅(−0.3,0.8,0.5)=(2⋅−0.3)+(4⋅0.8)+(6⋅0.5)=−0.6+3.2+3.0=5.6
+
+Resultado final:
+El punto (2,4,6) en el espacio definido por las componentes principales se representa como:
+(5.6,1.0,5.6)
+
+
+<a target="_blank" href="https://cienciadedatos.net/documentos/py19-pca-python.html">PCA Python</a>
+
+
+
+"
+---
+"Una empresa! De telecomunicaciones!!! (3/3) que va y diche, por la gloria de mi madre, <img class="floatl" width=18 src="https://media.tenor.com/zq0Pq0iNY_IAAAAM/dance-moves.gif"/> que va a  analizar datos de ubicación de los móviles y estudiar patrones de movilidad, detectar zonas de alta actividad, como centros comerciales o áreas de tráfico intenso.
+
+Para ello, usan el algoritmo DBSCAN con los siguientes aspectos clave
+
+- Los datos GPS recogidos en un área metropolitana de 150 km².
+
+- Los clusters se interpretan como zonas de alta densidad de usuarios, indicando lugares populares o áreas con congestión recurrente.
+
+- Los puntos dispersos pueden corresponder a trayectos poco transitados, áreas rurales o errores en los datos GPS.
+
+- Están evaluando las siguientes configuraciones para DBSCAN
+    - Distancia epsilon (ε)
+        0.1 km, 0.5 km o 21 km.
+    - Mínimo número de puntos (MinPts)
+        10(bajo), 15 o 30 (grande).
+
+Si con ε=21 km y MinPts=30 no se detectan las áreas esperadas, ¿qué ajustes sugerirías en los hiperparámetros y por qué? (mira expli):
+A. Reducir ε (pej entre 0.5 km y 5 km) para mejorar la detección de clus locales y evitar que grandes distancias fusionen pts no relacionados.
+B. Disminuir MinPts (pej 10 o 15) para permitir la formación de clus en áreas menos densas.
+C. Aumentar más ε (pej 30 km) para garantizar que todos los pts formen parte de un cluster, eliminando el ruido.
+D. Mantener ε y aumentar la cantidad de datos para obtener clus más densos y representativos.
+";"A,B";"
+
+Estas opciones explican correctamente cómo afecta MinPts al comportamiento del algoritmo DBSCAN:
+
+  <p style="color:#00ff00">
+  - Reducir ε a valores más pequeños mejora la resolución espacial, detectando clusters en áreas más locales y evitando la formación de clusters excesivamente grandes.
+
+  -  Disminuir MinPts facilita la formación de clusters en zonas con menor densidad de puntos, como áreas rurales o trayectos menos transitados.
+
+  </p>
+
+Las opciones siguientes son inválidas porque contienen errores conceptuales:
+
+  <p style="color:red">
+
+  - Aumentar ε a valores aún mayores sería contraproducente, ya que fusionaría puntos no relacionados en un solo cluster, perdiendo toda granularidad en el análisis.
+
+  - Mantener los valores actuales y confiar en más datos no resolvería el problema de que los hiperparámetros actuales están mal ajustados al contexto.
+  </p>
+
+<img src="https://media.datacamp.com/cms/google/ad_4nxczbbrn-drkfpsiiqf1zayyt5xnqiwgpz0qocpnt6au5mintqlk4r1mxlognyzyxxmewlx35vcn53cbwm6iun4hh5i-aokth6fyqhovv1dlill6myhah4hzizcpb-bmv-g8vbiwawgudq8_gkuhqb8yiwja.jpeg"/>
+
+<a target="_blank" href="https://www.datacamp.com/tutorial/dbscan-clustering-algorithm">DBSCAN Clustering</a>
+
+<a target="_blank" href="https://sefidian.com/2022/12/18/how-to-determine-epsilon-and-minpts-parameters-of-dbscan-clustering">Epsilon and Minpts</a>
+
+<a target="_blank" href="https://es.wikipedia.org/wiki/DBSCAN">DBSCAN Wikipedia</a>
+
+
+"
+---
+"Una empresa de telecomunicaciones (2/3) desea analizar datos de ubicación de los móviles y estudiar patrones de movilidad, detectar zonas de alta actividad, como centros comerciales o áreas de tráfico intenso.
+
+Para ello, usan el algoritmo DBSCAN con los siguientes aspectos clave
+
+- Los datos GPS recogidos en un área metropolitana de 150 km².
+
+- Los clusters se interpretan como zonas de alta densidad de usuarios, indicando lugares populares o áreas con congestión recurrente.
+
+- Los puntos dispersos pueden corresponder a trayectos poco transitados, áreas rurales o errores en los datos GPS.
+
+- Están evaluando las siguientes configuraciones para DBSCAN
+    - Distancia epsilon (ε)
+        0.1 km, 0.5 km o 21 km.
+    - Mínimo número de puntos (MinPts)
+        10(bajo), 15 o 30 (grande).
+
+¿De qué forma el parámetro MinPts influye en clasificar puntos como ruido o como parte de un cluster? ¿Qué beneficios y limitaciones tendría elegir un valor alto de MinPts en este contexto? (mira expli):
+A. MinPts=10 clu.s pequeños o menos densos sean detectados, pero puede incrementar el núm de pts clasif como clu.s ruidosos o irrelevantes.
+B. MinPts=30 exige una mayor densidad local de puntos para formar un cluster, reduce el ruido y asegura clu.s más significativos.
+C. MinPts=30 asegura que todos los pts, incluso más dispersos, se agrupen en clu.s, eliminando el ruido.
+D. MinPts=10 garantiza que no existan pts clasificados como ruido, ya que se formarán clusters automáticamente.
+";"A,B";"
+
+Estas opciones explican correctamente cómo afecta MinPts al comportamiento del algoritmo DBSCAN:
+
+  <p style="color:#00ff00">
+  -  MinPts bajo (ej 10) permite que clusters pequeños o menos densos sean detectados, pero puede incrementar el número de puntos clasificados como clusters ruidosos o irrelevantes.
+
+  Correcto! Explica que un valor bajo permite la detección de clusters más pequeños, pero con un posible aumento de ruido.
+
+  - MinPts alto (ej 30) exige una mayor densidad local de puntos para formar un cluster, reduciendo el ruido y asegurando clusters más significativos.
+
+  Correcto! Explica que un valor alto hace que los clusters sean más robustos, pero a costa de omitir puntos dispersos.
+  </p>
+
+Las opciones siguientes son inválidas porque contienen errores conceptuales:
+
+  <p style="color:red">
+  - MinPts alto (ej 30) asegura que todos los puntos, incluso más dispersos, se agrupen en clusters, eliminando el ruido.
+
+  Es incorrecto porque un valor alto de MinPts no asegura que todos los puntos sean agrupados de hecho, aumenta la probabilidad de clasificar puntos dispersos como ruido.
+
+  - MinPts bajo (ej 10) garantiza que no existan puntos clasificados como ruido, ya que se formarán clusters automáticamente.
+
+  Es incorrecto porque un valor bajo de MinPts no elimina la posibilidad de ruido. simplemente permite la formación de clusters con menor densidad.
+  </p>
+
+<img src="https://media.datacamp.com/cms/google/ad_4nxczbbrn-drkfpsiiqf1zayyt5xnqiwgpz0qocpnt6au5mintqlk4r1mxlognyzyxxmewlx35vcn53cbwm6iun4hh5i-aokth6fyqhovv1dlill6myhah4hzizcpb-bmv-g8vbiwawgudq8_gkuhqb8yiwja.jpeg"/>
+
+<a target="_blank" href="https://www.datacamp.com/tutorial/dbscan-clustering-algorithm">DBSCAN Clustering</a>
+
+<a target="_blank" href="https://sefidian.com/2022/12/18/how-to-determine-epsilon-and-minpts-parameters-of-dbscan-clustering">Epsilon and Minpts</a>
+
+<a target="_blank" href="https://es.wikipedia.org/wiki/DBSCAN">DBSCAN Wikipedia</a>
+
+
+"
+---
+"Una empresa de telecomunicaciones (1/3) desea analizar datos de ubicación de los móviles y estudiar patrones de movilidad, detectar zonas de alta actividad, como centros comerciales o áreas de tráfico intenso.
+
+Para ello, usan el algoritmo DBSCAN con los siguientes aspectos clave
+
+- Los datos GPS recogidos en un área metropolitana de 150 km².
+
+- Los clusters se interpretan como zonas de alta densidad de usuarios, indicando lugares populares o áreas con congestión recurrente.
+
+- Los puntos dispersos pueden corresponder a trayectos poco transitados, áreas rurales o errores en los datos GPS.
+
+- Están evaluando las siguientes configuraciones para DBSCAN
+    - Distancia epsilon (ε)
+        0.1 km, 0.5 km o 21 km.
+    - Mínimo número de puntos (MinPts)
+        10, 15 o 30.
+
+¿Cómo afecta el valor de ε a la detección de zonas con alta concentración de usuarios móviles? ¿Qué rango sería razonable para este caso?(mira expli):
+A. ε 0.1 km dejan muchos puntos como ruido. Un rango razonable es entre 0.5 km y 1 km.
+B. ε 21 km agrupan demasiados puntos lejanos. Un rango razonable es mayor a 10 km.
+C. ε no afecta mucho, ya que MinPts es el único parámetro que determina clusters.
+D. ε 0.1 km fusionan puntos, y ε 21 km separan zonas densas.";"A";"
+
+- ε 21 km agrupan demasiados puntos lejanos. Un rango razonable es mayor a 10 km. Incorrecta: propone un rango poco razonable para este caso.
+
+- ε no afecta mucho, ya que MinPts es el único parámetro que determina clusters. Incorrecta: ε tiene un impacto directo en la formación de clusters.
+
+- ε 0.1 km fusionan puntos, y ε 21 km separan zonas densas. Incorrecta: es contradictoria y confusa.
+
+Objetivo: Agrupar puntos encontrando regiones del espacio de alta densidad de puntos conectados, separadas de regiones de baja densidad.
+
+Casos:
+- Epsilon = 0.1 km: Puede que sea demasiado pequeño, muchos puntos no clusterizados.
+- Epsilon = 21 km: Pocos clusters, agrupaciones de puntos lejanos.
+
+* ε (epsilon): Radio de vecindad de un punto. Es la distancia máxima que puede haber entre dos puntos para que sean vecinos.
+    - Si es muy grande → Muchos grupos se van a fusionar. Casi todos los puntos en el mismo cluster.
+
+    - Si es muy pequeño → Muchos puntos van a verse como ruido/noise al no estar cerca de ningún grupo.
+
+<img src="https://media.datacamp.com/cms/google/ad_4nxczbbrn-drkfpsiiqf1zayyt5xnqiwgpz0qocpnt6au5mintqlk4r1mxlognyzyxxmewlx35vcn53cbwm6iun4hh5i-aokth6fyqhovv1dlill6myhah4hzizcpb-bmv-g8vbiwawgudq8_gkuhqb8yiwja.jpeg"/>
+
+<a target="_blank" href="https://www.datacamp.com/tutorial/dbscan-clustering-algorithm">DBSCAN Clustering</a>
+
+<a target="_blank" href="https://sefidian.com/2022/12/18/how-to-determine-epsilon-and-minpts-parameters-of-dbscan-clustering">Epsilon and Minpts</a>
+
+<a target="_blank" href="https://es.wikipedia.org/wiki/DBSCAN">DBSCAN Wikipedia</a>
+
+
+"
+---
+"Dado un clúster con los puntos (3,5,2),(4,6,1),(2,4,3) y un centroide c=(3,5,2), calculemos la distancia intra-cluster total. Usa las fórmulas
+<img src="assets/formulas_clustering.png"/>
+Las distancias de los puntos al centroide son:
+A. I = 0 + 1.73 + 1.73 = 3.46
+B. I = 0 + (1.73)²+(1.73)² = 5.98
+C. I = 1.73 + 1.73 + 1.73 = 5.19
+";"A";"la distancia intra-cluster total en este caso.
+
+    Definición de la distancia intra-cluster total:
+    La distancia intra-cluster total es la suma de las distancias individuales de cada punto al centroide del clúster. En este caso, las distancias individuales se calculan sin elevarlas al cuadrado, porque estamos trabajando con la distancia euclidiana, que es simplemente la raíz cuadrada de la suma de los cuadrados de las diferencias de las coordenadas.
+
+    Distancias dadas:
+        Distancia del punto (3,5,2) al centroide: 0.0 (porque el punto coincide con el centroide).
+        Distancia del punto (4,6,1) al centroide: 1.73.
+        Distancia del punto (2,4,3) al centroide: 1.73.
+
+    Cálculo correcto de I:
+    La fórmula para I es:
+    I = ∑ i=1, n∣∣xi−c∣∣²
+
+
+    Pero en este caso, ya se han calculado las distancias ∣∣xi−c∣∣, que son 0.0, 1.73, y 1.73. Por lo tanto:
+    I=0.0+1.73+1.73=3.46
+
+
+    Por qué las otras opciones son incorrectas:
+        - Incorrecto Eleva las distancias al cuadrado, lo que sería válido si estuvieras calculando inercia o WSS (suma de cuadrados dentro del clúster). Pero este no es el caso aquí, ya que estamos sumando las distancias directamente.
+
+        - Incorrecto Ignorar el punto (3,5,2), cuya distancia es 0.0, lo cual es incorrecto porque todos los puntos del clúster deben incluirse en la suma.
+"
+---
+"Dados los valores de inercia para k = 2, 3, 4, 5, 6, 7
+[900, 888, 450, 444, 400, 327], identifica el codo y justifica cuántos clústeres usarías:
+A. El codo se encuentra en k=3 porque la mediana de las inercia entre k=2 y k=7 es 450, y se estabiliza alrededor de k=3.
+B. El codo se encuentra en k=4 porque hay una gran reducción de inercia entre 888 y 450, y después las reducciones son menos significativas.
+C. El codo se encuentra en k=6 porque los valores de inercia continúan disminuyendo y k=6 da una mejor partición
+D. No hay codo claro, pero k=2 sería el número más simple de interpretar para dividir los datos";"B";"Solución:
+Dado: [900,888,450,444,400,327]
+
+Calcula las diferencias consecutivas:
+de a k:
+2 a 3*        900−888=12
+3 a 4*        888−450=438
+4 a 5*        450−444=6
+5 a 6*        444−400=44
+6 a 7*        400−327=73
+
+después de 4 ya se baja la diff, k=4
+
+"
+---
+"Una empresa de telefonía quiere segmentar a sus empleados en función del número de años que lleva en la empresa, su edad, y el número de años que lleva en su puesto actual.
+Los centroides de 3 segmentos son
+
+    Segmento A= (20.2, 55.3, 8.1)
+    Segmento B= (8.1, 42.2, 5.3)
+    Segmento C= (2.1, 35.2, 2.3)
+
+¿A qué grupo pertenecería un empleado con valores (6, 37, 1)?:
+A. dist = √((x2 - x1)² + (y2 - y1)² + (z2 - z1)²). Seg A=24.23, Seg B=7.07, Seg C=4.49. Segmento C el más cercano
+B. dist = abs(x2 - x1) + abs(y2 - y1) + abs(z2 - z1). Seg A=39.6, Seg B=11.6, Seg C=7.0. Segmento C es el más cercano
+C. dist = (x1 * x2) + (y1 * y2) + (z1 * z2). Seg A=2175.4, Seg B=1605.3, Seg C=1317.3. Segmento C el más cercano
+";"A";"Solución:
+<img src="assets/dist_eucl2.png"/>
+
+La raíz cuadrada
+  -> de las sumas de los cuadrados
+    -> de las diferencias de cada coordenada
+
+√ (
+   ( x2 - x1 )² +
+   ( y2 - y1 )² +
+   ( z2 - z1 )² +
+)
+
+<pre><code class="python">
+import math
+
+""" Coordenadas del punto empleado y del centroide """
+
+""" Valores del empleado """
+x1, y1, z1 = 6, 37, 1
+
+
+""" Valores del centroide (Segmento C) """
+x2, y2, z2 = 2.1, 35.2, 2.3
+
+
+"""Cálculo de la distancia euclidiana"""
+
+distancia = math.sqrt((x2 - x1)**2 + (y2 - y1)**2 + (z2 - z1)**2)
+
+print(f"La distancia euclidiana es: {distancia}")
+
+</code></pre>
+
+"
+---
+"Analiza el código de Clustering Jerárquico y selecciona la opción que mejor describe el significado de clustering.labels_.
+
+<pre><code class="python">
+
+from sklearn.cluster import AgglomerativeClustering
+
+import numpy as np
+
+X = np.array([[1, 2], [1, 4], [1, 0], ..., [4, 2], [4, 4], [4, 0]])
+
+clustering = AgglomerativeClustering().fit(X)
+
+clustering AgglomerativeClustering()
+
+clustering.labels_
+</code></pre>:
+A. Indica el valor del centroide más cercano a cada observación
+B. Indica cuántos clusters se han identificado
+C. Establece la cantidad óptima de clusters sugeridos
+D. Especifica la asignación de cada observación al cluster correspondiente
+";"D";"La razón por la que la respuesta correcta es D. Especifica la asignación de cada observación al cluster correspondiente es porque el atributo labels_ en los algoritmos de clustering de scikit-learn, como AgglomerativeClustering, contiene un arreglo de enteros que representa la asignación de cada punto u observación al cluster correspondiente.
+
+Aquí está el razonamiento detallado:
+
+    Qué hace AgglomerativeClustering:
+        Es un algoritmo de clustering jerárquico que agrupa datos en función de su similitud, comenzando con cada punto como un cluster individual y luego uniéndolos progresivamente.
+
+    El rol de fit(X):
+        Cuando se llama a fit(X), el modelo aplica el algoritmo de clustering a los datos de entrada X. Durante este proceso, determina a qué cluster pertenece cada observación.
+
+    Significado de clustering.labels_:
+        Después de ajustar el modelo, el atributo labels_ contiene un arreglo donde cada entrada es el índice del cluster al que pertenece cada punto en el conjunto de datos X. Por ejemplo:
+            Si X tiene 6 puntos y clustering.labels_ retorna [0, 0, 1, 1, 2, 2], esto significa que los primeros dos puntos pertenecen al cluster 0, los siguientes dos al cluster 1, y los últimos dos al cluster 2.
+
+    Por qué las otras opciones son incorrectas:
+        * Indica el valor del centroide más cercano a cada observación: Incorrecto, ya que el clustering jerárquico no utiliza centroides como el K-means. Por lo tanto, no devuelve información sobre centroides.
+
+        * Indica cuántos clusters se han identificado: Incorrecto, ya que el número de clusters no se deriva de labels_ directamente, sino que se establece en el parámetro n_clusters al inicializar el modelo.
+        Aunque no es el propósito directo de labels_, al analizarlo podríamos inferir cuántos clusters se formaron. Sin embargo, esto sería un uso derivado del atributo, no su función principal.
+
+        * Establece la cantidad óptima de clusters sugeridos: Incorrecto, porque AgglomerativeClustering no calcula automáticamente un número óptimo de clusters.
+
+En conclusión, clustering.labels_ es la manera en que el modelo indica cómo se asignan las observaciones a los clusters."
+---
 "¿Qué se busca en el aprendizaje no supervisado?:
 A. Realizar predicciones precisas basadas en datos de entrada.
 B. Entrenar un modelo para clasificar los datos en clases predefinidas.
