@@ -42,7 +42,7 @@ El punto (2,4,6) en el espacio definido por las componentes principales se repre
 
 "
 ---
-"Una empresa! De telecomunicaciones!!! (3/3) que va y diche, por la gloria de mi madre, <img class="floatl" width=18 src="https://media.tenor.com/zq0Pq0iNY_IAAAAM/dance-moves.gif"/> que va a  analizar datos de ubicación de los móviles y estudiar patrones de movilidad, detectar zonas de alta actividad, como centros comerciales o áreas de tráfico intenso.
+"Una empresa! De telecomunicaciones!!! (3/3) que va, por la gloria de mi madre, <img class="floatl" width=18 src="https://media.tenor.com/zq0Pq0iNY_IAAAAM/dance-moves.gif"/> que va a  analizar datos de ubicación de los móviles y estudiar patrones de movilidad, detectar zonas de alta actividad, como centros comerciales o áreas de tráfico intenso.
 
 Para ello, usan el algoritmo DBSCAN con los siguientes aspectos clave
 
@@ -203,12 +203,15 @@ Casos:
 "
 ---
 "Dado un clúster con los puntos (3,5,2),(4,6,1),(2,4,3) y un centroide c=(3,5,2), calculemos la distancia intra-cluster total. Usa las fórmulas
-<img src="assets/formulas_clustering.png"/>
+<a target="_blank" href="assets/formulas_clustering.png"/>
 Las distancias de los puntos al centroide son:
 A. I = 0 + 1.73 + 1.73 = 3.46
 B. I = 0 + (1.73)²+(1.73)² = 5.98
 C. I = 1.73 + 1.73 + 1.73 = 5.19
-";"A";"la distancia intra-cluster total en este caso.
+";"A";"
+ <img source="assets/formulas_clustering.png"/>
+
+la distancia intra-cluster total en este caso.
 
     Definición de la distancia intra-cluster total:
     La distancia intra-cluster total es la suma de las distancias individuales de cada punto al centroide del clúster. En este caso, las distancias individuales se calculan sin elevarlas al cuadrado, porque estamos trabajando con la distancia euclidiana, que es simplemente la raíz cuadrada de la suma de los cuadrados de las diferencias de las coordenadas.
