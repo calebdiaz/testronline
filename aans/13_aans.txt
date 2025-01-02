@@ -1,0 +1,191 @@
+--md--
+title:Test K-Means Clustering Quiz (MCQ Questions and Answers)
+description:Test de AiOnlineCourse, traducido y ensamblado por Claude.ai
+url:https://www.aionlinecourse.com/ai-quiz-questions/machine-learning/k-means-clustering
+--endmd--
+question;answer;explanation
+---
+"¿Qué ocurre si el número de clusters especificados en K-means clustering es demasiado pequeño?:
+A. El algoritmo no convergerá.
+B. Los clusters resultantes serán demasiado amplios y pueden no capturar la estructura subyacente de los datos.
+C. Los clusters resultantes serán demasiado específicos y pueden sobreajustar los datos.
+D. El algoritmo ajustará automáticamente el número de clusters.";"B";"Si el número de clusters especificados en K-means clustering es demasiado pequeño, los clusters resultantes serán demasiado amplios y pueden no capturar la estructura subyacente de los datos, lo que lleva a soluciones de clustering subóptimas."
+---
+"¿Cuál de las siguientes técnicas se puede utilizar para abordar la sensibilidad a la ubicación inicial de los centroides de cluster en K-means?:
+A. Inicialización aleatoria
+B. K-means++
+C. Ejecutar el algoritmo múltiples veces con diferentes inicializaciones y seleccionar la mejor solución
+D. Tanto K-means++ como Ejecutar el algoritmo múltiples veces";"D";"Para abordar la sensibilidad a la ubicación inicial de los centroides de los clústeres en el agrupamiento de K-means, se puede utilizar tanto la inicialización de K-means++ como la ejecución del algoritmo varias veces con diferentes inicializaciones. K-means++ mejora la ubicación inicial de los centroides, mientras que ejecutar el algoritmo varias veces aumenta la probabilidad de encontrar una mejor solución de agrupamiento al seleccionar la solución con la suma de cuadrados dentro del clúster más baja."
+---
+"¿Cuál es el propósito de la puntuación silhouette en K-means clustering?:
+A. Medir la compacidad de los clusters
+B. Medir la separación entre clusters
+C. Evaluar la calidad de la solución de clustering
+D. Determinar el número óptimo de clusters
+";"C";"La puntuación de silueta es una métrica utilizada para evaluar la calidad de la solución de agrupamiento en el agrupamiento K-means. Tiene en cuenta tanto la compacidad de los grupos como la separación entre ellos, y las puntuaciones más altas indican mejores soluciones de agrupamiento."
+---
+"¿Cómo se puede extender K-means clustering para manejar datos de tipo mixto (tanto continuos como categóricos)?:
+A. Usando la distancia Gower
+B. Mediante codificación one-hot de las variables categóricas
+C. Estandarizando las variables continuas
+D. Todas las anteriores
+";"D";"La agrupación de K-medias se puede ampliar para manejar datos de tipo mixto mediante el uso de la distancia de Gower, la codificación one-hot de variables categóricas y la estandarización de variables continuas. Estos pasos de preprocesamiento pueden ayudar a explicar las diferencias entre datos continuos y categóricos."
+---
+"¿Cuál de los siguientes algoritmos de clustering puede usarse como alternativa a K-means clustering para manejar datos categóricos?:
+A. DBSCAN
+B. Clustering jerárquico
+C. K-modes
+D. Clustering espectral";"C";"K-modes es un algoritmo de agrupamiento diseñado específicamente para manejar datos categóricos. Es una alternativa al agrupamiento de K-medias y reemplaza el cálculo del centroide basado en la media por un cálculo basado en la moda."
+---
+"¿Cuál de las siguientes es una limitación de K-means clustering al manejar conjuntos de datos desequilibrados?:
+A. K-means asume que todos los clusters tienen tamaños similares
+B. K-means es sensible a los valores atípicos
+C. K-means asume que todos los clusters tienen forma esférica
+D. K-means es sensible a la ubicación inicial de los centroides de cluster";"A";"La agrupación en clústeres de K-medias supone que todos los clústeres tienen tamaños similares, lo que puede ser una limitación al manejar conjuntos de datos desequilibrados, ya que el algoritmo puede no funcionar bien en clústeres con tamaños significativamente diferentes.
+"
+---
+"¿Cómo se puede usar K-means clustering para la detección de valores atípicos?:
+A. Identificando puntos de datos que están lejos de sus centroides de cluster
+B. Identificando clusters con pocos puntos de datos
+C. Identificando puntos de datos que tienen una alta puntuación silhouette
+D. Identificando puntos de datos con una alta varianza entre clusters";"A";"La agrupación de K-medias se puede utilizar para la detección de valores atípicos mediante la identificación de puntos de datos que están lejos de sus centroides de grupo. Estos puntos de datos pueden considerarse valores atípicos, ya que no encajan bien en su grupo asignado."
+---
+"En K-means clustering, ¿cuál de los siguientes factores puede impactar la calidad de la solución de clustering?:
+A. El número de clusters
+B. La métrica de distancia utilizada
+C. El método de inicialización
+D. Todos los anteriores";"D";"Todos los factores enumerados pueden afectar la calidad de la solución de agrupamiento en el agrupamiento K-means: la cantidad de agrupamientos, la métrica de distancia utilizada y el método de inicialización."
+---
+"¿Cómo se puede usar K-means clustering para la reducción de dimensionalidad?:
+A. Realizando análisis de componentes principales (PCA) en los datos
+B. Usando los centroides de cluster como una representación reducida de los datos
+C. Aplicando t-SNE (t-distributed stochastic neighbor embedding)
+D. Usando las asignaciones de cluster como nuevas características";"B";" La agrupación en K-medias se puede utilizar para reducir la dimensionalidad utilizando los centroides de los grupos como una representación reducida de los datos. Cada punto de datos se representa mediante su centroide más cercano, lo que reduce de manera efectiva la dimensionalidad del conjunto de datos."
+---
+"En K-means clustering, ¿cómo se seleccionan típicamente los centroides iniciales?:
+A. Aleatoriamente de los puntos de datos
+B. Usando el método de inicialización K-means++
+C. Empleando un algoritmo de clustering separado
+D. Tanto Aleatoriamente como K-means++";"D";"En la agrupación de K-means, los centroides iniciales normalmente se seleccionan aleatoriamente a partir de los puntos de datos o utilizando el método de inicialización K-means++, que reduce la sensibilidad a la ubicación inicial de los centroides del grupo."
+---
+"¿Cuál de las siguientes es una posible solución para manejar datos categóricos en K-means clustering?:
+A. Usar la distancia Gower
+B. Codificar las variables categóricas mediante one-hot encoding
+C. Reemplazar K-means con K-medoids
+D. Todas las anteriores";"D";"Todas las opciones enumeradas son soluciones potenciales para tratar datos categóricos en la agrupación de K-medias: usar la distancia de Gower, codificar variables categóricas con un solo valor o reemplazar K-medias con K-medoides."
+---
+"¿Puede K-means clustering manejar clusters no convexos?:
+A. Sí, pero puede requerir preprocesamiento adicional
+B. Sí, pero solo si se utiliza una métrica de distancia apropiada
+C. No, K-means clustering asume clusters convexos
+D. No, K-means clustering asume clusters linealmente separables";"C";" La agrupación de K-medias supone agrupaciones convexas, ya que se basa en minimizar la distancia euclidiana entre los puntos de datos y los centroides. Puede resultar difícil manejar agrupaciones no convexas sin un preprocesamiento o modificación adicionales."
+---
+"En K-means clustering, ¿a qué se refiere el término 'convergencia'?:
+A. El punto en el que los centroides dejan de cambiar significativamente
+B. El punto en el que el algoritmo ha encontrado el número óptimo de clusters
+C. El punto en el que la suma de cuadrados dentro del cluster alcanza un mínimo
+D. El punto en el que el algoritmo ha encontrado la mejor métrica de distancia";"A";"En la agrupación de K-medias, "convergencia" se refiere al punto en el que los centroides dejan de cambiar significativamente, lo que indica que el algoritmo ha alcanzado una solución de agrupamiento estable."
+---
+"¿Cuál es la diferencia entre K-means clustering y clustering jerárquico?:
+A. K-means es un método de clustering particional, mientras que el clustering jerárquico es un método basado en árbol
+B. K-means es sensible a los valores atípicos, mientras que el clustering jerárquico es robusto a los valores atípicos
+C. K-means requiere que se especifique el número de clusters, mientras que el clustering jerárquico no
+D. Todas las anteriores";"D";"Todas las opciones enumeradas son diferencias entre la agrupación en clústeres K-means y la agrupación en clústeres jerárquica: K-means es un método de agrupación en clústeres particional, mientras que la agrupación en clústeres jerárquica es un método basado en árboles; K-means es sensible a los valores atípicos, mientras que la agrupación en clústeres jerárquica es robusta a los valores atípicos; y K-means requiere que se especifique el número de clústeres, mientras que la agrupación en clústeres jerárquica no."
+---
+"¿Qué sucede si el número de clusters especificados en K-means clustering es demasiado grande?:
+A. El algoritmo no convergerá
+B. Los clusters resultantes serán demasiado específicos y pueden sobreajustar los datos
+C. Los clusters resultantes serán demasiado amplios y pueden no capturar la estructura subyacente de los datos
+D. El algoritmo ajustará automáticamente el número de clusters";"B";"Si la cantidad de clústeres especificados en la agrupación K-means es demasiado grande, los clústeres resultantes serán demasiado específicos y pueden sobreajustarse a los datos, lo que genera soluciones de agrupación subóptimas."
+---
+"¿Cuál de las siguientes es una aplicación común de K-means clustering?:
+A. Segmentación de imágenes
+B. Clasificación de texto
+C. Detección de anomalías
+D. Pronóstico de series temporales";"A";"La segmentación de imágenes es una aplicación común del agrupamiento K-means, ya que implica dividir una imagen en regiones según la intensidad de los píxeles o los colores."
+---
+"En K-means clustering, ¿cuál es el propósito del 'método del codo'?:
+A. Determinar el número óptimo de clusters
+B. Identificar la mejor métrica de distancia
+C. Seleccionar el mejor método de inicialización
+D. Determinar los criterios de convergencia";"A";"En la agrupación de K-medias, se utiliza el "método del codo" para determinar la cantidad óptima de conglomerados trazando la suma de cuadrados dentro del conglomerado contra la cantidad de conglomerados e identificando el punto donde agregar más conglomerados no da como resultado una mejora significativa en la varianza dentro del conglomerado."
+---
+"¿Cuál es la complejidad temporal del algoritmo K-means clustering?:
+A. O(n)
+B. O(n log n)
+C. O(nkI)
+D. O(n^2)";"C";"La complejidad temporal del algoritmo de agrupamiento K-medias es O(nkI), donde n es el número de puntos de datos, k es el número de clústeres e I es el número de iteraciones.
+"
+---
+"¿Con qué tipo de datos funciona mejor K-means clustering?:
+A. Datos continuos
+B. Datos categóricos
+C. Datos binarios
+D. Datos de texto";"A";"La agrupación de K-medias funciona mejor con datos continuos, ya que se basa en la distancia euclidiana para medir la similitud entre los puntos de datos."
+---
+"¿Cuál de las siguientes es una desventaja del algoritmo K-means clustering?:
+A. Asume que los clusters tienen forma esférica
+B. No puede manejar datos categóricos
+C. Es sensible a la ubicación inicial de los centroides de cluster
+D. Todas las anteriores";"D";"Todas las opciones enumeradas son desventajas del algoritmo de agrupamiento K-means: supone que los clústeres tienen una forma esférica, no puede manejar datos categóricos y es sensible a la ubicación inicial de los centroides del clúster."
+---
+"¿Cómo maneja el algoritmo K-means clustering un cluster vacío?:
+A. Reasigna los puntos de datos al cluster no vacío más cercano
+B. Selecciona un nuevo centroide para el cluster vacío de los puntos de datos restantes
+C. Elimina el cluster vacío de la solución final
+D. Reinicializa el centroide del cluster vacío";"B";"Si se encuentra un clúster vacío en el algoritmo de agrupamiento K-means, se selecciona un nuevo centroide para el clúster vacío entre los puntos de datos restantes, generalmente eligiendo el punto de datos con la mayor distancia desde su centroide actual."
+---
+"¿Cuál de las siguientes NO es una ventaja de K-means clustering?:
+A. Fácil de implementar y entender
+B. Escalable a grandes conjuntos de datos
+C. Garantizado encontrar el óptimo global
+D. Converge relativamente rápido";"C";"No se garantiza que la agrupación de K-medias encuentre el óptimo global, ya que es sensible a la ubicación inicial de los centroides del grupo y puede converger a un mínimo local."
+---
+"¿Cómo mejora K-means++ el algoritmo K-means original?:
+A. Empleando un algoritmo de clustering más eficiente
+B. Usando una técnica de inicialización que reduce la sensibilidad a la ubicación inicial de los centroides
+C. Determinando automáticamente el número óptimo de clusters
+D. Manejando datos faltantes";"B";"K-means++ mejora el algoritmo K-means original al utilizar una técnica de inicialización que reduce la sensibilidad a la ubicación inicial de los centroides del grupo, lo que aumenta la probabilidad de encontrar una mejor solución de agrupamiento."
+---
+"En K-means clustering, ¿cuál es el papel de la 'inercia' o 'suma de cuadrados dentro del cluster'?:
+A. Mide la similitud entre clusters
+B. Mide la disimilitud entre clusters
+C. Mide la compacidad de los clusters
+D. Mide la separación entre clusters";"C";"En la agrupación K-medias, la "inercia" o "suma de cuadrados dentro del grupo" mide la compacidad de los grupos, donde los valores más bajos indican grupos más compactos."
+---
+"¿Cuál es la principal diferencia entre los algoritmos K-means y K-medoids?:
+A. K-means usa centroides, mientras que K-medoids usa medoides
+B. K-means es un algoritmo de clustering jerárquico, mientras que K-medoids es un algoritmo de clustering particional
+C. K-means es sensible a los valores atípicos, mientras que K-medoids es robusto a los valores atípicos
+D. K-means puede manejar datos categóricos, mientras que K-medoids no puede";"A";"La principal diferencia entre los algoritmos de agrupamiento K-means y K-medoids es que K-means utiliza centroides (media de puntos de datos en un grupo), mientras que K-medoids utiliza medoides (puntos de datos reales que son más representativos de un grupo).
+"
+---
+"¿Cuál de las siguientes es una limitación de K-means clustering?:
+A. Sensibilidad a la ubicación inicial de los centroides de cluster
+B. Incapacidad para manejar datos faltantes
+C. Incapacidad para manejar datos categóricos
+D. Todas las anteriores";"D";"Todas las opciones enumeradas son limitaciones del agrupamiento de K-medias: sensibilidad a la ubicación inicial de los centroides del grupo, incapacidad para manejar datos faltantes e incapacidad para manejar datos categóricos."
+---
+"¿Cuál es la principal suposición que hace el algoritmo K-means clustering?:
+A. Los clusters tienen forma esférica
+B. Los clusters tienen densidades similares
+C. Los clusters tienen tamaños similares
+D. Los clusters son linealmente separables";"A";"El supuesto principal realizado por el algoritmo de agrupamiento K-means es que los grupos tienen una forma esférica, ya que el algoritmo minimiza la distancia euclidiana entre los puntos de datos y los centroides del grupo."
+---
+"¿Cómo se determina típicamente el número óptimo de clusters en K-means clustering?:
+A. Seleccionando el número de clusters que minimiza la varianza dentro del cluster
+B. Usando conocimiento del dominio o juicio experto
+C. Empleando un gráfico del codo o análisis silhouette
+D. Usando validación cruzada";"C";" La cantidad óptima de clústeres en la agrupación K-medias se determina generalmente empleando un gráfico de codo o un análisis de silueta para identificar el punto donde agregar más clústeres no resulta en una mejora significativa en la varianza dentro del clúster."
+---
+"¿Cuál es el objetivo principal de K-means clustering?:
+A. Reducción de dimensionalidad
+B. Clasificación
+C. Regresión
+D. Particionar datos en clusters";"D";"El objetivo principal de la agrupación K-medias es dividir los datos en grupos según la similitud, minimizando la varianza dentro del grupo y maximizando la varianza entre grupos."
+---
+"¿Qué métrica de distancia se usa más comúnmente en K-means clustering?:
+A. Distancia euclidiana
+B. Distancia de Manhattan
+C. Similitud del coseno
+D. Similitud de Jaccard";"A";"La distancia euclidiana es la métrica de distancia más comúnmente utilizada en la agrupación de K-medias para medir la similitud entre puntos de datos."

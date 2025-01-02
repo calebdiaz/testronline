@@ -1,0 +1,301 @@
+question;answer;explanation
+---
+"¿Cuál de los siguientes es un ejemplo de un algoritmo de aprendizaje no supervisado?:
+A. Regresión lineal
+B. Regresión logística
+C. Agrupamiento de K-means
+D. Máquinas de vectores de soporte";"C";"La agrupación en clústeres de K-means es un ejemplo de un algoritmo de aprendizaje no supervisado, ya que tiene como objetivo dividir los datos en clústeres en función de la similitud sin utilizar ningún ejemplo etiquetado."
+---
+"¿Cuál es el objetivo principal del aprendizaje no supervisado?:
+A. Clasificar datos en categorías conocidas
+B. Para encontrar patrones o estructuras ocultas en los datos
+C. Para optimizar una función de recompensa
+D. Para predecir puntos de datos futuros basándose en observaciones pasadas
+";"B";"El objetivo principal del aprendizaje no supervisado es encontrar patrones o estructuras ocultas en los datos sin la guía de ejemplos etiquetados u objetivos específicos."
+---
+"¿Cuál es la principal diferencia entre el aprendizaje supervisado y no supervisado?:
+A. El aprendizaje supervisado requiere datos etiquetados, mientras que el aprendizaje no supervisado no.
+B. El aprendizaje supervisado se utiliza para la clasificación, mientras que el aprendizaje no supervisado se utiliza para la regresión.
+C. El aprendizaje supervisado es determinista, mientras que el aprendizaje no supervisado es estocástico.
+D. El aprendizaje supervisado se utiliza para el aprendizaje en línea, mientras que el aprendizaje no supervisado se utiliza para el aprendizaje fuera de línea.
+";"A";"La principal diferencia entre el aprendizaje supervisado y no supervisado es que el aprendizaje supervisado requiere datos etiquetados para guiar el proceso de aprendizaje, mientras que el aprendizaje no supervisado no."
+---
+"¿Cuál es el propósito de la reducción de dimensionalidad en el aprendizaje no supervisado?:
+A. Para reducir la cantidad de características en el conjunto de datos, lo que facilita su visualización y análisis.
+B. Para aumentar la cantidad de características en el conjunto de datos, haciéndolo más informativo
+C. Para eliminar características irrelevantes del conjunto de datos, mejorando el rendimiento del modelo
+D. Para optimizar el algoritmo de agrupamiento utilizado en el aprendizaje no supervisado";"A";"El propósito de la reducción de dimensionalidad en el aprendizaje no supervisado es reducir la cantidad de características en el conjunto de datos, lo que hace que sea más fácil de visualizar y analizar y, al mismo tiempo, preservar la información más importante.
+
+Reducción de dimensionalidad (Dimensionality Reduction):
+
+    Qué hace: Transforma las características originales en un espacio de menor dimensionalidad, creando nuevas combinaciones o proyecciones que capturan la mayor parte de la información.
+    Cómo funciona: No conserva las características originales; en su lugar, genera un nuevo conjunto de componentes o dimensiones.
+    Propósito: Simplificar la estructura de los datos y facilitar su visualización, análisis o modelado.
+    Ejemplo: Usar técnicas como PCA (Análisis de Componentes Principales), t-SNE o UMAP.
+    Enfoque: Es transformativo; el resultado es un nuevo conjunto de características derivadas.
+
+Aplicación común: Visualizar datos en 2D o 3D y preparar datos para modelos que son sensibles a la alta dimensionalidad.
+
+
+"
+---
+"¿Cuál de las siguientes es una aplicación común del aprendizaje no supervisado?:
+A. Clasificación de imágenes
+B. Análisis de sentimientos
+C. Detección de anomalías
+D. Mantenimiento predictivo
+";"C";"La detección de anomalías es una aplicación común del aprendizaje no supervisado, ya que implica identificar puntos de datos inusuales o inesperados sin la necesidad de ejemplos etiquetados."
+---
+"¿Cuál es el objetivo principal de los algoritmos de agrupamiento en el aprendizaje no supervisado?:
+A. Para predecir una variable objetivo continua
+B. Clasificar datos en categorías conocidas
+C. Para agrupar puntos de datos similares
+D. Para optimizar una función de recompensa
+";"C";"El objetivo principal de los algoritmos de agrupamiento en el aprendizaje no supervisado es agrupar puntos de datos similares en función de alguna medida de similitud o distancia."
+---
+"¿Cuál de los siguientes es un ejemplo de una técnica de reducción de dimensionalidad en el aprendizaje no supervisado?:
+A. Análisis de componentes principales (PCA)
+B. Análisis discriminante lineal (LDA)
+C. Agrupamiento de K-means
+D. Árboles de decisión
+";"A";"El análisis de componentes principales (PCA) es un ejemplo de una técnica de reducción de dimensionalidad en el aprendizaje no supervisado, ya que tiene como objetivo transformar el espacio de características original en un espacio de menor dimensión preservando la información más importante."
+---
+"¿Cuál es un desafío común en el aprendizaje no supervisado?:
+A. Sobreajuste
+B. Falta de equipamiento
+C. Evaluación del rendimiento del modelo
+D. Manejo de datos faltantes
+";"C";"Evaluar el desempeño del modelo es un desafío común en el aprendizaje no supervisado, ya que la ausencia de datos etiquetados dificulta la evaluación de la calidad de las representaciones o estructuras aprendidas."
+---
+"¿Cuál de los siguientes es un algoritmo de agrupamiento basado en densidad?:
+A. Agrupamiento de K-means
+B. DBSCAN
+C. Agrupamiento jerárquico
+D. Agrupamiento espectral
+";"B";"DBSCAN (agrupamiento espacial basado en densidad de aplicaciones con ruido) es un algoritmo de agrupamiento basado en densidad que agrupa puntos de datos en función de su densidad y proximidad espacial."
+---
+"¿Cuál es la principal ventaja de la agrupación jerárquica sobre otros métodos de agrupación?:
+A. Puede manejar datos faltantes
+B. Produce un dendrograma que muestra la estructura anidada de los clústeres.
+C. Puede determinar automáticamente el número óptimo de clústeres.
+D. Es más eficiente en términos de complejidad computacional.
+";"B";" La principal ventaja de la agrupación jerárquica sobre otros métodos de agrupación es que produce un dendrograma, que muestra la estructura anidada de los grupos y proporciona información sobre las relaciones entre los puntos de datos y los grupos."
+---
+"¿Cuál de los siguientes algoritmos de aprendizaje no supervisado se basa en la idea de transformar los datos en un espacio de menor dimensión preservando las distancias por pares entre los puntos de datos?:
+A. Análisis de componentes principales (PCA)
+B. Incrustación de vecinos estocásticos distribuidos en t (t-SNE)
+C. Agrupamiento de K-means
+D. DBSCAN
+"; "B"; "la incrustación estocástica de vecinos distribuida en t (t-SNE) es un algoritmo de aprendizaje no supervisado basado en la idea de transformar los datos en un espacio de menor dimensión mientras se preservan las distancias por pares entre los puntos de datos, lo que lo hace particularmente útil para fines de visualización."
+---
+"¿Cuál es el objetivo principal de los autoencoders en el aprendizaje no supervisado?:
+A. Para aprender una representación comprimida de los datos de entrada
+B. Para clasificar los datos de entrada en categorías conocidas
+C. Para predecir una variable objetivo continua
+D. Para optimizar una función de recompensa
+";"A";"El objetivo principal de los autocodificadores en el aprendizaje no supervisado es aprender una representación comprimida de los datos de entrada entrenando una red neuronal para reconstruir los datos de entrada a partir de la representación comprimida."
+---
+"¿Cuál de los siguientes es un ejemplo de una métrica de evaluación de agrupamiento?:
+A. Exactitud
+B. Puntuación F1
+C. Puntuación de silueta
+D. Error cuadrático medio
+";"C";"La puntuación de silueta es un ejemplo de una métrica de evaluación de agrupamiento, ya que mide la calidad del agrupamiento comparando las distancias dentro del grupo con las distancias entre grupos
+
+La puntuación de silueta evalúa la calidad de las agrupaciones (clusters) en algoritmos de aprendizaje no supervisado, midiendo qué tan separados están los clústeres y qué tan coherentes son internamente.
+
+Fórmula
+
+Para un punto :
+
+1: Distancia promedio del punto  a los demás puntos en su propio clúster.
+
+2: Distancia promedio del punto  al clúster más cercano al que no pertenece.
+
+La puntuación para  se calcula como:
+
+- Valores :
+
+  Cercanos a 1: Buena agrupación.
+
+  Cercanos a 0: Punto en el límite entre clústeres.
+
+  Negativos: Mala agrupación.
+
+  La puntuación global es el promedio de todas las .
+
+* Ventajas
+
+- Evalúa sin necesidad de información previa de los datos.
+
+- Ayuda a determinar el número óptimo de clústeres.
+
+* Limitaciones
+
+- Costoso computacionalmente en grandes datasets.
+
+- Puede no ser confiable en datos con distribuciones no euclidianas o formas irregulares.
+
+<pre><code class="python">
+from sklearn.cluster import KMeans
+from sklearn.metrics import silhouette_score
+from sklearn.datasets import make_blobs
+import matplotlib.pyplot as plt
+
+# Crear un dataset de ejemplo
+X, _ = make_blobs(n_samples=500, centers=4, cluster_std=1.0, random_state=42)
+
+# Probar con diferentes números de clústeres
+scores = []
+k_values = range(2, 10)
+
+for k in k_values:
+    kmeans = KMeans(n_clusters=k, random_state=42).fit(X)
+    labels = kmeans.labels_
+    score = silhouette_score(X, labels)
+    scores.append(score)
+
+# Visualizar los resultados
+plt.plot(k_values, scores, marker='o')
+plt.title('Puntuación de Silueta vs. Número de Clústeres')
+plt.xlabel('Número de Clústeres (k)')
+plt.ylabel('Puntuación de Silueta')
+plt.show()
+</code></pre>
+
+"
+---
+"En el aprendizaje no supervisado, ¿cuál es el propósito de utilizar el método del codo?:
+A. Para determinar el número óptimo de clústeres
+B. Para seleccionar las características óptimas para la agrupación
+C. Para elegir el mejor algoritmo de agrupamiento
+D. Para evaluar el rendimiento de un algoritmo de agrupamiento
+";"A";"El propósito de utilizar el método del codo en el aprendizaje no supervisado es determinar la cantidad óptima de grupos examinando la relación entre la cantidad de grupos y la suma de errores al cuadrado (u otra métrica de rendimiento de agrupamiento)."
+---
+"¿Cuál es la principal diferencia entre la agrupación jerárquica de arriba hacia abajo y de abajo hacia arriba?:
+A. La agrupación de arriba hacia abajo comienza con un solo grupo y lo divide iterativamente, mientras que la agrupación de abajo hacia arriba comienza con puntos de datos individuales y los fusiona iterativamente.
+B. La agrupación de arriba hacia abajo es determinista, mientras que la agrupación de abajo hacia arriba es estocástica.
+C. La agrupación de arriba hacia abajo es más eficiente computacionalmente, mientras que la agrupación de abajo hacia arriba es más precisa.
+D. La agrupación de arriba hacia abajo se utiliza para el aprendizaje en línea, mientras que la agrupación de abajo hacia arriba se utiliza para el aprendizaje fuera de línea.
+";"A";"La principal diferencia entre la agrupación jerárquica de arriba hacia abajo y de abajo hacia arriba es que la agrupación de arriba hacia abajo comienza con un solo grupo y lo divide iterativamente, mientras que la agrupación de abajo hacia arriba comienza con puntos de datos individuales y los fusiona iterativamente para formar una estructura jerárquica."
+---
+"¿Cuál es una aplicación común de los autoencoders en el aprendizaje no supervisado?:
+A. Segmentación de imágenes
+B. Compresión de imagen
+C. Clasificación de imágenes
+D. Mejora de imagen
+";"B";"Una aplicación común de los autocodificadores en el aprendizaje no supervisado es la compresión de imágenes, ya que pueden aprender a representar imágenes de entrada en un espacio de menor dimensión mientras mantienen la información esencial para la reconstrucción."
+---
+"¿Cuál de los siguientes algoritmos de aprendizaje no supervisado se puede utilizar tanto para la agrupación como para la reducción de dimensionalidad?:
+A. Agrupamiento de K-means
+B. DBSCAN
+C. Agrupamiento espectral (Spectral Clustering)
+D. Incrustación de vecinos estocásticos distribuidos en t (t-SNE)
+";"C";"La agrupación espectral es un algoritmo de aprendizaje no supervisado que se puede utilizar tanto para la agrupación como para la reducción de dimensionalidad, ya que implica transformar los datos en un espacio de menor dimensión basado en los vectores propios de la matriz de similitud y luego agrupar los datos en el espacio transformado."
+---
+"¿Cuál es la principal ventaja de utilizar modelos de mezcla gaussiana (GMM) para agrupamiento en comparación con otros algoritmos de agrupamiento?:
+A. Pueden manejar datos faltantes
+B. Pueden modelar clústeres con diferentes formas, tamaños y orientaciones.
+C. Son más eficientes computacionalmente
+D. Pueden determinar automáticamente el número óptimo de clústeres.
+";"B";"La principal ventaja de utilizar modelos de mezcla gaussiana (GMM) para agrupamiento en comparación con otros algoritmos de agrupamiento es que pueden modelar agrupamientos con diferentes formas, tamaños y orientaciones asumiendo que los datos se generan a partir de una mezcla de varias distribuciones gaussianas."
+---
+"¿Cuál es el objetivo principal de los algoritmos de detección de valores atípicos (anomalías) en el aprendizaje no supervisado?:
+A. Clasificar datos en categorías conocidas
+B. Para agrupar puntos de datos similares
+C. Para identificar puntos de datos inusuales o inesperados
+D. Para optimizar una función de recompensa
+";"C";"El objetivo principal de los algoritmos de detección de valores atípicos en el aprendizaje no supervisado es identificar puntos de datos inusuales o inesperados, que pueden ser indicativos de errores, anomalías o fenómenos interesantes."
+---
+"¿Cuál de las siguientes es una aplicación común de las técnicas de reducción de dimensionalidad en el aprendizaje no supervisado?:
+A. Reconocimiento de imágenes
+B. Visualización de datos
+C. Análisis de sentimientos
+D. Resumen de texto
+";"B";"La visualización de datos es una aplicación común de las técnicas de reducción de dimensionalidad en el aprendizaje no supervisado, ya que reducir la dimensionalidad de los datos puede facilitar la visualización y el análisis de las relaciones entre los puntos de datos y las características."
+---
+"En el contexto del aprendizaje no supervisado, ¿qué es un “modelo de tema”?:
+A. Un modelo que agrupa palabras similares en función de sus patrones de coocurrencia en una colección de documentos
+B. Un modelo que clasifica los documentos en categorías predefinidas según su contenido.
+C. Un modelo que genera nuevos documentos basados ​​en un tema determinado
+D. Un modelo que extrae frases clave de una colección de documentos
+";"A";"En el contexto del aprendizaje no supervisado, un "modelo de tema" es un modelo que agrupa palabras similares en función de sus patrones de coocurrencia en una colección de documentos, con el objetivo de descubrir temas latentes en los datos."
+---
+"¿Cuál de los siguientes algoritmos de aprendizaje no supervisado es el más adecuado para encontrar grupos con formas arbitrarias?:
+A. Agrupamiento de K-means
+B. DBSCAN
+C. Modelos de mezcla gaussiana (GMM)
+D. Agrupamiento jerárquico
+";"B";"DBSCAN es un algoritmo de aprendizaje no supervisado que es más adecuado para encontrar grupos con formas arbitrarias, ya que se basa en la densidad y no hace suposiciones sobre la forma o el tamaño de los grupos."
+---
+"¿Cuál de los siguientes es un ejemplo de una técnica de <b>aprendizaje múltiple</b> en el aprendizaje no supervisado?:
+A. Análisis de componentes principales (PCA)
+B. Incrustación de vecinos estocásticos distribuidos en t (t-SNE)
+C. Agrupamiento de K-means
+D. DBSCAN
+";"B";"la incrustación estocástica de vecinos distribuida en t (t-SNE) es un ejemplo de una técnica de aprendizaje múltiple en el aprendizaje no supervisado, ya que tiene como objetivo preservar la estructura local de los datos en un espacio de menor dimensión preservando las distancias por pares entre los puntos de datos.
+"
+---
+"¿Cuál es un desafío común al aplicar algoritmos de agrupamiento a datos de <b>alta dimensión</b>?:
+A. Sobreajuste
+B. La maldición de la dimensionalidad
+C. Evaluación del rendimiento del modelo
+D. Manejo de datos faltantes
+";"B";" La maldición de la dimensionalidad es un desafío común al aplicar algoritmos de agrupamiento a datos de alta dimensión, ya que la distancia entre los puntos de datos se vuelve menos significativa y los datos se vuelven escasos, lo que dificulta encontrar agrupaciones significativas.
+"
+---
+"¿Cuál es el objetivo principal de la selección de características en el aprendizaje no supervisado?:
+A. reducir la cantidad de características en el conjunto de datos, lo que facilita su visualización y análisis.
+B. aumentar la cantidad de características en el conjunto de datos, haciéndolo más informativo
+C. eliminar características irrelevantes del conjunto de datos, mejorando el rendimiento del modelo
+D. optimizar el algoritmo de agrupamiento utilizado en el aprendizaje no supervisado
+";"C";"El objetivo principal de la selección de características en el aprendizaje no supervisado es eliminar características irrelevantes del conjunto de datos, mejorando el rendimiento del modelo al reducir el ruido y el riesgo de sobreajuste.
+
+ Selección de características (Feature Selection):
+
+    Qué hace: Elige un subconjunto de las características originales del conjunto de datos, eliminando aquellas que son irrelevantes o redundantes.
+    Cómo funciona: Conserva las características originales; no crea nuevas combinaciones o transformaciones.
+    Propósito: Reducir ruido, mejorar el rendimiento del modelo y hacer el conjunto de datos más manejable.
+    Ejemplo: Usar métodos como la varianza baja, pruebas estadísticas (correlación), o técnicas basadas en importancia (información mutua, selección basada en filtros).
+    Enfoque: Es selectivo; el resultado es un subconjunto de las características originales.
+
+Aplicación común: Identificar las características más relevantes para mejorar la interpretación y evitar trabajar con información irrelevante.
+
+"
+---
+"¿Cuál de las siguientes es una medida de similitud comúnmente utilizada en el Aprendizaje No Supervisado (no confundir solo con K-means)?:
+A. Distancia euclidiana.
+B. Coeficiente de correlación de Pearson.
+C. Semejanza de coseno.
+D. Todas las mencionadas.
+";"D";"Todas las opciones enumeradas (distancia euclidiana, coeficiente de correlación de Pearson y similitud de coseno) son medidas de similitud comúnmente utilizadas en el aprendizaje no supervisado para cuantificar las relaciones entre puntos de datos o características."
+---
+"¿Cuál de los siguientes algoritmos de agrupamiento es más sensible a la ubicación inicial de los centroides del clúster?:
+A. Agrupamiento de K-means
+B. DBSCAN
+C. Modelos de mezcla gaussiana (GMM)
+D. Agrupamiento jerárquico
+";"A";"La K-means es la más sensible a la ubicación inicial de los centroides del grupo, ya que la convergencia del algoritmo y el resultado final de la agrupación pueden verse fuertemente influenciados por las condiciones iniciales."
+---
+"En el contexto del aprendizaje no supervisado, ¿qué es el “aprendizaje semisupervisado”?:
+A. Un enfoque de aprendizaje que combina datos etiquetados y no etiquetados
+B. Un enfoque de aprendizaje que requiere solo una pequeña cantidad de datos etiquetados
+C. Un enfoque de aprendizaje que utiliza una combinación de algoritmos de aprendizaje supervisados ​​y no supervisados.
+D. Un enfoque de aprendizaje que implica aprendizaje activo y retroalimentación humana.
+";
+"A";"En el contexto del aprendizaje no supervisado, el aprendizaje semisupervisado es un enfoque de aprendizaje que combina datos etiquetados y no etiquetados, con el objetivo de aprovechar las grandes cantidades de datos no etiquetados para mejorar el rendimiento y la generalización del modelo.
+"
+---
+"¿Cuál es una aplicación común de los algoritmos de agrupamiento en el aprendizaje no supervisado?:
+A. Segmentación de clientes
+B. Reconocimiento de imágenes
+C. Clasificación de textos
+D. Reconocimiento de voz
+";"A";"La segmentación de clientes es una aplicación común de los algoritmos de agrupamiento en el aprendizaje no supervisado, ya que implica agrupar a los clientes en función de su comportamiento, preferencias o características demográficas para informar las estrategias de marketing y las decisiones comerciales."
+---
+"¿Cuál de los siguientes algoritmos de aprendizaje no supervisado es adecuado para encontrar estructuras no lineales en los datos?:
+A. Análisis de componentes principales (PCA)
+B. Agrupamiento de K-means
+C. Isomap
+D. Agrupamiento espectral
+";"C";"Isomap es un algoritmo de aprendizaje no supervisado que es adecuado para encontrar estructuras no lineales en los datos, ya que utiliza distancias geodésicas en un gráfico de vecindad para estimar la verdadera geometría intrínseca de la variedad de datos."
