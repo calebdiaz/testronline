@@ -39,8 +39,8 @@ history = model.fit(x, y, epochs=20, verbose=1, validation_data=(X_t, y_t))
 :
 A. No están bien las capas de Convolución.
 B. Falta una tf.keras.Flatten(), antes de Dense.
-C. Pocas neur en la salida.
-D. Demasiadas neurs en la salida.";"B,C";"Hay dos errores
+C. Pocas neuronas en la salida.
+D. Demasiadas neuronas en la salida.";"B,C";"Hay dos errores
 - Err1 - nos falta aplanar el vector a 1D antes de enviarlo a la capa Dense.
 
 - Err2 - Si vamos a clasificar 10 items o 20 o los que sea no podemos tener menos neuronas a la salida.
