@@ -1,0 +1,126 @@
+--md--
+title:CLUSTERING QUIZ (MCQ QUESTIONS AND ANSWERS)
+description:Test de AiOnlineCourse, traducido y ensamblado por Claude.ai
+url:https://www.aionlinecourse.com/ai-quiz-questions/machine-learning/clustering
+--endmd--
+question;answer;explanation
+---
+"El objetivo del clustering es:
+A. Dividir los puntos de datos en grupos
+B. Clasificar los puntos de datos en diferentes clases
+C. Predecir los valores de salida de los puntos de datos de entrada
+D. Todas las anteriores";"A";"El clustering tiene como objetivo agrupar puntos de datos en conjuntos con características similares. No se utiliza para clasificación ni para predicción, sino para descubrir patrones o estructuras inherentes en los datos."
+---
+"El clustering es:
+A. Aprendizaje supervisado
+B. Aprendizaje no supervisado
+C. Aprendizaje por refuerzo
+D. Ninguno";"B";"El clustering pertenece al aprendizaje no supervisado porque no utiliza etiquetas en los datos de entrada. Los patrones se identifican basándose únicamente en las similitudes dentro de los datos."
+---
+"¿Cuál de los siguientes algoritmos de clustering sufre del problema de convergencia en óptimos locales?:
+A. Clustering K-Means
+B. Clustering jerárquico
+C. Clustering diverso
+D. Todos los mencionados";"D";"Muchos algoritmos de clustering, como K-Means o los métodos jerárquicos, pueden quedarse atrapados en soluciones subóptimas debido a la dependencia de las condiciones iniciales."
+---
+"¿Qué versión del algoritmo de clustering es más sensible a los valores atípicos?:
+A. Algoritmo de clustering K-means
+B. Algoritmo de clustering K-modes
+C. Algoritmo de clustering K-medians
+D. Ninguno";"A";"El algoritmo K-means usa la media como centro del cluster. Esto lo hace muy susceptible a los valores atípicos, ya que un solo punto extremo puede alterar significativamente la posición de los centroides."
+---
+"¿Cuál de las siguientes es una mala característica de un conjunto de datos para análisis de clustering?:
+A. Puntos de datos con valores atípicos
+B. Puntos de datos con diferentes densidades
+C. Puntos de datos con formas no convexas
+D. Todas las anteriores";"D";"Estas características pueden dificultar el rendimiento de los algoritmos de clustering convencionales, que asumen datos con distribuciones uniformes y sin anomalías."
+---
+"Para el clustering, no requerimos:
+A. Datos etiquetados
+B. Datos no etiquetados
+C. Datos numéricos
+D. Datos categóricos";"A";"El clustering no utiliza datos etiquetados porque se basa en identificar estructuras dentro de los datos sin información previa sobre categorías o clases."
+---
+"¿Cuál de las siguientes es una aplicación del clustering?:
+A. Análisis de redes biológicas
+B. Predicción de tendencias de mercado
+C. Modelado de tópicos
+D. Todas las anteriores";"D";"El clustering tiene aplicaciones en múltiples áreas, como agrupar genes similares en biología, segmentar mercados y agrupar documentos relacionados en análisis de texto."
+---
+"¿En qué tipo de datos no podemos realizar análisis de clusters?:
+A. Datos de series temporales
+B. Datos de texto
+C. Datos multimedia
+D. Ninguno";"D";"El clustering es flexible y puede aplicarse a cualquier tipo de datos siempre que exista una métrica adecuada para medir similitud."
+---
+"El sistema de recomendación de películas de Netflix utiliza:
+A. Aprendizaje supervisado
+B. Aprendizaje no supervisado
+C. Aprendizaje por refuerzo
+D. Todas las anteriores";"C";"Netflix emplea aprendizaje por refuerzo para personalizar recomendaciones, ajustándose dinámicamente a las preferencias de los usuarios basándose en sus interacciones."
+---
+"El resultado final del clustering jerárquico es:
+A. El número de centroides de cluster
+B. El árbol que representa qué tan cerca están los puntos de datos entre sí
+C. Un mapa que define los puntos de datos similares en grupos individuales
+D. Todas las anteriores";"B";"El clustering jerárquico genera un dendrograma que visualiza cómo los puntos de datos se agrupan jerárquicamente en diferentes niveles."
+---
+"¿Cuál de los pasos no es requerido para el clustering K-means?:
+A. Una métrica de distancia
+B. Número inicial de clusters
+C. Suposición inicial de los centroides de cluster
+D. Ninguno";"D";"Todos los pasos mencionados son esenciales para la implementación del algoritmo K-means, desde la inicialización hasta el cálculo de distancias."
+---
+"¿Cuál de las siguientes afirmaciones es incorrecta?:
+A. El clustering k-means es un método de cuantización vectorial
+B. El clustering k-means intenta agrupar n observaciones en k clusters
+C. K-nearest neighbor es lo mismo que k-means
+D. Ninguna";"C";"K-nearest neighbor es un algoritmo de clasificación basado en proximidad, mientras que k-means es un algoritmo de clustering diseñado para agrupar puntos en clusters."
+---
+"¿Cuál de los siguientes utiliza el enfoque de fusión?:
+A. Clustering jerárquico
+B. Clustering particional
+C. Clustering basado en densidad
+D. Todas las anteriores";"A";"El clustering jerárquico aglomerativo utiliza un enfoque de fusión, comenzando con clusters individuales y fusionándolos gradualmente."
+---
+"¿Cuál de los siguientes es un método para elegir el número óptimo de clusters para k-means?:
+A. Validación cruzada
+B. El método silhouette
+C. El método del codo
+D. Todas las anteriores";"D";"Todos estos métodos son válidos para determinar el número óptimo de clusters en k-means."
+---
+"¿Cuándo deja el clustering k-means de crear u optimizar clusters?:
+A. Después de no encontrar nueva reasignación de puntos de datos
+B. Después de que el algoritmo alcanza el número definido de iteraciones
+C. Ambas
+D. Ninguno";"C";"K-means se detiene cuando alcanza la convergencia (no hay nuevas reasignaciones) o alcanza el límite de iteraciones."
+---
+"¿Qué algoritmo de clustering sigue un enfoque de arriba hacia abajo?:
+A. K-means
+B. Divisivo
+C. Aglomerativo
+D. Ninguno";"B";"El clustering divisivo sigue un enfoque top-down, comenzando con un solo cluster y dividiéndolo sucesivamente."
+---
+"¿Qué algoritmo no requiere un dendrograma?:
+A. K-means
+B. Divisivo
+C. Aglomerativo
+D. Todas las anteriores";"A";"K-means es un algoritmo particional que no produce ni requiere una estructura jerárquica (dendrograma)."
+---
+"¿Cuál de los siguientes algoritmos de clustering sufre del problema de convergencia en óptimos locales?:
+A. Toma cada punto de datos como un cluster individual
+B. Continúa haciendo clusters hasta que alcanza un número óptimo de clusters
+C. Sigue un enfoque de arriba hacia abajo
+D. Todas las anteriores";"D";"Todos estos enfoques pueden sufrir de convergencia en óptimos locales."
+---
+"Para el modelado de tópicos, ¿qué deberíamos usar?:
+A. Random forest
+B. Máquina de vectores de soporte
+C. K-means
+D. K-nearest neighbors";"C";"K-means es efectivo para el modelado de tópicos ya que puede agrupar documentos similares en clusters."
+---
+"¿Qué es un dendrograma?:
+A. Una estructura jerárquica
+B. Una estructura de diagrama
+C. Una estructura de grafo
+D. Ninguno";"A";"Un dendrograma es una representación visual de la estructura jerárquica que muestra cómo se relacionan los clusters entre sí."
